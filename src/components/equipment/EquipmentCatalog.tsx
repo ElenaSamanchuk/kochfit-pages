@@ -6,7 +6,11 @@ import { EquipmentModal } from "@/components/equipment/EquipmentModal";
 import { Typo } from "@/components/ui/TypoText";
 import { assetPath } from "@/lib/asset-path";
 import type { EquipmentCategory, EquipmentItem } from "@/content/equipment";
-import { equipmentIntro, equipmentItems } from "@/content/equipment";
+import {
+  equipmentIntro,
+  equipmentItems,
+  visibleEquipmentItem,
+} from "@/content/equipment";
 
 const img = (name: string) => assetPath(`/images/equipment/${name}`);
 
@@ -50,10 +54,11 @@ export function EquipmentCatalog() {
         className="mt-8 flex flex-col gap-4 lg:grid lg:grid-cols-2 lg:gap-4 xl:grid-cols-3"
       >
         {equipmentItems.map((item) => {
+          const visible = visibleEquipmentItem(item);
           const hasModal =
-            item.best.length > 0 ||
-            item.other.length > 0 ||
-            Boolean(item.advice.text);
+            visible.best.length > 0 ||
+            visible.other.length > 0 ||
+            Boolean(visible.advice.text);
 
           return (
             <article

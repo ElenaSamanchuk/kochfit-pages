@@ -4,8 +4,9 @@ import { Modal } from "@/components/ui/Modal";
 import { Typo } from "@/components/ui/TypoText";
 import { assetPath } from "@/lib/asset-path";
 import {
-  equipmentShops,
   showEquipmentShops,
+  visibleEquipmentItem,
+  visibleEquipmentShops,
   type EquipmentItem,
 } from "@/content/equipment";
 
@@ -25,8 +26,11 @@ export function EquipmentModal({
   open: boolean;
   onClose: () => void;
 }) {
+  const visibleItem = item ? visibleEquipmentItem(item) : null;
+  const shops = visibleEquipmentShops();
   const hasLinks =
-    item !== null && (item.best.length > 0 || item.other.length > 0);
+    visibleItem !== null &&
+    (visibleItem.best.length > 0 || visibleItem.other.length > 0);
 
   return (
     <Modal
@@ -38,7 +42,7 @@ export function EquipmentModal({
       align="bottom"
       zIndexClass="z-[200]"
     >
-      {item ? (
+      {visibleItem ? (
         <Typo>
         <div data-figma-node="2351:10404">
           <div className="mb-4 flex items-start justify-between gap-3">
@@ -46,7 +50,7 @@ export function EquipmentModal({
               id="equipment-modal-title"
               className="font-display text-[18px] font-normal leading-[1.2] text-ink"
             >
-              {item.name}
+              {visibleItem.name}
             </h2>
             <button
               type="button"
@@ -58,24 +62,24 @@ export function EquipmentModal({
             </button>
           </div>
 
-          {item.advice.text ? (
+          {visibleItem.advice.text ? (
             <div className="mb-4">
               <p className="text-[12px] font-semibold tracking-[-0.12px] text-ink-muted">
-                {item.advice.label}
+                {visibleItem.advice.label}
               </p>
               <p className="mt-1 text-[12px] font-medium leading-normal text-ink-secondary">
-                {item.advice.text}
+                {visibleItem.advice.text}
               </p>
             </div>
           ) : null}
 
-          {item.best.length > 0 ? (
+          {visibleItem.best.length > 0 ? (
             <div className="mb-4">
               <p className="text-[12px] font-semibold tracking-[-0.12px] text-ink-muted">
                 Лучшие варианты:
               </p>
               <ul className="mt-2 flex flex-col gap-2">
-                {item.best.map((link) => (
+                {visibleItem.best.map((link) => (
                   <li key={link.url}>
                     <a
                       href={link.url}
@@ -97,13 +101,13 @@ export function EquipmentModal({
             </div>
           ) : null}
 
-          {item.other.length > 0 ? (
+          {visibleItem.other.length > 0 ? (
             <div className="mb-4">
               <p className="text-[12px] font-semibold tracking-[-0.12px] text-ink-muted">
                 Другие варианты:
               </p>
               <ul className="mt-2 flex flex-col gap-2">
-                {item.other.map((link) => (
+                {visibleItem.other.map((link) => (
                   <li key={link.url}>
                     <a
                       href={link.url}
@@ -125,13 +129,13 @@ export function EquipmentModal({
             </div>
           ) : null}
 
-          {showEquipmentShops && equipmentShops.length > 0 ? (
+          {showEquipmentShops && shops.length > 0 ? (
             <div className="border-t border-line pt-4">
               <p className="text-[12px] font-semibold tracking-[-0.12px] text-ink-muted">
                 Все оборудование в одном месте:
               </p>
               <ul className="mt-2 flex flex-col gap-2">
-                {equipmentShops.map((shop) => (
+                {shops.map((shop) => (
                   <li key={shop.shop}>
                     <a
                       href={shop.url}
@@ -162,7 +166,7 @@ export function EquipmentModal({
             </div>
           ) : null}
 
-          {!hasLinks && !item.advice.text ? (
+          {!hasLinks && !visibleItem.advice.text ? (
             <p className="text-[12px] font-medium text-ink-secondary">
               Рекомендации скоро появятся
             </p>

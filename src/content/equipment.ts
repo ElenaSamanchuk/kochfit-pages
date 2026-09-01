@@ -45,6 +45,37 @@ export const equipmentIntro = {
 /** Блок «Все оборудование в одном месте» в модалке инвентаря */
 export const showEquipmentShops = false;
 
+const hiddenEquipmentShopHost = "structura.shop";
+
+/** Ссылки на structura.shop скрыты в UI, данные в массивах сохраняются. */
+export function isHiddenEquipmentShopUrl(url: string): boolean {
+  try {
+    return (
+      new URL(url).hostname.replace(/^www\./, "") === hiddenEquipmentShopHost
+    );
+  } catch {
+    return url.includes(hiddenEquipmentShopHost);
+  }
+}
+
+export function visibleEquipmentLinks(links: EquipmentLink[]): EquipmentLink[] {
+  return links.filter((link) => !isHiddenEquipmentShopUrl(link.url));
+}
+
+export function visibleEquipmentShops(
+  shops: EquipmentShop[] = equipmentShops,
+): EquipmentShop[] {
+  return shops.filter((shop) => !isHiddenEquipmentShopUrl(shop.url));
+}
+
+export function visibleEquipmentItem(item: EquipmentItem): EquipmentItem {
+  return {
+    ...item,
+    best: visibleEquipmentLinks(item.best),
+    other: visibleEquipmentLinks(item.other),
+  };
+}
+
 export const equipmentShops: EquipmentShop[] = [
   { shop: "restore_roller", code: "Кочкина", url: "https://fitnessroller.ru/" },
   { shop: "structura.shop", code: "Kochkina", url: "https://structura.shop/" },
