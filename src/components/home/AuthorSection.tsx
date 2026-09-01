@@ -121,7 +121,7 @@ export function AuthorSection() {
               </span>
               <div className="relative z-[1] flex w-full flex-col gap-2">
                 <p className="pl-[62px] text-body-lg font-semibold leading-tight text-ink">Юлия Кочкина</p>
-                <p className="w-full pb-1 text-small font-semibold leading-[1.35] tracking-[-0.02em] text-ink-muted">
+                <p className="w-full pl-[62px] pb-1 text-small font-semibold leading-[1.35] tracking-[-0.02em] text-ink-muted">
                   «Здесь не обещают «быстрое чудо», а помогают разобраться, что происходит с телом, дают инструменты, с которыми можно прийти к реальному результату»
                 </p>
               </div>
