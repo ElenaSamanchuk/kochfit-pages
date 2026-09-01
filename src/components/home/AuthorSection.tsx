@@ -119,9 +119,9 @@ export function AuthorSection() {
                   sizes={juliaAvatarSizes}
                 />
               </span>
-              <div className="relative z-[1] flex min-w-0 flex-col gap-1 pl-[62px] font-semibold leading-[normal]">
-                <p className="text-body-lg leading-tight text-ink">Юлия Кочкина</p>
-                <p className="max-w-[calc(100%-14px)] whitespace-pre-line pb-1 text-small leading-[1.35] tracking-[-0.02em] text-ink-muted">
+              <div className="relative z-[1] flex w-full flex-col gap-2">
+                <p className="pl-[62px] text-body-lg font-semibold leading-tight text-ink">Юлия Кочкина</p>
+                <p className="w-full pb-1 text-small font-semibold leading-[1.35] tracking-[-0.02em] text-ink-muted">
                   «Здесь не обещают «быстрое чудо», а помогают разобраться, что происходит с телом, дают инструменты, с которыми можно прийти к реальному результату»
                 </p>
               </div>
