@@ -1,0 +1,1175 @@
+[
+  {
+    "page": "home",
+    "route": "/",
+    "width": 768,
+    "metrics": {
+      "heroH": 720,
+      "heroW": 738,
+      "hasHScroll": false,
+      "scrollW": 768,
+      "clientW": 768,
+      "imgs": [
+        {
+          "i": 0,
+          "w": 832,
+          "h": 812,
+          "top": -46,
+          "left": -47,
+          "clippedTop": true,
+          "clippedBottom": true,
+          "clippedLeft": true,
+          "clippedRight": true
+        },
+        {
+          "i": 1,
+          "w": 64,
+          "h": 64,
+          "top": 621,
+          "left": 31,
+          "clippedTop": false,
+          "clippedBottom": false,
+          "clippedLeft": false,
+          "clippedRight": false
+        },
+        {
+          "i": 2,
+          "w": 0,
+          "h": 0,
+          "top": -10,
+          "left": -15,
+          "clippedTop": true,
+          "clippedBottom": false,
+          "clippedLeft": true,
+          "clippedRight": false
+        },
+        {
+          "i": 3,
+          "w": 0,
+          "h": 0,
+          "top": -10,
+          "left": -15,
+          "clippedTop": true,
+          "clippedBottom": false,
+          "clippedLeft": true,
+          "clippedRight": false
+        }
+      ],
+      "cards": null,
+      "title": {
+        "lines": 2.066666666666667,
+        "clipped": false,
+        "width": 612
+      },
+      "ctas": [
+        {
+          "text": "Бот предзаписиКурс по самым выгодным цен",
+          "visible": true,
+          "bottom": 600,
+          "overflows": false
+        }
+      ]
+    },
+    "screenshot": "e2e/screenshots/tablet-hero-audit/home-768.png"
+  },
+  {
+    "page": "home",
+    "route": "/",
+    "width": 1024,
+    "metrics": {
+      "heroH": 720,
+      "heroW": 994,
+      "hasHScroll": false,
+      "scrollW": 1024,
+      "clientW": 1024,
+      "imgs": [
+        {
+          "i": 0,
+          "w": 1129,
+          "h": 817,
+          "top": -49,
+          "left": -67,
+          "clippedTop": true,
+          "clippedBottom": true,
+          "clippedLeft": true,
+          "clippedRight": true
+        },
+        {
+          "i": 1,
+          "w": 64,
+          "h": 64,
+          "top": 621,
+          "left": 31,
+          "clippedTop": false,
+          "clippedBottom": false,
+          "clippedLeft": false,
+          "clippedRight": false
+        },
+        {
+          "i": 2,
+          "w": 0,
+          "h": 0,
+          "top": -11,
+          "left": -15,
+          "clippedTop": true,
+          "clippedBottom": false,
+          "clippedLeft": true,
+          "clippedRight": false
+        },
+        {
+          "i": 3,
+          "w": 0,
+          "h": 0,
+          "top": -11,
+          "left": -15,
+          "clippedTop": true,
+          "clippedBottom": false,
+          "clippedLeft": true,
+          "clippedRight": false
+        }
+      ],
+      "cards": null,
+      "title": {
+        "lines": 2.066666666666667,
+        "clipped": false,
+        "width": 612
+      },
+      "ctas": [
+        {
+          "text": "Бот предзаписиКурс по самым выгодным цен",
+          "visible": true,
+          "bottom": 600,
+          "overflows": false
+        }
+      ]
+    },
+    "screenshot": "e2e/screenshots/tablet-hero-audit/home-1024.png"
+  },
+  {
+    "page": "home",
+    "route": "/",
+    "width": 1200,
+    "metrics": {
+      "heroH": 720,
+      "heroW": 1170,
+      "hasHScroll": false,
+      "scrollW": 1200,
+      "clientW": 1200,
+      "imgs": [
+        {
+          "i": 0,
+          "w": 1319,
+          "h": 812,
+          "top": -46,
+          "left": -74,
+          "clippedTop": true,
+          "clippedBottom": true,
+          "clippedLeft": true,
+          "clippedRight": true
+        },
+        {
+          "i": 1,
+          "w": 64,
+          "h": 64,
+          "top": 621,
+          "left": 31,
+          "clippedTop": false,
+          "clippedBottom": false,
+          "clippedLeft": false,
+          "clippedRight": false
+        },
+        {
+          "i": 2,
+          "w": 0,
+          "h": 0,
+          "top": -10,
+          "left": -15,
+          "clippedTop": true,
+          "clippedBottom": false,
+          "clippedLeft": true,
+          "clippedRight": false
+        },
+        {
+          "i": 3,
+          "w": 0,
+          "h": 0,
+          "top": -10,
+          "left": -15,
+          "clippedTop": true,
+          "clippedBottom": false,
+          "clippedLeft": true,
+          "clippedRight": false
+        }
+      ],
+      "cards": null,
+      "title": {
+        "lines": 2.066666666666667,
+        "clipped": false,
+        "width": 612
+      },
+      "ctas": [
+        {
+          "text": "Бот предзаписиКурс по самым выгодным цен",
+          "visible": true,
+          "bottom": 600,
+          "overflows": false
+        }
+      ]
+    },
+    "screenshot": "e2e/screenshots/tablet-hero-audit/home-1200.png"
+  },
+  {
+    "page": "community",
+    "route": "/community",
+    "width": 768,
+    "metrics": {
+      "heroH": 720,
+      "heroW": 738,
+      "hasHScroll": false,
+      "scrollW": 768,
+      "clientW": 768,
+      "imgs": [
+        {
+          "i": 0,
+          "w": 0,
+          "h": 0,
+          "top": -10,
+          "left": -15,
+          "clippedTop": true,
+          "clippedBottom": false,
+          "clippedLeft": true,
+          "clippedRight": false
+        },
+        {
+          "i": 1,
+          "w": 834,
+          "h": 813,
+          "top": -62,
+          "left": -48,
+          "clippedTop": true,
+          "clippedBottom": true,
+          "clippedLeft": true,
+          "clippedRight": true
+        },
+        {
+          "i": 2,
+          "w": 0,
+          "h": 0,
+          "top": -10,
+          "left": -15,
+          "clippedTop": true,
+          "clippedBottom": false,
+          "clippedLeft": true,
+          "clippedRight": false
+        },
+        {
+          "i": 3,
+          "w": 40,
+          "h": 40,
+          "top": 443,
+          "left": 366,
+          "clippedTop": false,
+          "clippedBottom": false,
+          "clippedLeft": false,
+          "clippedRight": false
+        },
+        {
+          "i": 4,
+          "w": 0,
+          "h": 0,
+          "top": -10,
+          "left": -15,
+          "clippedTop": true,
+          "clippedBottom": false,
+          "clippedLeft": true,
+          "clippedRight": false
+        }
+      ],
+      "cards": {
+        "top": 428,
+        "bottom": 696,
+        "height": 268,
+        "overflowsHero": false
+      },
+      "title": {
+        "lines": 1.0666666666666667,
+        "clipped": false,
+        "width": 708
+      },
+      "ctas": [
+        {
+          "text": "Посмотреть программу",
+          "visible": true,
+          "bottom": 641,
+          "overflows": false
+        },
+        {
+          "text": "Бот предзаписиКурс по самым выгодным цен",
+          "visible": false,
+          "bottom": -10,
+          "overflows": false
+        }
+      ]
+    },
+    "screenshot": "e2e/screenshots/tablet-hero-audit/community-768.png"
+  },
+  {
+    "page": "community",
+    "route": "/community",
+    "width": 1024,
+    "metrics": {
+      "heroH": 720,
+      "heroW": 994,
+      "hasHScroll": false,
+      "scrollW": 1024,
+      "clientW": 1024,
+      "imgs": [
+        {
+          "i": 0,
+          "w": 0,
+          "h": 0,
+          "top": -10,
+          "left": -15,
+          "clippedTop": true,
+          "clippedBottom": false,
+          "clippedLeft": true,
+          "clippedRight": false
+        },
+        {
+          "i": 1,
+          "w": 1123,
+          "h": 813,
+          "top": -62,
+          "left": -64,
+          "clippedTop": true,
+          "clippedBottom": true,
+          "clippedLeft": true,
+          "clippedRight": true
+        },
+        {
+          "i": 2,
+          "w": 0,
+          "h": 0,
+          "top": -10,
+          "left": -15,
+          "clippedTop": true,
+          "clippedBottom": false,
+          "clippedLeft": true,
+          "clippedRight": false
+        },
+        {
+          "i": 3,
+          "w": 40,
+          "h": 40,
+          "top": 443,
+          "left": 494,
+          "clippedTop": false,
+          "clippedBottom": false,
+          "clippedLeft": false,
+          "clippedRight": false
+        },
+        {
+          "i": 4,
+          "w": 0,
+          "h": 0,
+          "top": -10,
+          "left": -15,
+          "clippedTop": true,
+          "clippedBottom": false,
+          "clippedLeft": true,
+          "clippedRight": false
+        }
+      ],
+      "cards": {
+        "top": 428,
+        "bottom": 696,
+        "height": 268,
+        "overflowsHero": false
+      },
+      "title": {
+        "lines": 1.0666666666666667,
+        "clipped": false,
+        "width": 964
+      },
+      "ctas": [
+        {
+          "text": "Посмотреть программу",
+          "visible": true,
+          "bottom": 641,
+          "overflows": false
+        },
+        {
+          "text": "Бот предзаписиКурс по самым выгодным цен",
+          "visible": false,
+          "bottom": -10,
+          "overflows": false
+        }
+      ]
+    },
+    "screenshot": "e2e/screenshots/tablet-hero-audit/community-1024.png"
+  },
+  {
+    "page": "community",
+    "route": "/community",
+    "width": 1200,
+    "metrics": {
+      "heroH": 720,
+      "heroW": 1170,
+      "hasHScroll": false,
+      "scrollW": 1200,
+      "clientW": 1200,
+      "imgs": [
+        {
+          "i": 0,
+          "w": 0,
+          "h": 0,
+          "top": -10,
+          "left": -15,
+          "clippedTop": true,
+          "clippedBottom": false,
+          "clippedLeft": true,
+          "clippedRight": false
+        },
+        {
+          "i": 1,
+          "w": 1319,
+          "h": 812,
+          "top": -62,
+          "left": -74,
+          "clippedTop": true,
+          "clippedBottom": true,
+          "clippedLeft": true,
+          "clippedRight": true
+        },
+        {
+          "i": 2,
+          "w": 0,
+          "h": 0,
+          "top": -10,
+          "left": -15,
+          "clippedTop": true,
+          "clippedBottom": false,
+          "clippedLeft": true,
+          "clippedRight": false
+        },
+        {
+          "i": 3,
+          "w": 40,
+          "h": 40,
+          "top": 443,
+          "left": 582,
+          "clippedTop": false,
+          "clippedBottom": false,
+          "clippedLeft": false,
+          "clippedRight": false
+        },
+        {
+          "i": 4,
+          "w": 0,
+          "h": 0,
+          "top": -10,
+          "left": -15,
+          "clippedTop": true,
+          "clippedBottom": false,
+          "clippedLeft": true,
+          "clippedRight": false
+        }
+      ],
+      "cards": {
+        "top": 428,
+        "bottom": 696,
+        "height": 268,
+        "overflowsHero": false
+      },
+      "title": {
+        "lines": 1.0666666666666667,
+        "clipped": false,
+        "width": 1140
+      },
+      "ctas": [
+        {
+          "text": "Посмотреть программу",
+          "visible": true,
+          "bottom": 641,
+          "overflows": false
+        },
+        {
+          "text": "Бот предзаписиКурс по самым выгодным цен",
+          "visible": false,
+          "bottom": -10,
+          "overflows": false
+        }
+      ]
+    },
+    "screenshot": "e2e/screenshots/tablet-hero-audit/community-1200.png"
+  },
+  {
+    "page": "pelvic",
+    "route": "/e_mtd",
+    "width": 768,
+    "metrics": {
+      "heroH": 720,
+      "heroW": 738,
+      "hasHScroll": false,
+      "scrollW": 768,
+      "clientW": 768,
+      "imgs": [
+        {
+          "i": 0,
+          "w": 760,
+          "h": 741,
+          "top": -11,
+          "left": -11,
+          "clippedTop": true,
+          "clippedBottom": true,
+          "clippedLeft": true,
+          "clippedRight": true
+        },
+        {
+          "i": 1,
+          "w": 708,
+          "h": 68,
+          "top": 550,
+          "left": 15,
+          "clippedTop": false,
+          "clippedBottom": false,
+          "clippedLeft": false,
+          "clippedRight": false
+        },
+        {
+          "i": 2,
+          "w": 19,
+          "h": 21,
+          "top": 573,
+          "left": 30,
+          "clippedTop": false,
+          "clippedBottom": false,
+          "clippedLeft": false,
+          "clippedRight": false
+        }
+      ],
+      "cards": {
+        "top": 550,
+        "bottom": 696,
+        "height": 146,
+        "overflowsHero": false
+      },
+      "title": {
+        "lines": 2.066666666666667,
+        "clipped": false,
+        "width": 631
+      },
+      "ctas": [
+        {
+          "text": "Посмотреть программу",
+          "visible": true,
+          "bottom": 684,
+          "overflows": false
+        }
+      ]
+    },
+    "screenshot": "e2e/screenshots/tablet-hero-audit/pelvic-768.png"
+  },
+  {
+    "page": "pelvic",
+    "route": "/e_mtd",
+    "width": 1024,
+    "metrics": {
+      "heroH": 720,
+      "heroW": 994,
+      "hasHScroll": false,
+      "scrollW": 1024,
+      "clientW": 1024,
+      "imgs": [
+        {
+          "i": 0,
+          "w": 1023,
+          "h": 741,
+          "top": -11,
+          "left": -15,
+          "clippedTop": true,
+          "clippedBottom": true,
+          "clippedLeft": true,
+          "clippedRight": true
+        },
+        {
+          "i": 1,
+          "w": 964,
+          "h": 68,
+          "top": 550,
+          "left": 15,
+          "clippedTop": false,
+          "clippedBottom": false,
+          "clippedLeft": false,
+          "clippedRight": false
+        },
+        {
+          "i": 2,
+          "w": 19,
+          "h": 21,
+          "top": 573,
+          "left": 30,
+          "clippedTop": false,
+          "clippedBottom": false,
+          "clippedLeft": false,
+          "clippedRight": false
+        }
+      ],
+      "cards": {
+        "top": 550,
+        "bottom": 696,
+        "height": 146,
+        "overflowsHero": false
+      },
+      "title": {
+        "lines": 2.066666666666667,
+        "clipped": false,
+        "width": 631
+      },
+      "ctas": [
+        {
+          "text": "Посмотреть программу",
+          "visible": true,
+          "bottom": 684,
+          "overflows": false
+        }
+      ]
+    },
+    "screenshot": "e2e/screenshots/tablet-hero-audit/pelvic-1024.png"
+  },
+  {
+    "page": "pelvic",
+    "route": "/e_mtd",
+    "width": 1200,
+    "metrics": {
+      "heroH": 720,
+      "heroW": 1170,
+      "hasHScroll": false,
+      "scrollW": 1200,
+      "clientW": 1200,
+      "imgs": [
+        {
+          "i": 0,
+          "w": 1196,
+          "h": 736,
+          "top": -8,
+          "left": -13,
+          "clippedTop": true,
+          "clippedBottom": true,
+          "clippedLeft": true,
+          "clippedRight": true
+        },
+        {
+          "i": 1,
+          "w": 1140,
+          "h": 68,
+          "top": 550,
+          "left": 15,
+          "clippedTop": false,
+          "clippedBottom": false,
+          "clippedLeft": false,
+          "clippedRight": false
+        },
+        {
+          "i": 2,
+          "w": 19,
+          "h": 21,
+          "top": 573,
+          "left": 30,
+          "clippedTop": false,
+          "clippedBottom": false,
+          "clippedLeft": false,
+          "clippedRight": false
+        }
+      ],
+      "cards": {
+        "top": 550,
+        "bottom": 696,
+        "height": 146,
+        "overflowsHero": false
+      },
+      "title": {
+        "lines": 2.066666666666667,
+        "clipped": false,
+        "width": 631
+      },
+      "ctas": [
+        {
+          "text": "Посмотреть программу",
+          "visible": true,
+          "bottom": 684,
+          "overflows": false
+        }
+      ]
+    },
+    "screenshot": "e2e/screenshots/tablet-hero-audit/pelvic-1200.png"
+  },
+  {
+    "page": "postpartum",
+    "route": "/r",
+    "width": 768,
+    "metrics": {
+      "heroH": 720,
+      "heroW": 738,
+      "hasHScroll": false,
+      "scrollW": 768,
+      "clientW": 768,
+      "imgs": [
+        {
+          "i": 0,
+          "w": 890,
+          "h": 868,
+          "top": -74,
+          "left": -76,
+          "clippedTop": true,
+          "clippedBottom": true,
+          "clippedLeft": true,
+          "clippedRight": true
+        },
+        {
+          "i": 1,
+          "w": 950,
+          "h": 638,
+          "top": 117,
+          "left": -106,
+          "clippedTop": false,
+          "clippedBottom": true,
+          "clippedLeft": true,
+          "clippedRight": true
+        },
+        {
+          "i": 2,
+          "w": 708,
+          "h": 68,
+          "top": 550,
+          "left": 15,
+          "clippedTop": false,
+          "clippedBottom": false,
+          "clippedLeft": false,
+          "clippedRight": false
+        },
+        {
+          "i": 3,
+          "w": 19,
+          "h": 21,
+          "top": 573,
+          "left": 30,
+          "clippedTop": false,
+          "clippedBottom": false,
+          "clippedLeft": false,
+          "clippedRight": false
+        }
+      ],
+      "cards": {
+        "top": 550,
+        "bottom": 696,
+        "height": 146,
+        "overflowsHero": false
+      },
+      "title": {
+        "lines": 2.066666666666667,
+        "clipped": false,
+        "width": 631
+      },
+      "ctas": [
+        {
+          "text": "Посмотреть программу",
+          "visible": true,
+          "bottom": 684,
+          "overflows": false
+        }
+      ]
+    },
+    "screenshot": "e2e/screenshots/tablet-hero-audit/postpartum-768.png"
+  },
+  {
+    "page": "postpartum",
+    "route": "/r",
+    "width": 1024,
+    "metrics": {
+      "heroH": 720,
+      "heroW": 994,
+      "hasHScroll": false,
+      "scrollW": 1024,
+      "clientW": 1024,
+      "imgs": [
+        {
+          "i": 0,
+          "w": 1180,
+          "h": 855,
+          "top": -67,
+          "left": -93,
+          "clippedTop": true,
+          "clippedBottom": true,
+          "clippedLeft": true,
+          "clippedRight": true
+        },
+        {
+          "i": 1,
+          "w": 1247,
+          "h": 622,
+          "top": 122,
+          "left": -126,
+          "clippedTop": false,
+          "clippedBottom": true,
+          "clippedLeft": true,
+          "clippedRight": true
+        },
+        {
+          "i": 2,
+          "w": 964,
+          "h": 68,
+          "top": 550,
+          "left": 15,
+          "clippedTop": false,
+          "clippedBottom": false,
+          "clippedLeft": false,
+          "clippedRight": false
+        },
+        {
+          "i": 3,
+          "w": 19,
+          "h": 21,
+          "top": 573,
+          "left": 30,
+          "clippedTop": false,
+          "clippedBottom": false,
+          "clippedLeft": false,
+          "clippedRight": false
+        }
+      ],
+      "cards": {
+        "top": 550,
+        "bottom": 696,
+        "height": 146,
+        "overflowsHero": false
+      },
+      "title": {
+        "lines": 2.066666666666667,
+        "clipped": false,
+        "width": 631
+      },
+      "ctas": [
+        {
+          "text": "Посмотреть программу",
+          "visible": true,
+          "bottom": 684,
+          "overflows": false
+        }
+      ]
+    },
+    "screenshot": "e2e/screenshots/tablet-hero-audit/postpartum-1024.png"
+  },
+  {
+    "page": "postpartum",
+    "route": "/r",
+    "width": 1200,
+    "metrics": {
+      "heroH": 720,
+      "heroW": 1170,
+      "hasHScroll": false,
+      "scrollW": 1200,
+      "clientW": 1200,
+      "imgs": [
+        {
+          "i": 0,
+          "w": 1422,
+          "h": 875,
+          "top": -77,
+          "left": -126,
+          "clippedTop": true,
+          "clippedBottom": true,
+          "clippedLeft": true,
+          "clippedRight": true
+        },
+        {
+          "i": 1,
+          "w": 1523,
+          "h": 646,
+          "top": 115,
+          "left": -177,
+          "clippedTop": false,
+          "clippedBottom": true,
+          "clippedLeft": true,
+          "clippedRight": true
+        },
+        {
+          "i": 2,
+          "w": 1140,
+          "h": 68,
+          "top": 550,
+          "left": 15,
+          "clippedTop": false,
+          "clippedBottom": false,
+          "clippedLeft": false,
+          "clippedRight": false
+        },
+        {
+          "i": 3,
+          "w": 19,
+          "h": 21,
+          "top": 573,
+          "left": 30,
+          "clippedTop": false,
+          "clippedBottom": false,
+          "clippedLeft": false,
+          "clippedRight": false
+        }
+      ],
+      "cards": {
+        "top": 550,
+        "bottom": 696,
+        "height": 146,
+        "overflowsHero": false
+      },
+      "title": {
+        "lines": 2.066666666666667,
+        "clipped": false,
+        "width": 631
+      },
+      "ctas": [
+        {
+          "text": "Посмотреть программу",
+          "visible": true,
+          "bottom": 684,
+          "overflows": false
+        }
+      ]
+    },
+    "screenshot": "e2e/screenshots/tablet-hero-audit/postpartum-1200.png"
+  },
+  {
+    "page": "pregnancy",
+    "route": "/for_pregnant",
+    "width": 768,
+    "metrics": {
+      "heroH": 720,
+      "heroW": 738,
+      "hasHScroll": false,
+      "scrollW": 768,
+      "clientW": 768,
+      "imgs": [
+        {
+          "i": 0,
+          "w": 881,
+          "h": 860,
+          "top": -70,
+          "left": -72,
+          "clippedTop": true,
+          "clippedBottom": true,
+          "clippedLeft": true,
+          "clippedRight": true
+        },
+        {
+          "i": 1,
+          "w": 855,
+          "h": 593,
+          "top": 155,
+          "left": -59,
+          "clippedTop": false,
+          "clippedBottom": true,
+          "clippedLeft": true,
+          "clippedRight": true
+        },
+        {
+          "i": 2,
+          "w": 708,
+          "h": 68,
+          "top": 550,
+          "left": 15,
+          "clippedTop": false,
+          "clippedBottom": false,
+          "clippedLeft": false,
+          "clippedRight": false
+        },
+        {
+          "i": 3,
+          "w": 19,
+          "h": 21,
+          "top": 573,
+          "left": 30,
+          "clippedTop": false,
+          "clippedBottom": false,
+          "clippedLeft": false,
+          "clippedRight": false
+        }
+      ],
+      "cards": {
+        "top": 550,
+        "bottom": 696,
+        "height": 146,
+        "overflowsHero": false
+      },
+      "title": {
+        "lines": 1.0666666666666667,
+        "clipped": false,
+        "width": 631
+      },
+      "ctas": [
+        {
+          "text": "Посмотреть программу",
+          "visible": true,
+          "bottom": 684,
+          "overflows": false
+        }
+      ]
+    },
+    "screenshot": "e2e/screenshots/tablet-hero-audit/pregnancy-768.png"
+  },
+  {
+    "page": "pregnancy",
+    "route": "/for_pregnant",
+    "width": 1024,
+    "metrics": {
+      "heroH": 720,
+      "heroW": 994,
+      "hasHScroll": false,
+      "scrollW": 1024,
+      "clientW": 1024,
+      "imgs": [
+        {
+          "i": 0,
+          "w": 1174,
+          "h": 850,
+          "top": -65,
+          "left": -90,
+          "clippedTop": true,
+          "clippedBottom": true,
+          "clippedLeft": true,
+          "clippedRight": true
+        },
+        {
+          "i": 1,
+          "w": 1132,
+          "h": 583,
+          "top": 158,
+          "left": -69,
+          "clippedTop": false,
+          "clippedBottom": true,
+          "clippedLeft": true,
+          "clippedRight": true
+        },
+        {
+          "i": 2,
+          "w": 964,
+          "h": 68,
+          "top": 550,
+          "left": 15,
+          "clippedTop": false,
+          "clippedBottom": false,
+          "clippedLeft": false,
+          "clippedRight": false
+        },
+        {
+          "i": 3,
+          "w": 19,
+          "h": 21,
+          "top": 573,
+          "left": 30,
+          "clippedTop": false,
+          "clippedBottom": false,
+          "clippedLeft": false,
+          "clippedRight": false
+        }
+      ],
+      "cards": {
+        "top": 550,
+        "bottom": 696,
+        "height": 146,
+        "overflowsHero": false
+      },
+      "title": {
+        "lines": 1.0666666666666667,
+        "clipped": false,
+        "width": 631
+      },
+      "ctas": [
+        {
+          "text": "Посмотреть программу",
+          "visible": true,
+          "bottom": 684,
+          "overflows": false
+        }
+      ]
+    },
+    "screenshot": "e2e/screenshots/tablet-hero-audit/pregnancy-1024.png"
+  },
+  {
+    "page": "pregnancy",
+    "route": "/for_pregnant",
+    "width": 1200,
+    "metrics": {
+      "heroH": 720,
+      "heroW": 1170,
+      "hasHScroll": false,
+      "scrollW": 1200,
+      "clientW": 1200,
+      "imgs": [
+        {
+          "i": 0,
+          "w": 1393,
+          "h": 857,
+          "top": -69,
+          "left": -111,
+          "clippedTop": true,
+          "clippedBottom": true,
+          "clippedLeft": true,
+          "clippedRight": true
+        },
+        {
+          "i": 1,
+          "w": 1350,
+          "h": 591,
+          "top": 156,
+          "left": -90,
+          "clippedTop": false,
+          "clippedBottom": true,
+          "clippedLeft": true,
+          "clippedRight": true
+        },
+        {
+          "i": 2,
+          "w": 1140,
+          "h": 68,
+          "top": 550,
+          "left": 15,
+          "clippedTop": false,
+          "clippedBottom": false,
+          "clippedLeft": false,
+          "clippedRight": false
+        },
+        {
+          "i": 3,
+          "w": 19,
+          "h": 21,
+          "top": 573,
+          "left": 30,
+          "clippedTop": false,
+          "clippedBottom": false,
+          "clippedLeft": false,
+          "clippedRight": false
+        }
+      ],
+      "cards": {
+        "top": 550,
+        "bottom": 696,
+        "height": 146,
+        "overflowsHero": false
+      },
+      "title": {
+        "lines": 1.0666666666666667,
+        "clipped": false,
+        "width": 631
+      },
+      "ctas": [
+        {
+          "text": "Посмотреть программу",
+          "visible": true,
+          "bottom": 684,
+          "overflows": false
+        }
+      ]
+    },
+    "screenshot": "e2e/screenshots/tablet-hero-audit/pregnancy-1200.png"
+  }
+]
