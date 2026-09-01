@@ -74,9 +74,9 @@ export const heroFigureZoom = "hero-figure-zoom absolute inset-0 size-full";
 export const heroBgPhoto =
   "hero-bg-photo absolute inset-0 size-full max-w-none object-cover scale-[1.15] xl:scale-100";
 
-/** /community hero — <xl zoom от верха: фигура уезжает вниз, освобождая место под текст. */
+/** /community hero — <xl лёгкий zoom вокруг головы; xl без scale. */
 export const heroBgPhotoBeauty =
-  "hero-bg-photo absolute inset-0 size-full max-w-none object-cover xl:scale-100";
+  "hero-bg-photo absolute inset-0 size-full max-w-none object-cover max-xl:scale-[1.1] xl:scale-100";
 
 /** /community hero <xl — высота верхней текстовой зоны (subtitle ~240px @375 + 20px gap). */
 export const heroBeautyMobileTextZoneH = "h-[260px]";
@@ -109,10 +109,11 @@ export const heroBgPhotoPosPelvic =
 
 /**
  * /community hero <xl — единая стена + фигура на весь hero (без отдельного top bg-surface).
- * object-[92%_bottom]: стена сверху, лицо ниже text zone, ноги у карточек.
+ * object-[50%_26%] + origin-[50%_38%] + translate: голова ~8–20px под subtitle @375,
+ * pose крупнее (scale на heroBgPhotoBeauty). xl: object-bottom без изменений.
  */
 export const heroBgPhotoBeautyMobileWall =
-  "object-[50%_top] origin-top";
+  "max-xl:object-[50%_30%] max-xl:origin-[50%_38%] max-xl:-translate-y-[24px] xl:object-bottom xl:origin-center";
 
 /** /community hero — xl: полный фон object-bottom. <xl: см. heroBgPhotoBeautyMobileWall. */
 export const heroBgPhotoPosBeauty =

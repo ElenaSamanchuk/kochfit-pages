@@ -350,6 +350,39 @@ body {
   }
 }
 
+/* Каталог — флагман «Красота и здоровье»: max-xl две строки тегов (2261:1785) */
+@media (max-width: 1279px) {
+  .flagship-catalog-tags .flagship-tag-breath {
+    display: none;
+  }
+}
+
+@media (min-width: 1280px) {
+  .flagship-catalog-tags .flagship-tag-flag {
+    order: 1;
+  }
+
+  .flagship-catalog-tags .flagship-tag-intro {
+    order: 2;
+  }
+
+  .flagship-catalog-tags .flagship-tag-pilates {
+    order: 3;
+  }
+
+  .flagship-catalog-tags .flagship-tag-strength {
+    order: 4;
+  }
+
+  .flagship-catalog-tags .flagship-tag-breath {
+    order: 5;
+  }
+
+  .flagship-catalog-tags .flagship-tag-mfr {
+    order: 6;
+  }
+}
+
 /* Пилюли hero: mobile/desktop py из токенов — не усреднять через 640px */
 .plaque-chip {
   display: inline-flex;

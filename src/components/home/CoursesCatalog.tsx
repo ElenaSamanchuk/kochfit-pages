@@ -58,9 +58,6 @@ const CATALOG_CTA_BUTTON_TEXT = "Подробнее" as const;
 const catalogCtaButtonClass =
   "catalog-cta-btn btn-primary flex min-h-[36px] shrink-0 items-center justify-center rounded-[10px] px-2 py-1 sm:max-xl:min-h-[44px] sm:max-xl:rounded-[12px] sm:max-xl:px-6 sm:max-xl:py-3 xl:min-h-0 xl:rounded-[12px] xl:px-[32px] xl:py-[16px]";
 
-/** Теги флагманского курса; на мобилке показываем первые три. */
-const flagshipTags = ["Пилатес", "Силовые", "Дыхание", "МФР"];
-
 const flagshipFeatures = [
   "тренировки распределены по уровням и задачам",
   "материалы по нутрициологии, физиологии, психологии",
@@ -163,7 +160,7 @@ export function CoursesCatalog() {
           <article className="course-card course-card-abs relative w-full overflow-hidden border-2 border-solid border-[#84b0d2] xl:h-[267px] xl:w-[740px]">
             <span
               aria-hidden
-              className="pointer-events-none absolute left-[323px] top-[-290px] hidden h-[655.831px] w-[699.715px] items-center justify-center xl:flex"
+              className="pointer-events-none absolute left-[323px] top-[-290px] hidden h-[655.831px] w-[699.715px] items-center justify-center"
             >
               <span className="block rotate-[-144.22deg]">
                 <img
@@ -179,52 +176,46 @@ export function CoursesCatalog() {
             </span>
 
             <div className="relative flex flex-col gap-4 xl:contents">
-              <div className="flex w-full flex-wrap items-start gap-x-2 gap-y-2 xl:absolute xl:left-[16px] xl:top-[16px] xl:w-auto">
+              <div className="w-full xl:absolute xl:left-[16px] xl:top-[16px] xl:w-auto">
                 <div className="flex min-w-0 flex-1 flex-wrap items-center gap-2">
-                  <span className="course-catalog-tag bg-surface-blue text-accent">
-                    Флагманский курс
-                  </span>
-                  <span className="course-catalog-tag bg-surface text-ink-muted">
-                    Если не знаете, с чего начать
-                  </span>
-                  {flagshipTags.map((tag, i) => (
-                    <span
-                      key={tag}
-                      className={`course-catalog-tag bg-surface text-ink-muted ${
-                        i >= 2 ? "max-xl:!hidden" : ""
-                      }`}
-                    >
-                      {tag}
+                  <div className="flex flex-wrap items-center gap-2 max-xl:col-start-1 max-xl:row-start-1 xl:contents">
+                    <span className="course-catalog-tag bg-surface-blue text-accent">
+                      Флагманский курс
                     </span>
-                  ))}
+                  </div>
+                  <span className="relative ml-auto inline-grid shrink-0 place-items-start leading-none xl:hidden">
+                    <span className="col-start-1 row-start-1 size-[60px]">
+                      <img
+                        loading="lazy"
+                        alt=""
+                        width={60}
+                        height={60}
+                        className="block size-full"
+                        src={img("imgRectangle29424.svg")}
+                      />
+                    </span>
+                    <span className="col-start-1 row-start-1 ml-[4px] mt-[4px] size-[52px] overflow-hidden rounded-sm">
+                      <img
+                        loading="lazy"
+                        decoding="async"
+                        alt="Курс «Красота и здоровье»"
+                        data-figma-node="2241:5358"
+                        width={52}
+                        height={52}
+                        className="block size-full origin-[52%_18%] object-cover object-[52%_22%] [scale:2.65]"
+                        src={courseImageSrc}
+                      />
+                    </span>
+                  </span>
+                  <div className="flex flex-wrap items-center gap-2 max-xl:col-span-2 max-xl:row-start-2 xl:contents">
+                    <span className="course-catalog-tag bg-surface text-ink-muted">
+                      Если не знаете, с чего начать
+                    </span>
+                  </div>
                 </div>
-                <span className="relative inline-grid shrink-0 place-items-start leading-none xl:hidden">
-                  <span className="col-start-1 row-start-1 size-[60px]">
-                    <img
-                      loading="lazy"
-                      alt=""
-                      width={60}
-                      height={60}
-                      className="block size-full"
-                      src={img("imgRectangle29424.svg")}
-                    />
-                  </span>
-                  <span className="col-start-1 row-start-1 ml-[4px] mt-[4px] size-[52px] overflow-hidden rounded-sm">
-                    <img
-                      loading="lazy"
-                      decoding="async"
-                      alt="Курс «Красота и здоровье»"
-                      data-figma-node="2241:5358"
-                      width={52}
-                      height={52}
-                      className="block size-full origin-[52%_18%] object-cover object-[52%_22%] [scale:2.65]"
-                      src={courseImageSrc}
-                    />
-                  </span>
-                </span>
               </div>
 
-              <div className="flex flex-col gap-4 xl:absolute xl:left-[16px] xl:top-[64px] xl:flex-row xl:items-start xl:gap-[40px] xl:leading-[normal]">
+              <div className="flex flex-col gap-4 xl:absolute xl:left-[16px] xl:top-[58px] xl:flex-row xl:items-start xl:gap-[40px] xl:leading-[normal]">
                 <div className="flex max-w-[301px] flex-col gap-1">
                   <p className="text-body-lg font-semibold text-ink">Красота и здоровье</p>
                   <p className="text-small font-normal text-ink-secondary">
@@ -239,7 +230,7 @@ export function CoursesCatalog() {
                 </div>
               </div>
 
-              <div className="flex flex-col gap-2 xl:absolute xl:left-[357px] xl:top-[160px] xl:w-[362px] xl:leading-[normal]">
+              <div className="flex flex-col gap-2 xl:absolute xl:left-[357px] xl:top-[153px] xl:w-[362px] xl:leading-[normal]">
                 <p className="text-body font-semibold text-ink">Что внутри:</p>
                 {flagshipFeatures.map((feature) => (
                   <span key={feature} className="flex w-full items-center gap-2">
