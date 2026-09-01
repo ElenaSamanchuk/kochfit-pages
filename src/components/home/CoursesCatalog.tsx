@@ -175,7 +175,7 @@ export function CoursesCatalog() {
               </span>
             </span>
 
-            <div className="relative flex flex-col gap-4 xl:contents">
+            <div className="relative flex flex-col gap-2 xl:contents">
               <div className="w-full xl:absolute xl:left-[16px] xl:top-[16px] xl:w-auto">
                 <div className="flagship-catalog-header flex min-w-0 flex-1 max-xl:grid max-xl:grid-cols-[1fr_auto] max-xl:items-start max-xl:gap-x-2 xl:flex xl:flex-wrap xl:items-center xl:gap-2">
                   <div className="flagship-catalog-tag-stack flex flex-col xl:contents xl:flex-row xl:flex-wrap xl:items-center xl:gap-2">
