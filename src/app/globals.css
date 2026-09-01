@@ -352,6 +352,14 @@ body {
 
 /* Каталог — флагман «Красота и здоровье»: max-xl две строки тегов (2261:1785) */
 @media (max-width: 1279px) {
+  .flagship-catalog-header {
+    margin-top: -4px;
+  }
+
+  .flagship-catalog-tag-stack {
+    gap: 2px;
+  }
+
   .flagship-catalog-tags .flagship-tag-breath {
     display: none;
   }

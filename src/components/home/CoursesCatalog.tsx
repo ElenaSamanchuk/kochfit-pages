@@ -177,13 +177,16 @@ export function CoursesCatalog() {
 
             <div className="relative flex flex-col gap-4 xl:contents">
               <div className="w-full xl:absolute xl:left-[16px] xl:top-[16px] xl:w-auto">
-                <div className="flex min-w-0 flex-1 flex-wrap items-center gap-2">
-                  <div className="flex flex-wrap items-center gap-2 max-xl:col-start-1 max-xl:row-start-1 xl:contents">
+                <div className="flagship-catalog-header flex min-w-0 flex-1 max-xl:grid max-xl:grid-cols-[1fr_auto] max-xl:items-start max-xl:gap-x-2 xl:flex xl:flex-wrap xl:items-center xl:gap-2">
+                  <div className="flagship-catalog-tag-stack flex flex-col xl:contents xl:flex-row xl:flex-wrap xl:items-center xl:gap-2">
                     <span className="course-catalog-tag bg-surface-blue text-accent">
                       Флагманский курс
                     </span>
+                    <span className="course-catalog-tag bg-surface text-ink-muted">
+                      Если не знаете, с чего начать
+                    </span>
                   </div>
-                  <span className="relative ml-auto inline-grid shrink-0 place-items-start leading-none xl:hidden">
+                  <span className="relative inline-grid shrink-0 place-items-start leading-none max-xl:col-start-2 max-xl:row-start-1 xl:hidden">
                     <span className="col-start-1 row-start-1 size-[60px]">
                       <img
                         loading="lazy"
@@ -207,11 +210,6 @@ export function CoursesCatalog() {
                       />
                     </span>
                   </span>
-                  <div className="flex flex-wrap items-center gap-2 max-xl:col-span-2 max-xl:row-start-2 xl:contents">
-                    <span className="course-catalog-tag bg-surface text-ink-muted">
-                      Если не знаете, с чего начать
-                    </span>
-                  </div>
                 </div>
               </div>
 
