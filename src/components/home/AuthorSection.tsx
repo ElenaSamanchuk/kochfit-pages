@@ -159,8 +159,8 @@ export function AuthorSection() {
       </div>
 
       {/* Правая колонка — Figma 2265:2902: items-center, карточка 260 по центру (inset ~50.5) */}
-      <div className="relative z-10 flex w-full flex-col gap-6 sm:gap-8 xl:w-[420px] xl:shrink-0 xl:items-center xl:gap-[158px]">
-        <p className="w-full font-display text-[15px] font-normal leading-[1.35] text-ink-secondary sm:text-body-lg xl:text-right xl:leading-[1.2]">
+      <div className="relative z-10 flex w-full min-w-0 flex-col gap-6 sm:gap-8 xl:w-[361px] xl:max-w-[361px] xl:shrink-0 xl:items-center xl:gap-[158px]">
+        <p className="w-full min-w-0 font-display text-[15px] font-normal leading-[1.35] text-ink-secondary sm:text-body-lg xl:text-right xl:leading-[1.2]">
           Кочфит — это не только тренировка и экспертность, но и большое комьюнити, в котором есть
           поддержка от Юлии, куратора
         </p>
