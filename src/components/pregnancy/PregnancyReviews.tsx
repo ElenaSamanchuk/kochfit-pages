@@ -327,7 +327,7 @@ export function PregnancyReviews() {
         <div
           data-drag-scroll
           data-figma-node="2351:11143-scroll"
-          className="mt-5 flex min-w-0 snap-x snap-mandatory items-start gap-3 overflow-x-auto overflow-y-visible scroll-smooth pb-1 [-ms-overflow-style:none] [-webkit-overflow-scrolling:touch] [scrollbar-width:none] [touch-action:pan-x] max-xl:hscroll-bleed lg:mt-[40px] lg:gap-4 xl:hscroll-end xl:w-[calc(50%+50vw)] xl:max-w-none xl:snap-none [&::-webkit-scrollbar]:hidden"
+          className="mt-5 flex min-w-0 snap-x snap-mandatory items-start gap-3 overflow-x-auto overflow-y-visible scroll-smooth pb-1 [-ms-overflow-style:none] [-webkit-overflow-scrolling:touch] [scrollbar-width:none] [touch-action:pan-x_pan-y] max-xl:hscroll-bleed lg:mt-[40px] lg:gap-4 xl:hscroll-end xl:w-[calc(50%+50vw)] xl:max-w-none xl:snap-none [&::-webkit-scrollbar]:hidden"
         >
           {cards.map((card) => (
             <article

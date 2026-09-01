@@ -187,7 +187,7 @@ export function Footer() {
             </div>
           </div>
 
-          {/* 3. Документы в 2 колонки + ИП / NinetyNine */}
+          {/* 3. Документы в 2 колонки + ИП / Shumann lab */}
           <div className="grid grid-cols-2 gap-x-[12px] font-display text-[11px] font-normal leading-[1.25] text-white/50">
             <div className="flex min-w-0 flex-col items-start gap-0">
               {mobileLegalLeft.map((link) => (

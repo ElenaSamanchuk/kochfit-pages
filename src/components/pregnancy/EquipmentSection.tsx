@@ -196,7 +196,7 @@ export function EquipmentSection() {
         id="course-equipment-scroller"
         data-drag-scroll
         data-figma-node="2351:11434"
-        className="mt-6 flex min-w-0 items-stretch gap-3 overflow-x-auto overflow-y-visible pb-1 [-ms-overflow-style:none] [-webkit-overflow-scrolling:touch] [scrollbar-width:none] [touch-action:pan-x] max-xl:hscroll-bleed sm:mt-[40px] lg:gap-4 xl:hscroll-end xl:w-[calc(50%+50vw)] xl:max-w-none [&::-webkit-scrollbar]:hidden"
+        className="mt-6 flex min-w-0 items-stretch gap-3 overflow-x-auto overflow-y-visible pb-1 [-ms-overflow-style:none] [-webkit-overflow-scrolling:touch] [scrollbar-width:none] [touch-action:pan-x_pan-y] max-xl:hscroll-bleed sm:mt-[40px] lg:gap-4 xl:hscroll-end xl:w-[calc(50%+50vw)] xl:max-w-none [&::-webkit-scrollbar]:hidden"
       >
         {cards.map((card) => (
           <EquipmentCardView key={card.id} card={card} onOpen={openModal} />

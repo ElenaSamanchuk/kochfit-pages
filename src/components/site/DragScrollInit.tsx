@@ -76,21 +76,6 @@ export function DragScrollInit() {
     document.addEventListener("click", onClickCapture, true);
     document.addEventListener("dragstart", onDragStart);
 
-    // Вертикальное колёсико над лентой → горизонтальный скролл (как в нативных каруселях)
-    const onWheel = (e: WheelEvent) => {
-      const el = (e.target as HTMLElement).closest<HTMLElement>("[data-drag-scroll]");
-      if (!el || el.scrollWidth <= el.clientWidth + 1) return;
-      let delta = e.deltaX;
-      if (Math.abs(delta) <= Math.abs(e.deltaY)) delta = e.deltaY;
-      if (delta === 0) return;
-      // Только если у ленты есть куда листать в направлении жеста
-      const goingRight = delta > 0;
-      if (goingRight && el.scrollLeft >= el.scrollWidth - el.clientWidth - 1) return;
-      if (!goingRight && el.scrollLeft <= 0) return;
-      e.preventDefault();
-      el.scrollLeft += delta;
-    };
-    document.addEventListener("wheel", onWheel, { passive: false });
 
     cleanups.push(() => {
       document.removeEventListener("pointerdown", onPointerDown);
@@ -99,7 +84,6 @@ export function DragScrollInit() {
       window.removeEventListener("pointercancel", endDrag);
       document.removeEventListener("click", onClickCapture, true);
       document.removeEventListener("dragstart", onDragStart);
-      document.removeEventListener("wheel", onWheel);
     });
 
     /* ——— 2. Стрелки ——— */

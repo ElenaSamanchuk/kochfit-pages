@@ -63,7 +63,7 @@ export function PersonalTrainingModal({
                   name={f.name}
                   placeholder={f.name}
                   rows={3}
-                  className={inputClass}
+                  className={`${inputClass} resize-none`}
                 />
               ) : (
                 <input

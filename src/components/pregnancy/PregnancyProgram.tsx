@@ -267,7 +267,7 @@ export function PregnancyProgram() {
       </h2>
       <div
         data-drag-scroll
-        className="mt-6 flex min-w-0 items-stretch gap-5 overflow-x-auto overflow-y-visible pb-1 [-ms-overflow-style:none] [-webkit-overflow-scrolling:touch] [scrollbar-width:none] [touch-action:pan-x] max-[1199px]:hscroll-bleed sm:mt-[41px] min-[1200px]:hscroll-end min-[1200px]:w-[calc(50%+50vw)] min-[1200px]:max-w-none [&::-webkit-scrollbar]:hidden"
+        className="mt-6 flex min-w-0 items-stretch gap-5 overflow-x-auto overflow-y-visible pb-1 [-ms-overflow-style:none] [-webkit-overflow-scrolling:touch] [scrollbar-width:none] [touch-action:pan-x_pan-y] max-[1199px]:hscroll-bleed sm:mt-[41px] min-[1200px]:hscroll-end min-[1200px]:w-[calc(50%+50vw)] min-[1200px]:max-w-none [&::-webkit-scrollbar]:hidden"
       >
         {cards.map((card) => (
           <ProgramCardView key={card.node} card={card} chipCtx={chipCtx} />

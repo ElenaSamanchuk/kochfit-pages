@@ -75,7 +75,7 @@ export function AuthorSection() {
       </span>
 
       {/* Левая колонка */}
-      <div className="relative z-10 flex w-full flex-col gap-6 sm:gap-8 xl:w-[472px] xl:shrink-0 xl:gap-[154px]">
+      <div className="relative z-10 flex w-full flex-col gap-6 sm:gap-8 xl:w-[472px] xl:shrink-0 xl:gap-[190px]">
         <h2 className="max-w-[338px] font-display text-h2 font-normal leading-[1.2] text-ink">
           Kochfit ведёт Юлия Кочкина
         </h2>
@@ -91,7 +91,7 @@ export function AuthorSection() {
               <span
                 data-figma-node="2265:2897"
                 aria-hidden
-                className="absolute right-[12px] top-[12px] z-10 block size-[36px] shrink-0 overflow-hidden rounded-full border border-solid border-surface-blue bg-surface-blue"
+                className="absolute right-[12px] top-[12px] z-10 hidden size-[36px] shrink-0 overflow-hidden rounded-full border border-solid border-surface-blue bg-surface-blue"
               >
                 <img
                   loading="lazy"
@@ -105,7 +105,7 @@ export function AuthorSection() {
               <span
                 data-figma-node="2265:2893"
                 aria-hidden
-                className="pointer-events-none absolute bottom-[10px] right-[10px] z-0 block size-[48px] overflow-hidden rounded-full border border-solid border-surface-blue shadow-[var(--shadow-card)]"
+                className="pointer-events-none absolute left-[15px] top-[15px] z-0 block size-[48px] overflow-hidden rounded-full border border-solid border-surface-blue shadow-[var(--shadow-card)]"
               >
                 <img
                   loading="lazy"
@@ -119,7 +119,7 @@ export function AuthorSection() {
                   sizes={juliaAvatarSizes}
                 />
               </span>
-              <div className="relative z-[1] flex min-w-0 flex-col gap-1 pr-11 font-semibold leading-[normal]">
+              <div className="relative z-[1] flex min-w-0 flex-col gap-1 pl-[62px] font-semibold leading-[normal]">
                 <p className="text-body-lg leading-tight text-ink">Юлия Кочкина</p>
                 <p className="max-w-[calc(100%-14px)] whitespace-pre-line pb-1 text-small leading-[1.35] tracking-[-0.02em] text-ink-muted">
                   «Здесь не обещают «быстрое чудо», а помогают разобраться, что происходит с телом, дают инструменты, с которыми можно прийти к реальному результату»
@@ -160,7 +160,7 @@ export function AuthorSection() {
 
       {/* Правая колонка — Figma 2265:2902: items-center, карточка 260 по центру (inset ~50.5) */}
       <div className="relative z-10 flex w-full min-w-0 flex-col gap-6 sm:gap-8 xl:w-[361px] xl:max-w-[361px] xl:shrink-0 xl:items-center xl:gap-[158px]">
-        <p className="w-full min-w-0 font-display text-[15px] font-normal leading-[1.35] text-ink-secondary sm:text-body-lg xl:text-right xl:leading-[1.2]">
+        <p className="w-full min-w-0 font-display text-[15px] font-normal leading-[1.35] text-ink-secondary sm:text-body-lg xl:text-right xl:text-[15px] xl:leading-[1.3]">
           Кочфит — это не только тренировка и экспертность, но и большое комьюнити, в котором есть
           поддержка от Юлии, куратора
         </p>

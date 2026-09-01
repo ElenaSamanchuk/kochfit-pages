@@ -76,7 +76,7 @@ export function WhyKochfit() {
             data-drag-scroll
             /* xl:snap-none — при mandatory-снапе точка привязки последней карточки лежит за maxScroll,
                и браузер откатывает скролл назад, из-за чего до 5-й карточки нельзя доехать драгом */
-            className="flex min-w-0 snap-x snap-mandatory gap-4 overflow-x-auto overflow-y-visible scroll-smooth pb-1 [-ms-overflow-style:none] [-webkit-overflow-scrolling:touch] [scrollbar-width:none] [touch-action:pan-x] max-xl:hscroll-bleed xl:mr-[calc((1160px-100vw)/2)] xl:flex-1 xl:hscroll-end-bleed xl:items-start xl:snap-none xl:gap-[16px] [&::-webkit-scrollbar]:hidden"
+            className="flex min-w-0 snap-x snap-mandatory gap-4 overflow-x-auto overflow-y-visible scroll-smooth pb-1 [-ms-overflow-style:none] [-webkit-overflow-scrolling:touch] [scrollbar-width:none] [touch-action:pan-x_pan-y] max-xl:hscroll-bleed xl:mr-[calc((1160px-100vw)/2)] xl:flex-1 xl:hscroll-end-bleed xl:items-start xl:snap-none xl:gap-[16px] [&::-webkit-scrollbar]:hidden"
           >
           {/* Карточка 1 — Figma 2241:5251, h 207 */}
           <article className="relative flex w-[min(242px,78vw)] shrink-0 snap-start flex-col items-start max-xl:justify-between gap-3 rounded-xl bg-white p-[15px] drop-shadow-[var(--shadow-card)] xl:h-[207px] xl:p-[16px] xl:justify-start xl:gap-[78px]">

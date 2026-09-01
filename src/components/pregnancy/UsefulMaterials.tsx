@@ -139,7 +139,7 @@ export function UsefulMaterials() {
           <div
             id="useful-materials-scroll"
             data-drag-scroll
-            className="flex min-w-0 items-stretch gap-3 overflow-x-auto overflow-y-visible scroll-smooth pb-1 [-ms-overflow-style:none] [-webkit-overflow-scrolling:touch] [scrollbar-width:none] [touch-action:pan-x] max-[1199px]:hscroll-bleed min-[1200px]:mr-[calc((1160px-100vw)/2)] min-[1200px]:flex-1 min-[1200px]:gap-4 min-[1200px]:hscroll-end-bleed [&::-webkit-scrollbar]:hidden"
+            className="flex min-w-0 items-stretch gap-3 overflow-x-auto overflow-y-visible scroll-smooth pb-1 [-ms-overflow-style:none] [-webkit-overflow-scrolling:touch] [scrollbar-width:none] [touch-action:pan-x_pan-y] max-[1199px]:hscroll-bleed min-[1200px]:mr-[calc((1160px-100vw)/2)] min-[1200px]:flex-1 min-[1200px]:gap-4 min-[1200px]:hscroll-end-bleed [&::-webkit-scrollbar]:hidden"
           >
             {materials.map((card, i) => (
               <MaterialCardLink key={i} card={card} />

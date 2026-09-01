@@ -169,7 +169,7 @@ export function HomeHero() {
               <span className="relative size-[56px] shrink-0 overflow-hidden rounded-[6px] sm:size-[64px]">
                 <img
                   alt=""
-                  className="hero-card-photo pointer-events-none size-full object-cover object-[45%_40%]"
+                  className="hero-card-photo pointer-events-none size-full object-cover object-[50%_32%]"
                   src={heroGlassCard}
                   width={544}
                   height={264}

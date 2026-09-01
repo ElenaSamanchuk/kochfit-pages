@@ -67,7 +67,7 @@ export function ContactForm({
           name="Сообщение"
           placeholder="Сообщение"
           rows={5}
-          className={inputClass}
+          className={`${inputClass} resize-none`}
         />
       )}
       <button

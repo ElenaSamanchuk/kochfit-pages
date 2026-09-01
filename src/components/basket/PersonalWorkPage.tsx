@@ -91,6 +91,12 @@ function CheckIcon() {
 }
 
 /** Лендинг «Персональная работа» — old-site/page22983826 + блок тренировок с главной */
+/** На десктопе эти два пункта не показываем — решение по макету. */
+const HIDDEN_ON_DESKTOP = new Set([
+  "помощь в коррекции рациона (по запросу)",
+  "оценка состояния ОДА",
+]);
+
 export function PersonalWorkPage() {
   const [payOpen, setPayOpen] = useState(false);
 
@@ -189,7 +195,9 @@ export function PersonalWorkPage() {
             {c.training.features.map((feature) => (
               <li
                 key={feature}
-                className="flex gap-[12px] text-[14px] leading-[1.45] sm:leading-[1.55] text-ink-secondary sm:text-[15px]"
+                className={`flex gap-[12px] text-[14px] leading-[1.45] sm:leading-[1.55] text-ink-secondary sm:text-[15px] ${
+                  HIDDEN_ON_DESKTOP.has(feature) ? "xl:hidden" : ""
+                }`}
               >
                 <CheckIcon />
                 {feature}
