@@ -18,8 +18,6 @@ const webpSrcSet = (stem: string, widths: number[], bust = CACHE_BUST) =>
 /** 550/1100/1650 — pre-downscale Lanczos3; 2752 — native Figma fill. */
 const bridgePhotoSrcSet = webpSrcSet("imgImage1", [550, 1100, 1650, 2752], BRIDGE_BUST);
 const duoPhotoSrcSet = webpSrcSet("imgImage2", [700, 1100, 2000]);
-/** Слот 2031:2302 — портрет Юлии (кадр не используется больше нигде на странице). */
-const juliaInsideSrcSet = webpSrcSet("imgJuliaInside", [550, 1100]);
 const appMockupSrcSet = webpSrcSet("imgIPhone15Pro", [560, 840]);
 
 /**
@@ -277,8 +275,8 @@ export function InsideCourse() {
             width={275}
             height={152}
             className="absolute inset-0 h-full w-full object-cover object-center"
-            src={img("imgJuliaInside-550.webp")}
-            srcSet={juliaInsideSrcSet}
+            src={bridgeImg("imgImage1-1100.webp")}
+            srcSet={bridgePhotoSrcSet}
             sizes={bridgePhotoSizes}
           />
         </span>
