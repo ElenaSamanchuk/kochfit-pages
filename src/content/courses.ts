@@ -122,6 +122,56 @@ export const coursePricing = {
         },
       ] satisfies FixedPeriodTariff[],
     },
+    /** kochfit.ru/sale — акционные цены (старая цена зачёркнута).
+     * TODO: чекауты пока те же, что на /community — заменить на скидочные tariff_… с v2. */
+    sale: {
+      standardFixedPeriods: [
+        {
+          period: "1 месяц",
+          price: 3590,
+          priceLabel: formatRub(3590),
+          oldPriceLabel: formatRub(4790),
+          checkoutUrl: checkout("lwNM9A"),
+        },
+        {
+          period: "3 месяца",
+          price: 8990,
+          priceLabel: formatRub(8990),
+          oldPriceLabel: formatRub(12590),
+          checkoutUrl: checkout("yAl4rA"),
+        },
+        {
+          period: "6 месяцев",
+          price: 15990,
+          priceLabel: formatRub(15990),
+          oldPriceLabel: formatRub(25390),
+          checkoutUrl: checkout("RjQmLj"),
+        },
+      ] satisfies FixedPeriodTariff[],
+      premiumFixedPeriods: [
+        {
+          period: "1 месяц",
+          price: 6290,
+          priceLabel: formatRub(6290),
+          oldPriceLabel: formatRub(7490),
+          checkoutUrl: checkout("OPDMEA"),
+        },
+        {
+          period: "3 месяца",
+          price: 14990,
+          priceLabel: formatRub(14990),
+          oldPriceLabel: formatRub(20590),
+          checkoutUrl: checkout("bPWm3w"),
+        },
+        {
+          period: "6 месяцев",
+          price: 26190,
+          priceLabel: formatRub(26190),
+          oldPriceLabel: formatRub(41190),
+          checkoutUrl: checkout("5j16VP"),
+        },
+      ] satisfies FixedPeriodTariff[],
+    },
   },
   pelvicFloor: {
     catalogPrices: {

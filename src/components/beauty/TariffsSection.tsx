@@ -5,7 +5,7 @@ import { useState } from "react";
 import { SubscriptionPopup } from "@/components/site/SubscriptionPopup";
 import { AppLink } from "@/components/ui/AppLink";
 import { Typo } from "@/components/ui/TypoText";
-import { coursePricing } from "@/content/courses";
+import { coursePricing, type FixedPeriodTariff } from "@/content/courses";
 import { externalLinks } from "@/content/links";
 
 const img = (name: string) => assetPath(`/images/beauty-health/${name}`);
@@ -33,10 +33,12 @@ function TariffAvatar({ src, alt }: { src: string; alt: string }) {
 
 function PriceCard({
   price,
+  oldPrice,
   period,
   href,
 }: {
   price: string;
+  oldPrice?: string;
   period: string;
   href: string;
 }) {
@@ -44,6 +46,11 @@ function PriceCard({
     <div className="flex w-full min-w-0 flex-col items-center gap-[12px] rounded-[16px] border border-solid border-[#efefef] bg-[#f8f8f8] p-[12px] sm:items-start sm:p-[10px]">
       <div className="flex w-full flex-row items-center justify-between sm:items-start">
         <span className="flex items-center gap-2 font-bold leading-[normal] sm:flex-col sm:items-start sm:gap-[4px]">
+          {oldPrice ? (
+            <span className="whitespace-nowrap text-[13px] font-normal text-[#999ca8] line-through sm:text-[12px]">
+              {oldPrice}
+            </span>
+          ) : null}
           <span className="whitespace-nowrap text-[16px] text-[#4b4d57] sm:text-[15px]">{price}</span>
         </span>
         <span className="flex h-fit shrink-0 items-center justify-center whitespace-nowrap rounded-[7px] bg-white px-[6px] py-[4px] text-center text-[10px] font-semibold leading-none text-[#4b4d57] sm:text-[9px]">
@@ -211,8 +218,17 @@ function ChatNote({
 const tariffHeaderBadge =
   "flex h-fit w-fit items-center justify-center rounded-[7px] px-[6px] py-[8px] text-center text-[10px] font-semibold leading-none sm:px-[10px] sm:py-[6px] sm:text-[12px]";
 
-/** «Тарифы курса» — Figma 2031:2351 (Стандарт 2031:2470, Премиум 2031:2352) */
-export function TariffsSection() {
+/** «Тарифы курса» — Figma 2031:2351 (Стандарт 2031:2470, Премиум 2031:2352).
+ * standardPeriods/premiumPeriods — переопределение цен (kochfit.ru/sale: акционные с зачёркнутой старой). */
+export function TariffsSection({
+  standardPeriods = standardFixed,
+  premiumPeriods = premiumFixed,
+  showOldPrices = false,
+}: {
+  standardPeriods?: readonly FixedPeriodTariff[];
+  premiumPeriods?: readonly FixedPeriodTariff[];
+  showOldPrices?: boolean;
+} = {}) {
   const [popupOpen, setPopupOpen] = useState(false);
 
   return (
@@ -295,10 +311,11 @@ export function TariffsSection() {
             />
 
             <div className="grid w-full grid-cols-1 gap-[12px] sm:grid-cols-3 sm:gap-[12px]">
-              {standardFixed.map((tariff) => (
+              {standardPeriods.map((tariff) => (
                 <PriceCard
                   key={tariff.period}
                   price={tariff.priceLabel}
+                  oldPrice={showOldPrices ? tariff.oldPriceLabel : undefined}
                   period={tariff.period}
                   href={tariff.checkoutUrl}
                 />
@@ -374,10 +391,11 @@ export function TariffsSection() {
             />
 
             <div className="grid w-full grid-cols-1 gap-[12px] sm:grid-cols-3 sm:gap-[12px]">
-              {premiumFixed.map((tariff) => (
+              {premiumPeriods.map((tariff) => (
                 <PriceCard
                   key={tariff.period}
                   price={tariff.priceLabel}
+                  oldPrice={showOldPrices ? tariff.oldPriceLabel : undefined}
                   period={tariff.period}
                   href={tariff.checkoutUrl}
                 />
