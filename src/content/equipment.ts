@@ -99,17 +99,17 @@ export const equipmentItems: EquipmentItem[] = [
     },
     best: [
       {
-        label: "1. Коврик для фитнеса двусторонний",
+        label: "Коврик для фитнеса двусторонний",
         url: "https://structura.shop/mats",
       },
       {
-        label: "2. Коврик для йоги фитнеса нескользящий",
+        label: "Коврик для йоги фитнеса нескользящий",
         url: "https://www.wildberries.ru/catalog/294774245/detail.aspx",
       },
     ],
     other: [
       {
-        label: "1. Коврик для йоги и фитнеса нескользящий универсальный",
+        label: "Коврик для йоги и фитнеса нескользящий универсальный",
         url: "https://www.ozon.ru/product/kovrik-dlya-yogi-i-fitnesa-neskolzyashchiy-universalnyy-3020925841/?at=MZtvmvX5RCXzZ3A0sZ7Y39BhORYN8XhKD0o4YSBDJyNj",
       },
     ],
@@ -134,16 +134,16 @@ export const equipmentItems: EquipmentItem[] = [
     },
     best: [
       {
-        label: "1. Мячи FRANKLIN 12 см",
+        label: "Мячи FRANKLIN 12 см",
         url: "https://fitnessroller.ru/massajnoe-oborudovanie/massajnie-myachi/igolchatie-myachi/myachi-dlya-relaksatsii-franklin-method-easy-grip-set/",
       },
       {
-        label: "2. Мячи массажные мягкие, 10 см, 2 шт",
+        label: "Мячи массажные мягкие, 10 см, 2 шт",
         url: "https://www.wildberries.ru/catalog/114201663/detail.aspx?targetUrl=MS&size=205259798",
       },
     ],
     other: [
-      { label: "1. Массажные мячи 11 см", url: "https://ozon.ru/t/V0EVQYQ" },
+      { label: "Массажные мячи 11 см", url: "https://ozon.ru/t/V0EVQYQ" },
     ],
   },
   {
@@ -165,17 +165,17 @@ export const equipmentItems: EquipmentItem[] = [
     },
     best: [
       {
-        label: "1. Гантели разборные кейс 20 кг",
+        label: "Гантели разборные кейс 20 кг",
         url: "https://www.wildberries.ru/catalog/13631109/detail.aspx?targetUrl=MS&size=41181482",
       },
     ],
     other: [
       {
-        label: "1. Гиря 4 кг чугунная спортивная для фитнеса",
+        label: "Гиря 4 кг чугунная спортивная для фитнеса",
         url: "https://www.ozon.ru/product/girya-4-kg-1611448288/",
       },
       {
-        label: "2. Гиря 4 кг",
+        label: "Гиря 4 кг",
         url: "https://www.wildberries.ru/catalog/208633824/detail.aspx?targetUrl=EX",
       },
     ],
@@ -200,17 +200,17 @@ export const equipmentItems: EquipmentItem[] = [
     },
     best: [
       {
-        label: "1. Эспандер ленточный 2 м",
+        label: "Эспандер ленточный 2 м",
         url: "https://structura.shop/elastic",
       },
       {
-        label: "2. Эспандер ленточный широкий 1,8 м INDIGO Sport",
+        label: "Эспандер ленточный широкий 1,8 м INDIGO Sport",
         url: "https://www.wildberries.ru/catalog/25780059/detail.aspx",
       },
     ],
     other: [
       {
-        label: "1. Лента эластичная для фитнеса 180 см",
+        label: "Лента эластичная для фитнеса 180 см",
         url: "https://www.ozon.ru/product/lenta-elastichnaya-dlya-fitnesa-180sm-espander-lentochnyy-fitnes-rezinka-indigo-medium-goluboy-1-250100804/?at=6WtZvMWOJT5kXygnUK7zBm1TkkKwAXSv5gr4OU5R95V6",
       },
     ],
@@ -233,17 +233,17 @@ export const equipmentItems: EquipmentItem[] = [
     },
     best: [
       {
-        label: "1. Ролик массажный Trigger Point GRID 33 см",
+        label: "Ролик массажный Trigger Point GRID 33 см",
         url: "https://www.ozon.ru/product/rolik-massazhnyy-trigger-point-grid-33-sm-oranzhevyy-150248869/",
       },
       {
-        label: "2. Валик массажный для спины, йоги и МФР EVA 45x15 см",
+        label: "Валик массажный для спины, йоги и МФР EVA 45x15 см",
         url: "https://www.ozon.ru/product/valik-massazhnyy-dlya-spiny-yogi-i-mfr-eva-rolik-45x15-sm-222553020/?from_sku=746039633&oos_search=false",
       },
     ],
     other: [
       {
-        label: "1. Ролик массажный для фитнеса и йоги Bodyboss, МФР валик 60 см",
+        label: "Ролик массажный для фитнеса и йоги Bodyboss, МФР валик 60 см",
         url: "https://www.wildberries.ru/catalog/59627557/detail.aspx?targetUrl=MS",
       },
     ],
@@ -267,17 +267,17 @@ export const equipmentItems: EquipmentItem[] = [
     },
     best: [
       {
-        label: "1. Мяч для пилатеса 25 см",
+        label: "Мяч для пилатеса 25 см",
         url: "https://structura.shop/pilatesballs",
       },
       {
-        label: "2. Мяч для пилатеса и фитнеса гимнастический Starfit 25 см",
+        label: "Мяч для пилатеса и фитнеса гимнастический Starfit 25 см",
         url: "https://www.wildberries.ru/catalog/146261624/detail.aspx",
       },
     ],
     other: [
       {
-        label: "1. Мяч для пилатеса и фитнеса 25 см",
+        label: "Мяч для пилатеса и фитнеса 25 см",
         url: "https://www.wildberries.ru/catalog/47364818/detail.aspx?targetUrl=SG&size=1361710492",
       },
     ],
@@ -301,13 +301,13 @@ export const equipmentItems: EquipmentItem[] = [
     },
     best: [
       {
-        label: "1. Кинезио тейп Rocktape Classic 5 см х 5 м хлопок",
+        label: "Кинезио тейп Rocktape Classic 5 см х 5 м хлопок",
         url: "https://www.ozon.ru/product/kinezio-teyp-rocktape-classic-5-sm-h-5-m-hlopok-muertape-podhodit-dlya-vseh-uchastkov-tela-215219972/?at=ywtAVAZN0hNZ0gk8I5QRBP6s0MDLGAtOqoLBMhG3rxAv",
       },
     ],
     other: [
       {
-        label: "1. Кинезио тейп Muay Thai",
+        label: "Кинезио тейп Muay Thai",
         url: "https://www.wildberries.ru/catalog/17855570/detail.aspx",
       },
     ],
@@ -331,13 +331,13 @@ export const equipmentItems: EquipmentItem[] = [
     },
     best: [
       {
-        label: "1. Блоки для йоги (2 шт)",
+        label: "Блоки для йоги (2 шт)",
         url: "https://structura.shop/blocks",
       },
     ],
     other: [
       {
-        label: "1. Блок для йоги STARFIT, синий, 2 шт",
+        label: "Блок для йоги STARFIT, синий, 2 шт",
         url: "https://www.ozon.ru/product/blok-dlya-yogi-starfit-siniy-2-sht-1318992570/?at=RltyZyErRupBNxD7C4yGzJBsMQOV6AfBpn6pyFvog93K",
       },
     ],
