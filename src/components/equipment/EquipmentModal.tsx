@@ -3,7 +3,11 @@
 import { Modal } from "@/components/ui/Modal";
 import { Typo } from "@/components/ui/TypoText";
 import { assetPath } from "@/lib/asset-path";
-import { equipmentShops, type EquipmentItem } from "@/content/equipment";
+import {
+  equipmentShops,
+  showEquipmentShops,
+  type EquipmentItem,
+} from "@/content/equipment";
 
 const arrowLink = assetPath("/images/equipment/arrow-link.svg");
 const arrowShop = assetPath("/images/equipment/arrow-shop.svg");
@@ -121,7 +125,7 @@ export function EquipmentModal({
             </div>
           ) : null}
 
-          {equipmentShops.length > 0 ? (
+          {showEquipmentShops && equipmentShops.length > 0 ? (
             <div className="border-t border-line pt-4">
               <p className="text-[12px] font-semibold tracking-[-0.12px] text-ink-muted">
                 Все оборудование в одном месте:

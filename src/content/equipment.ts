@@ -42,6 +42,9 @@ export const equipmentIntro = {
   hint: "Нажмите «Подробнее», чтобы увидеть рекомендации и ссылки на проверенные варианты оборудования",
 };
 
+/** Блок «Все оборудование в одном месте» в модалке инвентаря */
+export const showEquipmentShops = false;
+
 export const equipmentShops: EquipmentShop[] = [
   { shop: "restore_roller", code: "Кочкина", url: "https://fitnessroller.ru/" },
   { shop: "structura.shop", code: "Kochkina", url: "https://structura.shop/" },
