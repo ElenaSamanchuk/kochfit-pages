@@ -39,3 +39,20 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+tmp/
+tmp-*
+.tmp-*
+tmp-assets/
+
+# dev logs
+logs/
+
+# Архив старого сайта (Тильда) — только справочный материал
+/old-site
+
+# Playwright
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+/tmp/

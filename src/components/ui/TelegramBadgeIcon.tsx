@@ -1,0 +1,48 @@
+/** Telegram badge (голубой круг + самолётик) — inline SVG для чёткого масштабирования. */
+export function TelegramBadgeIcon({ className = "size-full" }: { className?: string }) {
+  return (
+    <svg
+      viewBox="0 0 48 48"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      aria-hidden
+    >
+      <g filter="url(#telegram-badge-shadow)">
+        <circle cx="23" cy="23" r="20" fill="#84B0D2" />
+      </g>
+      <path
+        d="M31.9362 16.1682L28.9062 30.3532C28.6802 31.3522 28.1002 31.5772 27.2622 31.1262L22.7172 27.7742L20.4922 29.9012C20.2672 30.1272 20.0412 30.3532 19.5252 30.3532L19.8802 25.6782L28.3582 17.9742C28.7122 17.6192 28.2612 17.4902 27.8102 17.7812L17.2692 24.4212L12.7232 23.0352C11.7242 22.7132 11.7242 22.0352 12.9492 21.5852L30.6142 14.7182C31.4842 14.4602 32.2262 14.9122 31.9362 16.1682Z"
+        fill="white"
+      />
+      <defs>
+        <filter
+          id="telegram-badge-shadow"
+          x="0"
+          y="0"
+          width="48"
+          height="48"
+          filterUnits="userSpaceOnUse"
+          colorInterpolationFilters="sRGB"
+        >
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
+          <feColorMatrix
+            in="SourceAlpha"
+            type="matrix"
+            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+            result="hardAlpha"
+          />
+          <feOffset dx="1" dy="1" />
+          <feGaussianBlur stdDeviation="2" />
+          <feComposite in2="hardAlpha" operator="out" />
+          <feColorMatrix
+            type="matrix"
+            values="0 0 0 0 0.491034 0 0 0 0 0.751588 0 0 0 0 0.757719 0 0 0 0.2 0"
+          />
+          <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow" />
+          <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape" />
+        </filter>
+      </defs>
+    </svg>
+  );
+}

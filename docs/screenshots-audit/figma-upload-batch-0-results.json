@@ -1,0 +1,433 @@
+{
+  "results": [
+    {
+      "file": "5htp-desktop.png",
+      "ok": false,
+      "error": "HTTP 409: {\"success\":false,\"error\":\"Upload has already been submitted\"}"
+    },
+    {
+      "file": "5htp-mobile.png",
+      "ok": false,
+      "error": "HTTP 409: {\"success\":false,\"error\":\"Upload has already been submitted\"}"
+    },
+    {
+      "file": "bad_2-desktop.png",
+      "ok": false,
+      "error": "HTTP 409: {\"success\":false,\"error\":\"Upload has already been submitted\"}"
+    },
+    {
+      "file": "bad_2-mobile.png",
+      "ok": false,
+      "error": "HTTP 409: {\"success\":false,\"error\":\"Upload has already been submitted\"}"
+    },
+    {
+      "file": "basket-desktop.png",
+      "ok": false,
+      "error": "HTTP 409: {\"success\":false,\"error\":\"Upload has already been submitted\"}"
+    },
+    {
+      "file": "basket-mobile.png",
+      "ok": false,
+      "error": "HTTP 409: {\"success\":false,\"error\":\"Upload has already been submitted\"}"
+    },
+    {
+      "file": "blog_1-desktop.png",
+      "ok": false,
+      "error": "HTTP 409: {\"success\":false,\"error\":\"Upload has already been submitted\"}"
+    },
+    {
+      "file": "blog_1-mobile.png",
+      "ok": false,
+      "error": "HTTP 409: {\"success\":false,\"error\":\"Upload has already been submitted\"}"
+    },
+    {
+      "file": "blog_10-desktop.png",
+      "ok": false,
+      "error": "HTTP 409: {\"success\":false,\"error\":\"Upload has already been submitted\"}"
+    },
+    {
+      "file": "blog_10-mobile.png",
+      "ok": false,
+      "error": "HTTP 409: {\"success\":false,\"error\":\"Upload has already been submitted\"}"
+    },
+    {
+      "file": "blog_11-desktop.png",
+      "ok": false,
+      "error": "HTTP 409: {\"success\":false,\"error\":\"Upload has already been submitted\"}"
+    },
+    {
+      "file": "blog_11-mobile.png",
+      "ok": false,
+      "error": "HTTP 409: {\"success\":false,\"error\":\"Upload has already been submitted\"}"
+    },
+    {
+      "file": "blog_12-desktop.png",
+      "ok": false,
+      "error": "HTTP 409: {\"success\":false,\"error\":\"Upload has already been submitted\"}"
+    },
+    {
+      "file": "blog_12-mobile.png",
+      "ok": false,
+      "error": "HTTP 409: {\"success\":false,\"error\":\"Upload has already been submitted\"}"
+    },
+    {
+      "file": "blog_13-desktop.png",
+      "ok": false,
+      "error": "HTTP 409: {\"success\":false,\"error\":\"Upload has already been submitted\"}"
+    },
+    {
+      "file": "blog_13-mobile.png",
+      "ok": false,
+      "error": "HTTP 409: {\"success\":false,\"error\":\"Upload has already been submitted\"}"
+    },
+    {
+      "file": "blog_14-desktop.png",
+      "ok": false,
+      "error": "HTTP 409: {\"success\":false,\"error\":\"Upload has already been submitted\"}"
+    },
+    {
+      "file": "blog_14-mobile.png",
+      "ok": false,
+      "error": "HTTP 409: {\"success\":false,\"error\":\"Upload has already been submitted\"}"
+    },
+    {
+      "file": "blog_15-desktop.png",
+      "ok": false,
+      "error": "HTTP 409: {\"success\":false,\"error\":\"Upload has already been submitted\"}"
+    },
+    {
+      "file": "blog_15-mobile.png",
+      "ok": false,
+      "error": "HTTP 409: {\"success\":false,\"error\":\"Upload has already been submitted\"}"
+    },
+    {
+      "file": "blog_16-desktop.png",
+      "ok": false,
+      "error": "HTTP 409: {\"success\":false,\"error\":\"Upload has already been submitted\"}"
+    },
+    {
+      "file": "blog_16-mobile.png",
+      "ok": false,
+      "error": "HTTP 409: {\"success\":false,\"error\":\"Upload has already been submitted\"}"
+    },
+    {
+      "file": "blog_17-desktop.png",
+      "ok": false,
+      "error": "HTTP 409: {\"success\":false,\"error\":\"Upload has already been submitted\"}"
+    },
+    {
+      "file": "blog_17-mobile.png",
+      "ok": false,
+      "error": "HTTP 409: {\"success\":false,\"error\":\"Upload has already been submitted\"}"
+    },
+    {
+      "file": "blog_18-desktop.png",
+      "ok": false,
+      "error": "HTTP 409: {\"success\":false,\"error\":\"Upload has already been submitted\"}"
+    },
+    {
+      "file": "blog_18-mobile.png",
+      "ok": false,
+      "error": "HTTP 409: {\"success\":false,\"error\":\"Upload has already been submitted\"}"
+    },
+    {
+      "file": "blog_19-desktop.png",
+      "ok": false,
+      "error": "HTTP 409: {\"success\":false,\"error\":\"Upload has already been submitted\"}"
+    },
+    {
+      "file": "blog_19-mobile.png",
+      "ok": false,
+      "error": "HTTP 409: {\"success\":false,\"error\":\"Upload has already been submitted\"}"
+    },
+    {
+      "file": "blog_2-desktop.png",
+      "ok": true,
+      "success": true,
+      "imageHash": "fa322483f1105255cf35d4237eca6e799232900b",
+      "sizeBytes": 2371577,
+      "contentType": "image/png",
+      "placedOnNodeId": "7:2"
+    },
+    {
+      "file": "blog_2-mobile.png",
+      "ok": true,
+      "success": true,
+      "imageHash": "95089d2123545f9a071772ba4e0d7c894175a2c2",
+      "sizeBytes": 1721373,
+      "contentType": "image/png",
+      "placedOnNodeId": "7:3"
+    },
+    {
+      "file": "blog_20-desktop.png",
+      "ok": true,
+      "success": true,
+      "imageHash": "a9de8c96de176505290b70b682d80d400b50f832",
+      "sizeBytes": 424207,
+      "contentType": "image/png",
+      "placedOnNodeId": "7:4"
+    },
+    {
+      "file": "blog_20-mobile.png",
+      "ok": true,
+      "success": true,
+      "imageHash": "37db9c0640918cb9aa8b39221451e9eb4df6d3b9",
+      "sizeBytes": 1077659,
+      "contentType": "image/png",
+      "placedOnNodeId": "7:5"
+    },
+    {
+      "file": "blog_21-desktop.png",
+      "ok": true,
+      "success": true,
+      "imageHash": "0a605116c1b6a2d5e0c7bbcf6746f811bdb72c2f",
+      "sizeBytes": 170967,
+      "contentType": "image/png",
+      "placedOnNodeId": "7:6"
+    },
+    {
+      "file": "blog_21-mobile.png",
+      "ok": true,
+      "success": true,
+      "imageHash": "5ef38d6ab4a637d7993deb0670a2188486869ca7",
+      "sizeBytes": 428728,
+      "contentType": "image/png",
+      "placedOnNodeId": "7:7"
+    },
+    {
+      "file": "blog_22-desktop.png",
+      "ok": true,
+      "success": true,
+      "imageHash": "364828d51a2397b61fa023261d4aac995e7e69a9",
+      "sizeBytes": 300051,
+      "contentType": "image/png",
+      "placedOnNodeId": "7:8"
+    },
+    {
+      "file": "blog_22-mobile.png",
+      "ok": true,
+      "success": true,
+      "imageHash": "8fa93c8306d8e46e49df5ec5ba921d6431ee3648",
+      "sizeBytes": 774920,
+      "contentType": "image/png",
+      "placedOnNodeId": "7:9"
+    },
+    {
+      "file": "blog_23-desktop.png",
+      "ok": true,
+      "success": true,
+      "imageHash": "f9648c0c064ea4e6d9788519312f28397d7b53dd",
+      "sizeBytes": 205401,
+      "contentType": "image/png",
+      "placedOnNodeId": "7:10"
+    },
+    {
+      "file": "blog_23-mobile.png",
+      "ok": true,
+      "success": true,
+      "imageHash": "699d49fdc4d21c141b8c99ae782c0eb9e36295c4",
+      "sizeBytes": 520060,
+      "contentType": "image/png",
+      "placedOnNodeId": "7:11"
+    },
+    {
+      "file": "blog_24-desktop.png",
+      "ok": true,
+      "success": true,
+      "imageHash": "e089afcd827939b26a46d0609c7cf1606d94620f",
+      "sizeBytes": 605868,
+      "contentType": "image/png",
+      "placedOnNodeId": "7:12"
+    },
+    {
+      "file": "blog_24-mobile.png",
+      "ok": true,
+      "success": true,
+      "imageHash": "0ed52fbe6686bedad7994938b4305f233c65cd39",
+      "sizeBytes": 1641599,
+      "contentType": "image/png",
+      "placedOnNodeId": "7:13"
+    },
+    {
+      "file": "blog_25-desktop.png",
+      "ok": true,
+      "success": true,
+      "imageHash": "a2482fbf1cc50d38a438dee2fe185c1ea130b8d1",
+      "sizeBytes": 905332,
+      "contentType": "image/png",
+      "placedOnNodeId": "7:14"
+    },
+    {
+      "file": "blog_25-mobile.png",
+      "ok": true,
+      "success": true,
+      "imageHash": "f4c84280289b133d05342f99016e38d35972c9ed",
+      "sizeBytes": 2153024,
+      "contentType": "image/png",
+      "placedOnNodeId": "7:15"
+    },
+    {
+      "file": "blog_26-desktop.png",
+      "ok": true,
+      "success": true,
+      "imageHash": "ca8354af204ea582ebada5385418375b1d966e70",
+      "sizeBytes": 206821,
+      "contentType": "image/png",
+      "placedOnNodeId": "7:16"
+    },
+    {
+      "file": "blog_26-mobile.png",
+      "ok": true,
+      "success": true,
+      "imageHash": "dd702064e2b6cf63970cfd95ea9437ce03b0a290",
+      "sizeBytes": 475615,
+      "contentType": "image/png",
+      "placedOnNodeId": "7:17"
+    },
+    {
+      "file": "blog_27-desktop.png",
+      "ok": true,
+      "success": true,
+      "imageHash": "61467d0d4938183aca611cfa5aaba95eee31612e",
+      "sizeBytes": 331817,
+      "contentType": "image/png",
+      "placedOnNodeId": "7:18"
+    },
+    {
+      "file": "blog_27-mobile.png",
+      "ok": true,
+      "success": true,
+      "imageHash": "ab9fcb8eb9a0f71bbc86d6650799039439650a21",
+      "sizeBytes": 817473,
+      "contentType": "image/png",
+      "placedOnNodeId": "7:19"
+    },
+    {
+      "file": "blog_28-desktop.png",
+      "ok": true,
+      "success": true,
+      "imageHash": "d303727d0857c4f55b32bb12f47b1cec0187a53d",
+      "sizeBytes": 1992178,
+      "contentType": "image/png",
+      "placedOnNodeId": "7:20"
+    },
+    {
+      "file": "blog_28-mobile.png",
+      "ok": true,
+      "success": true,
+      "imageHash": "83c075c64c0ca3c74a71e6a90df2508ec530a814",
+      "sizeBytes": 2628330,
+      "contentType": "image/png",
+      "placedOnNodeId": "7:21"
+    },
+    {
+      "file": "blog_29-desktop.png",
+      "ok": true,
+      "success": true,
+      "imageHash": "1b99070ef9c65a5e54b5fd0da430b7927057c80c",
+      "sizeBytes": 449499,
+      "contentType": "image/png",
+      "placedOnNodeId": "7:22"
+    },
+    {
+      "file": "blog_29-mobile.png",
+      "ok": true,
+      "success": true,
+      "imageHash": "444a95cbb94ae00766e66681bcfe971ab04ecd8a",
+      "sizeBytes": 1084624,
+      "contentType": "image/png",
+      "placedOnNodeId": "7:23"
+    },
+    {
+      "file": "blog_3-desktop.png",
+      "ok": true,
+      "success": true,
+      "imageHash": "762439fae37c7cf71106fa0d5144b8f5c9e04817",
+      "sizeBytes": 401313,
+      "contentType": "image/png",
+      "placedOnNodeId": "7:24"
+    },
+    {
+      "file": "blog_3-mobile.png",
+      "ok": true,
+      "success": true,
+      "imageHash": "afff71765d6652aaddf7a57759e2c2ccce5485ae",
+      "sizeBytes": 907102,
+      "contentType": "image/png",
+      "placedOnNodeId": "7:25"
+    },
+    {
+      "file": "blog_30-desktop.png",
+      "ok": true,
+      "success": true,
+      "imageHash": "aff094b5a31c0b0e52a064fd03ac715bedf14ac3",
+      "sizeBytes": 160208,
+      "contentType": "image/png",
+      "placedOnNodeId": "7:26"
+    },
+    {
+      "file": "blog_30-mobile.png",
+      "ok": true,
+      "success": true,
+      "imageHash": "80e2d2fafd86dfff7485164282c60ce1ef807734",
+      "sizeBytes": 397961,
+      "contentType": "image/png",
+      "placedOnNodeId": "7:27"
+    },
+    {
+      "file": "blog_31-desktop.png",
+      "ok": true,
+      "success": true,
+      "imageHash": "1e881860f342275400ada223c584f74f9efcfc31",
+      "sizeBytes": 239722,
+      "contentType": "image/png",
+      "placedOnNodeId": "7:28"
+    },
+    {
+      "file": "blog_31-mobile.png",
+      "ok": true,
+      "success": true,
+      "imageHash": "38ea3b99a712d397cd302ac948c1942fac31496c",
+      "sizeBytes": 611047,
+      "contentType": "image/png",
+      "placedOnNodeId": "7:29"
+    },
+    {
+      "file": "blog_32-desktop.png",
+      "ok": true,
+      "success": true,
+      "imageHash": "0ad3be309eaca6dbae916990db709fd1971f3114",
+      "sizeBytes": 226331,
+      "contentType": "image/png",
+      "placedOnNodeId": "7:30"
+    },
+    {
+      "file": "blog_32-mobile.png",
+      "ok": true,
+      "success": true,
+      "imageHash": "ed7d4c0ce8a369ba24bcde480be56fab31b89406",
+      "sizeBytes": 576083,
+      "contentType": "image/png",
+      "placedOnNodeId": "7:31"
+    },
+    {
+      "file": "blog_33-desktop.png",
+      "ok": true,
+      "success": true,
+      "imageHash": "12adb3b8b7cb21cef04408c4449a9374f3568cb8",
+      "sizeBytes": 282163,
+      "contentType": "image/png",
+      "placedOnNodeId": "7:32"
+    },
+    {
+      "file": "blog_33-mobile.png",
+      "ok": true,
+      "success": true,
+      "imageHash": "d835ece8dfb880c3fe4ecfd7bef012a85c53cc59",
+      "sizeBytes": 732652,
+      "contentType": "image/png",
+      "placedOnNodeId": "7:33"
+    }
+  ],
+  "at": "2026-08-26T15:38:47.748Z"
+}

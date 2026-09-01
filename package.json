@@ -3,10 +3,17 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev -p 3400",
     "build": "next build",
-    "start": "next start",
-    "lint": "eslint"
+    "build:server": "NEXT_PUBLIC_BASE_PATH=/kochfit KOCHFIT_BASE_PATH=/kochfit next build",
+    "deploy:server": "node scripts/deploy-kochfit.mjs",
+    "start": "next start -p 3400",
+    "lint": "eslint",
+    "test:e2e": "playwright test",
+    "test:e2e:ui": "playwright test --ui",
+    "migrate:tilda": "node scripts/migrate-tilda.mjs",
+    "extract:equipment": "node scripts/extract-equipment.mjs",
+    "build:root": "KOCHFIT_STATIC_EXPORT=1 next build"
   },
   "dependencies": {
     "next": "16.3.0",
@@ -14,6 +21,7 @@
     "react-dom": "19.2.8"
   },
   "devDependencies": {
+    "@playwright/test": "^1.62.1",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",

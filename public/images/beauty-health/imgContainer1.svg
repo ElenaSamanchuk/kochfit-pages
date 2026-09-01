@@ -1,0 +1,16 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="648" height="648" viewBox="0 0 648 648" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Container">
+<circle id="Ellipse 6364" cx="324" cy="324" r="324" fill="black" fill-opacity="0.2"/>
+<circle id="Ellipse 6360" opacity="0.2" cx="324" cy="254" r="96" fill="white"/>
+<path id="Ellipse 6362" d="M235.22 632.479C176 615.435 122.938 581.706 82.37 535.319C41.8021 488.933 15.4437 431.849 6.44281 370.886C-2.55812 309.923 6.17888 247.658 31.6103 191.527C57.0418 135.395 98.0927 87.7706 149.86 54.3403C201.628 20.91 261.924 3.0871 323.548 3.00032C385.172 2.91353 445.518 20.5665 497.38 53.8509C549.241 87.1353 590.426 134.644 616.016 190.704C641.605 246.763 650.518 309.004 641.688 369.991" stroke="white" stroke-width="6" stroke-linecap="round"/>
+<path id="Ellipse 6363" d="M235.22 632.479C169.278 613.501 111.152 573.89 69.3693 519.459C27.5867 465.027 4.34618 398.639 3.05686 330.031C1.76754 261.424 22.4973 194.209 62.2053 138.246C101.913 82.2832 158.51 40.5172 223.693 19.0747" stroke="url(#paint0_linear_0_26)" stroke-width="6" stroke-linecap="round"/>
+<rect id="Rectangle" opacity="0.26" x="173" y="59.9256" width="1.44" height="115.2" rx="0.72" transform="rotate(-40 173 59.9256)" fill="#EFEFEF"/>
+<rect id="Rectangle_2" opacity="0.26" x="487.049" y="65" width="1.44" height="115.2" rx="0.72" transform="rotate(40 487.049 65)" fill="#EFEFEF"/>
+</g>
+<defs>
+<linearGradient id="paint0_linear_0_26" x1="18.2024" y1="16.3533" x2="737.961" y2="555.319" gradientUnits="userSpaceOnUse">
+<stop stop-color="#73A2C6"/>
+<stop offset="1" stop-color="#9ABEDB"/>
+</linearGradient>
+</defs>
+</svg>

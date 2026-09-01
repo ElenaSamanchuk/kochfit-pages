@@ -1,26 +1,1434 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-nunito-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-evolventa), var(--font-nunito-sans), sans-serif;
+
+  --color-ink: #4b4d57;
+  --color-ink-secondary: #676971;
+  --color-ink-muted: #999ca8;
+  --color-accent: #84b0d2;
+  --color-accent-hover: #73a2c6;
+  --color-bg: #f8f8f8;
+  --color-surface: #f8f8f8;
+  --color-surface-blue: #edf4f9;
+  --color-surface-blue-2: #eef4fb;
+  --color-surface-blue-3: #d5e8f6;
+  --color-coral: #ff746a;
+  --color-coral-soft: #ffe4e2;
+  --color-line: #efefef;
+  /* Плашки «Старт с момента покупки» / тариф на голубом фоне */
+  --color-plaque: #6d8da6;
+
+  /* Типографическая шкала: fluid clamp() между мобильным и Figma-десктопным (1400px) значением */
+  --text-h1: clamp(1.75rem, 1.1rem + 3.1vw, 3.125rem); /* 28px → 50px, Figma 2031:1845 */
+  --text-h2: clamp(1.375rem, 1.2rem + 0.85vw, 1.5rem); /* 22px → 24px */
+  --text-lead: clamp(0.9375rem, 0.85rem + 0.4vw, 1.125rem); /* 15px → 18px, hero-параграф */
+  --text-body-lg: 1rem; /* 16px */
+  --text-body: 0.875rem; /* 14px — большинство инстансов в коде статичны на всех брейкпоинтах */
+  --text-small: 0.75rem; /* 12px — доминирующий микро-текст (бейджи, лейблы) */
+  --text-caption: 0.6875rem; /* 11px — легенда PlatformSection */
+
+  /* Шкала радиусов — литеральные значения из Figma; пилюли/круги (≥ половины стороны) идут через rounded-full */
+  --radius-xs: 4px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 18px;
+  --radius-2xl: 20px;
+  --radius-3xl: 24px;
 }
 
-@media (prefers-color-scheme: dark) {
+:root {
+  /* Figma tokens: белый / т / с / св серый / г / #EDF4F9 / фон / свет серый */
+  --gradient-primary: linear-gradient(
+    133deg,
+    var(--color-accent-hover) 2.69%,
+    rgb(154, 190, 219) 101.81%
+  );
+  --gradient-soft: linear-gradient(
+    133deg,
+    var(--color-surface-blue) 2.69%,
+    var(--color-surface-blue-3) 101.81%
+  );
+  --shadow-card: 2px 2px 8px 0px rgba(224, 224, 224, 0.25);
+  --shadow-card-hover: 4px 8px 24px 0px rgba(132, 176, 210, 0.22);
+  /* Затемнение под drawer/modal; было rgba(0,0,0,0.35) — чуть плотнее для контраста со светлым текстом hero */
+  --color-scrim: color-mix(in srgb, var(--color-ink) 45%, transparent);
+
+  /* Hero header glass pills — чуть плотнее rgba(255,255,255,0.2) для читаемости на светлых секциях */
+  --header-glass-bg: color-mix(in srgb, var(--color-ink) 26%, rgba(255, 255, 255, 0.38));
+  --header-glass-bg-hover: color-mix(in srgb, var(--color-ink) 32%, rgba(255, 255, 255, 0.44));
+  --header-glass-border: color-mix(in srgb, var(--color-ink) 14%, rgba(255, 255, 255, 0.42));
+  --header-glass-blur: 25px;
+  --header-glass-blur-nav: 42.25px;
+
+  /* Макет лендингов: боковой/верхний inset. Менять здесь — попадёт в .page-inset и .hscroll* */
+  --page-inset-x-mobile: 15px;
+  --page-inset-x-desktop: 20px;
+  --page-inset-x: var(--page-inset-x-mobile);
+  /* Trailing scroll room (last-child margin, не padding скроллера). Mobile = gutter. */
+  --hscroll-end-inset: var(--page-inset-x);
+  /* Desktop xl+: лента с xl:mr-[calc((1160px-100vw)/2)] — scrollport уже content-колонки */
+  --hscroll-end-inset-bleed: max(0px, calc((100vw - 1160px) / 2 + var(--page-inset-x)));
+  --page-inset-top: 8px;
+  --page-inset-bottom: 16px;
+
+  /* Плашки: всегда пара mobile / desktop. Desktop = xl 1280px (Figma). Не один py на все вьюпорты. */
+  --plaque-px-mobile: 10px;
+  --plaque-px-desktop: 10px;
+  --plaque-py-mobile: 8px; /* тарифы / startBadge / hero-card — чуть выше 6px */
+  --plaque-py-desktop: 8px; /* тарифы xl — чуть выше 6px */
+  --plaque-py-hero-card-desktop: 8px; /* hero price card pills xl — = .plaque */
+
+  --plaque-py-hero-label-desktop: 5px; /* stat / free-workout hero xl — ниже chip (8px); Figma ~6px */
+  --plaque-tag-py-mobile: 5px; /* .course-catalog-tag — чуть выше .plaque (4px) */
+  --plaque-tag-py-desktop: 6px; /* .course-catalog-tag Figma xl */
+  --plaque-radius: 7px;
+  --plaque-chip-px-mobile: 10px;
+  --plaque-chip-px-desktop: 12px;
+  --plaque-chip-py-mobile: 8px; /* hero pills — чуть выше 6px; центрирование в .plaque-chip */
+  --plaque-chip-py-desktop: 10px; /* было 8px — чуть выше на xl */
+  --plaque-chip-radius-mobile: 9999px; /* rounded-full — только <xl */
+  --plaque-chip-radius-desktop: 139px; /* Figma xl:rounded-[139px] */
+  --plaque-chip-font-mobile: 10px; /* hero pills mobile — ниже --text-small (12px) */
+  --plaque-chip-font-desktop: 12px; /* = --text-small, Figma xl */
+  --plaque-feature-pl: 6px;
+  --plaque-feature-py-mobile: 6px;
+  --plaque-feature-py-desktop: 6px;
+  --plaque-feature-py-platform-desktop: 6px; /* PlatformSection xl: чуть ниже, было 8px */
+  --plaque-feature-font-mobile: 11px;
+  --plaque-feature-font-desktop: 12px;
+  /* PlatformSection mobile: чуть плотнее, чтобы 2+2 влезало в 390 */
+  --plaque-feature-font-platform-mobile: 10px;
+  --plaque-feature-font-platform-desktop: 14px;
+  --plaque-feature-pr-platform-mobile: 8px;
+  --plaque-feature-pr-platform-desktop: 10px;
+  --plaque-feature-gap-platform-mobile: 6px;
+  /* ExpectCourse mobile (<lg): плотнее, чтобы 5 плашек = 2+2+1 в 390 */
+  --plaque-feature-font-expect-mobile: 10px;
+  --plaque-feature-py-expect-mobile: 4px;
+  --plaque-feature-pr-expect-mobile: 8px;
+  --plaque-feature-gap-expect-mobile: 4px;
+  --plaque-label-px-mobile: 12px; /* таймлайн — чуть больше внутренних отступов */
+  --plaque-label-px-desktop: 10px; /* было 8px */
+  --plaque-label-py-mobile: 5px; /* было 3px */
+  --plaque-label-py-desktop: 6px; /* было 4px; WhenToStart lg+ */
+  --plaque-label-font-mobile: 11px;
+  --plaque-label-font-desktop: 10px;
+  --plaque-label-radius-mobile: 9999px;
+  --plaque-label-radius-desktop: 28px;
+
+  /* Карточки-ряды: высота только на своём брейкпоинте, не копировать xl на мобилку. */
+  --card-padding-mobile: 15px;
+  --card-padding-desktop: 16px;
+  --card-padding: var(--card-padding-mobile);
+  --fit-card-min-height: 72px;
+  --fit-card-height: 90px;
+
+  /* Motion tokens */
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-soft: cubic-bezier(0.4, 0, 0.2, 1);
+  --dur-fast: 160ms;
+  --dur: 280ms;
+  --dur-slow: 480ms;
+
+  /* Reveal / entrance — one language: fade + slight rise (`up`) */
+  --reveal-ease: var(--ease-out);
+  --reveal-dur: var(--dur-slow);
+  --reveal-dur-hero: 720ms;
+  --reveal-dur-hero-photo: 1.2s;
+  --reveal-dur-hero-figure: 1.35s;
+  --reveal-hero-photo-scale: 1.08;
+  --reveal-hero-figure-scale: 1.14;
+  --reveal-hero-figure-rise: 18px;
+  --reveal-distance-mobile: 20px;
+  --reveal-distance-desktop: 24px;
+  --reveal-distance: var(--reveal-distance-mobile);
+  --reveal-distance-hero-mobile: 14px;
+  --reveal-distance-hero-desktop: 16px;
+  --reveal-distance-hero: var(--reveal-distance-hero-mobile);
+  --reveal-stagger: 70ms;
+  --reveal-stagger-initial: 80ms;
+  --reveal-delay: 0ms;
+}
+
+@media (min-width: 1280px) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --page-inset-x: var(--page-inset-x-desktop);
+    --card-padding: var(--card-padding-desktop);
+    --reveal-distance: var(--reveal-distance-desktop);
+    --reveal-distance-hero: var(--reveal-distance-hero-desktop);
   }
 }
 
+html {
+  /* Page canvas = home (#f8f8f8). Also on html so overscroll / empty viewport match body. */
+  background-color: var(--color-bg);
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+/* Плашка ВК не должна перекрывать открытое меню */
+html.menu-open .vk-notice {
+  display: none;
+}
+
+@keyframes vk-notice-in {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes vk-notice-out {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+}
+
+.vk-notice-enter {
+  animation: vk-notice-in var(--dur-slow) var(--ease-out) both;
+}
+
+.vk-notice-exit {
+  animation: vk-notice-out var(--dur) var(--ease-soft) both;
+  pointer-events: none;
+}
+
+/* Drag-to-scroll: курсор-хваталка на десктопе */
+[data-drag-scroll] {
+  cursor: grab;
+}
+[data-drag-scroll].is-dragging {
+  cursor: grabbing;
+  scroll-behavior: auto;
+  /* Без отключения снапа каждое присвоение scrollLeft прищёлкивается назад */
+  scroll-snap-type: none;
+  user-select: none;
+}
+[data-drag-scroll].is-dragging a,
+[data-drag-scroll].is-dragging button {
+  pointer-events: none;
+}
+
+/* Marquee задаёт scrollLeft каждый кадр — snap не должен его откатывать */
+[data-marquee] {
+  scroll-snap-type: none;
+}
+
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  /* Outer page canvas sitewide — same as home. Cards/heroes stay white on top. */
+  background-color: var(--color-bg);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  /* Оси вариативного Nunito Sans — как в макете Figma */
+  font-variation-settings: "YTLC" 500, "wdth" 100;
+  text-wrap: pretty;
+  overflow-x: clip;
+}
+
+/* ——— Мобильная горизонтальная лента карточек ———
+   Нативный скролл со scroll-snap и «подглядыванием» следующей карточки.
+   Растягивается до краёв экрана при контейнере с --page-inset-x.
+   @utility — чтобы варианты (lg:hidden и т.п.) корректно переопределяли. */
+@utility hscroll {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  overflow-y: visible;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  /* 50vw-bleed, не отрицательный inset: иначе max-w-[1160px] > * { max-width:100% } режет peek */
+  width: 100vw;
+  max-width: none;
+  min-width: 0;
+  margin-left: calc(50% - 50vw);
+  /* Inset — margin первого/последнего ребёнка, не padding скроллера:
+     padding + overflow-x:auto в Chromium/WebKit режет карточку при свайпе
+     по content-box, а не по краю экрана. */
+  scroll-padding-inline: var(--page-inset-x);
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  & > * {
+    flex-shrink: 0;
+    scroll-snap-align: start;
+  }
+
+  & > *:first-child {
+    margin-inline-start: var(--page-inset-x);
+  }
+
+  & > *:last-child {
+    margin-inline-end: var(--hscroll-end-inset);
+  }
+}
+
+/* Trailing scroll room — last-child margin, не padding-inline скроллера.
+   .hscroll-end — scrollport до viewport (50%+50vw); .hscroll-end-bleed — узкий scrollport + mr bleed. */
+@utility hscroll-end {
+  & > *:last-child {
+    margin-inline-end: var(--hscroll-end-inset);
+  }
+}
+
+@utility hscroll-end-bleed {
+  & > *:last-child {
+    margin-inline-end: var(--hscroll-end-inset-bleed);
+  }
+}
+
+/* Ширина карточки в мобильной ленте: peek следующей ~12% */
+@utility hscroll-card {
+  width: min(85vw, 320px);
+}
+
+/* ——— Shared chrome: one token/class change hits every landing ———
+   Не копировать py/radius/font с одной страницы. Правило: visual-consistency.mdc */
+
+.page-inset {
+  padding-inline: var(--page-inset-x);
+  padding-top: var(--page-inset-top);
+  padding-bottom: var(--page-inset-bottom);
+}
+
+/* Прямоугольная плашка. Default = mobile; xl = Figma desktop. Не 640px. */
+.plaque,
+.course-catalog-tag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  min-height: 0;
+  border-radius: var(--plaque-radius);
+  font-size: var(--text-small);
+  font-weight: 600;
+  /* 1 — иначе em-box Nunito с 1.15/normal съезжает внутри равного padding */
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.plaque {
+  padding: var(--plaque-py-mobile) var(--plaque-px-mobile);
+}
+
+.course-catalog-tag {
+  padding: var(--plaque-tag-py-mobile) var(--plaque-px-mobile);
+}
+
+/* Плашка под фото на hero-карточке (stat, «Бесплатная тренировка») — выше тарифных chip */
+
+@media (min-width: 1280px) {
+  .plaque {
+    padding: var(--plaque-py-desktop) var(--plaque-px-desktop);
+  }
+
+  .plaque.plaque-hero-label {
+    padding: var(--plaque-py-hero-label-desktop) var(--plaque-px-desktop);
+  }
+
+  .plaque.plaque-hero-card {
+    padding: var(--plaque-py-hero-card-desktop) var(--plaque-px-desktop);
+  }
+
+  .course-catalog-tag {
+    padding: var(--plaque-tag-py-desktop) var(--plaque-px-desktop);
+  }
+}
+
+/* Пилюли hero: mobile/desktop py из токенов — не усреднять через 640px */
+.plaque-chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  padding: var(--plaque-chip-py-mobile) var(--plaque-chip-px-mobile);
+  border-radius: var(--plaque-chip-radius-mobile);
+  font-size: var(--plaque-chip-font-mobile);
+  font-weight: 600;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  color: #fff;
+}
+
+@media (min-width: 1280px) {
+  .plaque-chip {
+    padding: var(--plaque-chip-py-desktop) var(--plaque-chip-px-desktop);
+    border-radius: var(--plaque-chip-radius-desktop);
+    font-size: var(--plaque-chip-font-desktop);
+  }
+}
+
+.plaque-chip-accent {
+  background-color: var(--color-accent);
+}
+
+.plaque-chip-glass {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+/* Иконка + подпись (ExpectCourse, PlatformSection). */
+.plaque-feature {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-width: 0;
+  padding: var(--plaque-feature-py-mobile) var(--plaque-px-mobile)
+    var(--plaque-feature-py-mobile) var(--plaque-feature-pl);
+  border-radius: var(--radius-sm);
+  background: #fff;
+  box-shadow: 0 4px 5.5px rgba(238, 238, 238, 0.57);
+  font-size: var(--plaque-feature-font-mobile);
+  font-weight: 500;
+  line-height: 1;
+  text-align: center;
+  color: var(--color-ink-secondary);
+  white-space: nowrap;
+}
+
+/* ExpectCourse desktop-макет с lg (1024), не ждать 1280 */
+@media (min-width: 1024px) {
+  .plaque-feature {
+    padding-block: var(--plaque-feature-py-desktop);
+    font-size: var(--plaque-feature-font-desktop);
+  }
+}
+
+/* PlatformSection mobile (&lt;sm): плотнее, чтобы 2+2 влезало в ~360px; sm–lg без изменений */
+@media (max-width: 639px) {
+  .plaque-feature-platform {
+    gap: var(--plaque-feature-gap-platform-mobile);
+    padding-inline: var(--plaque-feature-pl) var(--plaque-feature-pr-platform-mobile);
+    font-size: var(--plaque-feature-font-platform-mobile);
+  }
+}
+
+/* ExpectCourse mobile-only (класс вешается только в lg:hidden-дереве).
+ * Ширина по контенту + padding; ряды 2+2+1 через flex, не equal-col grid. */
+.plaque-feature-expect-mobile {
+  width: fit-content;
+  max-width: 100%;
+  gap: var(--plaque-feature-gap-expect-mobile);
+  padding: var(--plaque-feature-py-expect-mobile) var(--plaque-feature-pr-expect-mobile)
+    var(--plaque-feature-py-expect-mobile) var(--plaque-feature-pl);
+  font-size: var(--plaque-feature-font-expect-mobile);
+  white-space: nowrap;
+  text-align: center;
+  line-height: 1;
+}
+
+/* PlatformSection: крупнее на xl (1280), не смешивать с ExpectCourse lg */
+@media (min-width: 1280px) {
+  .plaque-feature-platform {
+    gap: 8px;
+    padding-block: var(--plaque-feature-py-platform-desktop);
+    padding-inline: var(--plaque-feature-pl) var(--plaque-feature-pr-platform-desktop);
+    font-size: var(--plaque-feature-font-platform-desktop);
+  }
+}
+
+/* Лейблы таймлайна WhenToStart: центрирование + пара mobile/desktop токенов */
+.plaque-label {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--plaque-label-py-mobile) var(--plaque-label-px-mobile);
+  border-radius: var(--plaque-label-radius-mobile);
+  background: var(--color-ink);
+  font-size: var(--plaque-label-font-mobile);
+  font-weight: 600;
+  line-height: 1;
+  text-align: center;
+  text-transform: uppercase;
+  white-space: nowrap;
+  color: #fff;
+}
+
+/* WhenToStart desktop-макет с lg (1024) */
+@media (min-width: 1024px) {
+  .plaque-label {
+    padding: var(--plaque-label-py-desktop) var(--plaque-label-px-desktop);
+    font-size: var(--plaque-label-font-desktop);
+    border-radius: var(--plaque-label-radius-desktop);
+  }
+}
+
+/* Каталог курсов — единая ширина CTA-кнопок с ценой (флагман = эталон) */
+:root {
+  --catalog-cta-btn-width-tablet: 140px;
+  --catalog-cta-btn-width-desktop: 156px;
+}
+
+.catalog-cta-btn {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .catalog-cta-btn {
+    width: var(--catalog-cta-btn-width-tablet);
+    min-width: var(--catalog-cta-btn-width-tablet);
+    max-width: var(--catalog-cta-btn-width-tablet);
+  }
+}
+
+@media (min-width: 1280px) {
+  .catalog-cta-btn {
+    width: var(--catalog-cta-btn-width-desktop);
+    min-width: var(--catalog-cta-btn-width-desktop);
+    max-width: var(--catalog-cta-btn-width-desktop);
+  }
+}
+
+/* Белые listing-карточки каталога (радиус md, паддинг 16). overflow — в разметке. */
+.course-card {
+  border-radius: var(--radius-md);
+  background: #fff;
+  box-shadow: var(--shadow-card);
+  padding: var(--card-padding);
+}
+
+@media (min-width: 1280px) {
+  .course-card-abs {
+    padding: 0;
+  }
+}
+
+/* Ряды who-fits: 72px только моб/default; 90px только xl. Не lg. */
+.fit-card {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  min-width: 0;
+  min-height: var(--fit-card-min-height);
+  overflow: hidden;
+  border-radius: var(--radius-2xl);
+  background: #fff;
+  box-shadow: var(--shadow-card);
+}
+
+.fit-card > p {
+  overflow: visible;
+}
+
+@media (min-width: 1280px) {
+  .fit-card {
+    height: var(--fit-card-height);
+    min-height: var(--fit-card-height);
+  }
+}
+
+/* WhyKochfit carousel — corner photo/icon thumbs: mobile −8px, xl Figma */
+.why-kochfit-thumb-photo {
+  width: 49px;
+  height: 49px;
+  flex-shrink: 0;
+}
+
+@media (min-width: 1280px) {
+  .why-kochfit-thumb-photo {
+    width: 57px;
+    height: 57px;
+  }
+}
+
+.why-kochfit-thumb-icon-box {
+  width: 28px;
+  height: 28px;
+}
+
+@media (min-width: 1280px) {
+  .why-kochfit-thumb-icon-box {
+    width: 36px;
+    height: 36px;
+  }
+}
+
+.why-kochfit-thumb-icon {
+  left: 4px;
+  top: 4px;
+  width: 20px;
+  height: 20px;
+}
+
+@media (min-width: 1280px) {
+  .why-kochfit-thumb-icon {
+    left: 6px;
+    top: 6px;
+    width: 24px;
+    height: 24px;
+  }
+}
+
+.why-kochfit-thumb-grid {
+  grid-template-columns: minmax(0, 1fr) 49px;
+}
+
+@media (min-width: 1280px) {
+  .why-kochfit-thumb-grid {
+    grid-template-columns: minmax(0, 1fr) 57px;
+  }
+}
+
+/* «Полезные материалы Kochfit»: компактная высота на мобилке */
+@media (max-width: 1199px) {
+  [data-figma-node="2351:11004"] .useful-material-card {
+    height: auto;
+    min-height: 0;
+  }
+}
+
+@media (hover: hover) {
+  [data-figma-node="2351:11004"] [data-carousel-prev]:hover,
+  [data-figma-node="2351:11004"] [data-carousel-next]:hover {
+    opacity: 0.8;
+  }
+}
+
+/* Вылет ленты на ширину вьюпорта: следующая карточка подглядывает
+   за колонку контента, а не режется по max-width белого контейнера.
+   50vw-трюк не зависит от padding предка; max-width: none бьёт
+   .figma-landing section[max-w-1160] > * { max-width: 100% }. */
+@utility hscroll-bleed {
+  width: 100vw;
+  max-width: none;
+  min-width: 0;
+  margin-left: calc(50% - 50vw);
+  scroll-padding-inline: var(--page-inset-x);
+
+  & > *:first-child {
+    margin-inline-start: var(--page-inset-x);
+  }
+
+  & > *:last-child {
+    margin-inline-end: var(--hscroll-end-inset);
+  }
+}
+
+/* Отступ между секциями: 48px mobile → 64px tablet → 100px desktop */
+.section-gap {
+  margin-top: 3rem;
+}
+
+@media (min-width: 768px) {
+  .section-gap {
+    margin-top: 4rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .section-gap {
+    margin-top: 100px;
+  }
+}
+
+/* Hero → «почему»: 48 → 64 → 100px, xl чуть больше (140px) */
+.section-gap-after-hero {
+  margin-top: 3rem;
+}
+
+@media (min-width: 768px) {
+  .section-gap-after-hero {
+    margin-top: 4rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .section-gap-after-hero {
+    margin-top: 100px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .section-gap-after-hero {
+    margin-top: 140px;
+  }
+}
+
+/* WhyKochfit → «Курсы Kochfit»: 48 → 64 → 100px, xl чуть больше (120px) */
+@media (min-width: 1280px) {
+  .section-gap-before-courses {
+    margin-top: 120px;
+  }
+}
+
+/* Author → AppPromo на главной: Figma 112px между секциями */
+@media (min-width: 1024px) {
+  .section-gap--112 {
+    margin-top: 112px;
+  }
+}
+
+/* /r: после «Программа курса» → «Когда можно начать»: desktop 100 → 80 → 60. Mobile/tablet — .section-gap */
+@media (min-width: 1024px) {
+  .section-gap.section-gap-after-program {
+    margin-top: 60px;
+  }
+}
+
+/* /r, /for_pregnant: перед «Тарифы курса»: desktop 100 → 80 → 64 → 72. Mobile/tablet — .section-gap.
+   Не вешать на /community — там общий .section-gap 100px остаётся. */
+@media (min-width: 1024px) {
+  .section-gap.section-gap-before-tariffs {
+    margin-top: 72px;
+  }
+}
+
+/* ExpectCourse («Что вас ждет на курсе»): desktop 100 → 80 → 64. Mobile/tablet — .section-gap */
+@media (min-width: 1024px) {
+  .section-gap.section-gap-before-expect {
+    margin-top: 64px;
+  }
+
+  /* /e_mtd: больше воздуха перед блоком, чем на остальных курсах (64 → 120 → 160 → 140) */
+  .section-gap.section-gap-before-expect-mtd {
+    margin-top: 140px;
+  }
+
+  /* /for_pregnant: desktop gap before ExpectCourse (было 140 → 100 → 80 → 90) */
+  .section-gap.section-gap-before-expect-pregnant {
+    margin-top: 90px;
+  }
+
+  /* /r: desktop gap before ExpectCourse (64 → 80 → 100). Не трогать /community (общий 64). */
+  .section-gap.section-gap-before-expect-postpartum {
+    margin-top: 100px;
+  }
+}
+
+/* Referral («Реферальная программа»): desktop 100 → 120 → 160. Mobile/tablet — .section-gap */
+@media (min-width: 1024px) {
+  .section-gap.section-gap-before-referral {
+    margin-top: 160px;
+  }
+}
+
+/* Figma-лендинги: секции с фиксированной шириной — горизонтальный скролл на узких экранах.
+   Не трогаем .hscroll / .hscroll-bleed: иначе max-width:100% (specificity выше utility)
+   обрезает peek следующей карточки по колонке контента. */
+.figma-landing [data-reveal]:has([data-drag-scroll]),
+.figma-landing [data-reveal]:has([class*="hscroll"]) {
+  overflow-x: visible;
+  overflow-y: visible;
+}
+
+/* Marquee: без боковых margin на копиях — иначе шов цикла. Карточки идут к краю экрана. */
+.figma-landing [data-marquee].hscroll-bleed > *:first-child,
+.figma-landing [data-marquee][class*="hscroll-bleed"] > *:first-child {
+  margin-inline-start: 0;
+}
+.figma-landing [data-marquee].hscroll-bleed > *:last-child,
+.figma-landing [data-marquee][class*="hscroll-bleed"] > *:last-child {
+  margin-inline-end: 0;
+}
+
+@media (max-width: 1199px) {
+  .figma-landing section[class*="max-w-[1160px]"],
+  .figma-landing section[class*="max-w-[1160px]"] > *:not([class*="hscroll"]) {
+    max-width: 100%;
+  }
+
+  .figma-landing [class*="left-[100px]"],
+  .figma-landing [class*="left-[196px]"],
+  .figma-landing [class*="left-[258px]"] {
+    position: relative !important;
+    left: auto !important;
+    top: auto !important;
+  }
+}
+
+/* ——— Базовые интерактивные переходы ——— */
+a,
+button,
+[role="button"],
+input,
+textarea,
+select,
+summary {
+  transition:
+    color var(--dur-fast) var(--ease-soft),
+    background-color var(--dur-fast) var(--ease-soft),
+    background var(--dur-fast) var(--ease-soft),
+    border-color var(--dur-fast) var(--ease-soft),
+    box-shadow var(--dur) var(--ease-soft),
+    opacity var(--dur-fast) var(--ease-soft),
+    transform var(--dur-fast) var(--ease-out),
+    filter var(--dur-fast) var(--ease-soft);
+}
+
+a:active,
+button:active,
+[role="button"]:active {
+  transform: scale(0.97);
+}
+
+/* Карточки / белые блоки — лёгкий lift */
+.motion-card,
+main a.rounded-\[20px\],
+footer a {
+  transition:
+    transform var(--dur) var(--ease-out),
+    box-shadow var(--dur) var(--ease-soft),
+    background-color var(--dur-fast) var(--ease-soft),
+    color var(--dur-fast) var(--ease-soft),
+    opacity var(--dur-fast) var(--ease-soft);
+}
+
+/* Универсальный hover для ссылок-кнопок и CTA */
+main a[class*="rounded"],
+main button,
+header a[class*="rounded"],
+aside a[class*="rounded"] {
+  will-change: transform;
+}
+
+main a[class*="rounded"]:hover,
+main button:hover,
+header a[class*="rounded"]:hover {
+  filter: brightness(1.03);
+}
+
+main a[class*="rounded"]:active,
+main button:active {
+  filter: brightness(0.98);
+}
+
+/* Карточки — подъём при наведении */
+.motion-lift {
+  transition:
+    transform var(--dur) var(--ease-out),
+    box-shadow var(--dur) var(--ease-soft),
+    background-color var(--dur-fast) var(--ease-soft),
+    color var(--dur-fast) var(--ease-soft);
+}
+
+.motion-lift:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-card-hover);
+}
+
+/* ——— Scroll / load reveal (активно только после MotionRoot) ———
+   Hide snaps (no transition). Reveal animates — otherwise adding
+   `.motion-ready` would fade content *out* then reverse in (jank). */
+html.motion-ready [data-reveal]:not(.is-revealed) {
+  opacity: 0;
+  transform: translate3d(0, var(--reveal-distance), 0);
+  transition: none;
+  will-change: opacity, transform;
+}
+
+html.motion-ready [data-reveal="fade"]:not(.is-revealed) {
+  transform: none;
+}
+
+[data-reveal].is-revealed {
+  opacity: 1;
+  transform: none;
+  transition:
+    opacity var(--reveal-dur) var(--reveal-ease),
+    transform var(--reveal-dur) var(--reveal-ease);
+  transition-delay: var(--reveal-delay);
+}
+
+/* Hero: same ease family, slightly longer / shorter travel */
+html.motion-ready [data-reveal-hero]:not(.is-revealed),
+html.motion-ready .hero-motion:not(.is-revealed) {
+  opacity: 0;
+  transform: translate3d(0, var(--reveal-distance-hero), 0);
+  transition: none;
+  will-change: opacity, transform;
+}
+
+[data-reveal-hero].is-revealed,
+.hero-motion.is-revealed {
+  opacity: 1;
+  transform: none;
+  transition:
+    opacity var(--reveal-dur-hero) var(--reveal-ease),
+    transform var(--reveal-dur-hero) var(--reveal-ease);
+}
+
+/*
+  Hero photo load zoom: Ken Burns on inner wrappers, all breakpoints
+  (no min-width: 1280px gate — mobile must see the same depth effect).
+  Wrappers settle to identity so img crop (Tailwind scale-* / object-position)
+  is never overridden — `/r` must not settle at scale 1.28 origin-bottom.
+  Shell is opacity:0 during the 2-rAF prep, so the start scale is hidden.
+  Figure wrapper zooms more + rises slightly → depth vs BG.
+  Origin is center on the wrapper only; img origin/object-position stay per crop.
+*/
+.hero-photo-zoom,
+.hero-figure-zoom {
+  transform-origin: center center;
+}
+
+html.motion-ready [data-reveal-hero]:not(.is-revealed) .hero-photo-zoom,
+html.motion-ready .hero-motion:not(.is-revealed) .hero-photo-zoom {
+  transform: scale(var(--reveal-hero-photo-scale));
+  transition: none;
+  will-change: transform;
+}
+
+[data-reveal-hero].is-revealed .hero-photo-zoom,
+.hero-motion.is-revealed .hero-photo-zoom {
+  transform: none;
+  transition: transform var(--reveal-dur-hero-photo) var(--reveal-ease);
+}
+
+html.motion-ready [data-reveal-hero]:not(.is-revealed) .hero-figure-zoom,
+html.motion-ready .hero-motion:not(.is-revealed) .hero-figure-zoom {
+  transform: scale(var(--reveal-hero-figure-scale))
+    translate3d(0, var(--reveal-hero-figure-rise), 0);
+  transition: none;
+  will-change: transform;
+}
+
+[data-reveal-hero].is-revealed .hero-figure-zoom,
+.hero-motion.is-revealed .hero-figure-zoom {
+  transform: none;
+  transition: transform var(--reveal-dur-hero-figure) var(--reveal-ease);
+}
+
+/* Hero landing menu: scroll-linked lift (see HeroHeader + hero-layout).
+   Rest: lower + inset into hero cover; docked: higher / nearer edges.
+   Progress 0→1 over heroHeaderLiftScrollPx; travel/inset-extra per breakpoint.
+   Desktop xl unchanged: travel 36 → visual top ~44→8; bar px = page-inset + 20.
+   Header is a sibling of <main> (not inside overflow-x-clip / hero transform).
+   Load / restored-scroll corrections ease; live scroll uses .is-scrolling. */
+.hero-header {
+  --hero-header-progress: 0;
+  --hero-header-travel: 14px;
+  --hero-header-inset-extra: 12px;
+  top: max(var(--page-inset-top), env(safe-area-inset-top, 0px));
+  padding-top: 0;
+  padding-bottom: 0;
+  transform: translate3d(
+    0,
+    calc(var(--hero-header-travel) * (1 - var(--hero-header-progress))),
+    0
+  );
+  transition: transform var(--dur) var(--ease-out);
+  will-change: transform;
+}
+
+.hero-header.is-scrolling {
+  transition: none;
+}
+
+.hero-header-bar {
+  padding-inline: calc(
+    var(--page-inset-x) + var(--hero-header-inset-extra) *
+      (1 - var(--hero-header-progress))
+  );
+  transition: padding-inline var(--dur) var(--ease-out);
+}
+
+.hero-header.is-scrolling .hero-header-bar {
+  transition: none;
+}
+
+@media (min-width: 640px) and (max-width: 1279px) {
+  .hero-header {
+    --hero-header-travel: 18px;
+    --hero-header-inset-extra: 12px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .hero-header {
+    --hero-header-travel: 36px;
+    --hero-header-inset-extra: 0px;
+    top: var(--page-inset-top);
+  }
+
+  .hero-header-bar {
+    padding-inline: calc(var(--page-inset-x-desktop) + 20px);
+  }
+}
+
+/* ——— Hero header glass pills (burger+logo, desktop nav) ——— */
+.header-glass-pill {
+  background-color: var(--header-glass-bg);
+  border: 0;
+  backdrop-filter: blur(var(--header-glass-blur));
+  -webkit-backdrop-filter: blur(var(--header-glass-blur));
+  transition: background-color var(--dur-fast) var(--ease-soft);
+}
+
+.header-glass-pill--nav {
+  --header-glass-blur: var(--header-glass-blur-nav);
+}
+
+.header-glass-pill:hover,
+.header-glass-pill:focus-within {
+  background-color: var(--header-glass-bg-hover);
+}
+
+/* ——— Site menu drawer (CSS transition, no remount keyframes) ——— */
+.site-menu {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  overflow: hidden;
+  pointer-events: none;
+  visibility: hidden;
+  /* Hide only after close transition finishes */
+  transition: visibility 0s linear var(--dur);
+}
+
+.site-menu.is-open {
+  pointer-events: auto;
+  visibility: visible;
+  transition-delay: 0s;
+}
+
+.site-menu-backdrop {
+  position: absolute;
+  inset: 0;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  background: var(--color-scrim);
+  opacity: 0;
+  transition: opacity var(--dur) var(--ease-soft);
+}
+
+.site-menu.is-open .site-menu-backdrop {
+  opacity: 1;
+}
+
+.site-menu-drawer {
+  background-color: #fff;
+  transform: translate3d(-100%, 0, 0);
+  will-change: transform;
+  transition: transform var(--dur) var(--ease-out);
+  padding-top: env(safe-area-inset-top);
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+/* Все страницы: frosted white drawer + тёмный текст; пилюля hero-шапки без изменений */
+.site-menu--light .site-menu-backdrop {
+  background: color-mix(in srgb, var(--color-ink) 65%, transparent);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+.site-menu--light .site-menu-drawer {
+  background-color: rgba(255, 255, 255, 0.97);
+  backdrop-filter: blur(32px);
+  -webkit-backdrop-filter: blur(32px);
+  border-right: 1px solid var(--color-line);
+}
+
+.site-menu--light .site-menu-drawer-logo {
+  color: var(--color-ink);
+}
+
+.site-menu--light .site-menu-close:hover {
+  background-color: var(--color-surface-blue);
+}
+
+.site-menu--light .site-menu-close-bar {
+  background-color: var(--color-ink);
+}
+
+.site-menu--light .site-menu-link {
+  color: var(--color-ink);
+}
+
+.site-menu--light .site-menu-link.is-active,
+.site-menu--light .site-menu-link:hover,
+.site-menu--light .site-menu-link:active {
+  color: var(--color-accent);
+  background-color: var(--color-surface-blue);
+}
+
+.site-menu.is-open .site-menu-drawer {
+  transform: translate3d(0, 0, 0);
+}
+
+.site-menu-nav > li {
+  opacity: 0;
+  transform: translate3d(-6px, 0, 0);
+  transition:
+    opacity 220ms var(--ease-soft),
+    transform 220ms var(--ease-out);
+}
+
+.site-menu.is-open .site-menu-nav > li {
+  opacity: 1;
+  transform: none;
+}
+
+/* Drawer links / socials / LK — soft hover (override global a:active scale) */
+.site-menu-link {
+  display: block;
+  border-radius: 10px;
+  padding: 12px;
+  font-family: var(--font-display);
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.3;
+  color: var(--color-ink);
+  background-color: transparent;
+  transform: translate3d(0, 0, 0);
+  transition:
+    color var(--dur) var(--ease-out),
+    background-color var(--dur) var(--ease-out),
+    transform var(--dur) var(--ease-out);
+}
+
+@media (min-width: 1280px) {
+  .site-menu-link {
+    font-size: 14px;
+  }
+}
+
+.site-menu-link.is-active {
+  color: var(--color-accent);
+}
+
+.site-menu-link:hover {
+  color: var(--color-accent);
+  background-color: var(--color-surface-blue);
+  transform: translate3d(3px, 0, 0);
+}
+
+.site-menu-link:active {
+  transform: translate3d(2px, 0, 0);
+  background-color: var(--color-surface-blue);
+  color: var(--color-accent);
+}
+
+/* Тап-зона 44px, визуальный кружок 34px внутри */
+.site-menu-social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  margin: -5px;
+}
+
+.site-menu-social-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 9999px;
+  background-color: var(--color-surface-blue);
+  color: var(--color-accent);
+  transform: scale(1);
+  transition:
+    color var(--dur) var(--ease-out),
+    background-color var(--dur) var(--ease-out),
+    transform var(--dur) var(--ease-out);
+}
+
+.site-menu-social:hover .site-menu-social-badge {
+  background-color: var(--color-accent);
+  color: #fff;
+  transform: scale(1.06);
+}
+
+.site-menu-social:active .site-menu-social-badge {
+  transform: scale(1.02);
+  background-color: var(--color-accent);
+  color: #fff;
+}
+
+.site-menu-login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 14px;
+  height: 40px;
+  width: 100%;
+  border-radius: 10px;
+  font-family: var(--font-display);
+  font-size: 13px;
+  font-weight: 600;
+  color: #fff;
+  background-image: var(--gradient-primary);
+  filter: brightness(1);
+  transform: scale(1);
+  transition:
+    transform var(--dur) var(--ease-out),
+    filter var(--dur) var(--ease-out),
+    opacity var(--dur) var(--ease-out);
+}
+
+.site-menu-login:hover {
+  transform: scale(1.015);
+  filter: brightness(1.04);
+}
+
+.site-menu-login:active {
+  transform: scale(1);
+  filter: brightness(0.98);
+}
+
+/** Primary CTA — hero «Посмотреть программу» / «Оформить подписку» */
+.btn-primary {
+  background-image: var(--gradient-primary);
+  color: #fff;
+  font-family: var(--font-display);
+  font-weight: 600;
+}
+
+/**
+ * CTA на тёмной/цветной плашке — светлая кнопка из макета:
+ * soft-градиент + accent-текст (тот же приём, что у desktop CTA chip
+ * в PregnancyProgram), а не btn-primary.
+ */
+.btn-on-dark {
+  background-image: var(--gradient-soft);
+  background-color: var(--color-surface-blue);
+  color: var(--color-accent);
+  font-family: var(--font-display);
+  font-weight: 600;
+}
+
+.btn-on-dark:hover {
+  filter: brightness(1.04);
+}
+
+/* ——— Overlay / popup keyframes ——— */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes pop-in {
+  from {
+    opacity: 0;
+    transform: scale(0.94) translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes pop-out {
+  from {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: scale(0.96) translateY(8px);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in var(--dur) var(--ease-soft) both;
+}
+
+.animate-fade-out {
+  animation: fade-out var(--dur-fast) var(--ease-soft) both;
+}
+
+.animate-pop-in {
+  animation: pop-in var(--dur-slow) var(--ease-out) both;
+}
+
+.animate-pop-out {
+  animation: pop-out var(--dur-fast) var(--ease-soft) both;
+}
+
+/** Бейджи категорий /equipment — PDF + /colors/, не Figma export hex */
+.equipment-chip {
+  display: inline-flex;
+  height: 24px;
+  width: fit-content;
+  align-items: center;
+  border-radius: 8px;
+  padding-inline: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  backdrop-filter: blur(5px);
+}
+
+.equipment-chip--all {
+  background-color: var(--color-line);
+  color: var(--color-ink-muted);
+}
+
+.equipment-chip--soft {
+  background: var(--gradient-soft);
+  color: var(--color-plaque);
+}
+
+.equipment-chip--new {
+  background-color: var(--color-coral-soft);
+  color: var(--color-coral);
+  padding-block: 5px;
+  line-height: 1.1;
+}
+
+/** Вертикальная стрелка: плавное движение сверху вниз (hero, инвентарь) */
+@keyframes equipment-arrow-down {
+  0%,
+  100% {
+    transform: translateY(-1px);
+    opacity: 0.72;
+  }
+  50% {
+    transform: translateY(1.5px);
+    opacity: 1;
+  }
+}
+
+.equipment-arrow-down {
+  animation: equipment-arrow-down 2.8s cubic-bezier(0.42, 0, 0.58, 1) infinite;
+}
+
+/** Шкала «Важность» на /equipment — scaleX как в kochfit-oborudovanie */
+.equipment-importance-fill {
+  transform: scaleX(0);
+  transform-origin: left center;
+  will-change: transform;
+}
+
+.equipment-importance-fill.is-filled {
+  transform: scaleX(1);
+}
+
+/** Таймлайн «Когда можно начать курс» (/r) — линия → маркеры → пункты */
+.when-start-line {
+  transform: scaleX(0);
+  transform-origin: left center;
+  will-change: transform;
+}
+
+.when-start-line.is-revealed {
+  transform: scaleX(1);
+  transition: transform var(--reveal-dur-hero) var(--reveal-ease);
+}
+
+.when-start-line-vertical {
+  transform: scaleY(0);
+  transform-origin: top center;
+  will-change: transform;
+}
+
+.when-start-line-vertical.is-revealed {
+  transform: scaleY(1);
+  transition: transform var(--reveal-dur) var(--reveal-ease);
+}
+
+.when-start-marker {
+  opacity: 0;
+  transform: scale(0.55);
+  will-change: opacity, transform;
+}
+
+.when-start-marker.is-revealed {
+  opacity: 1;
+  transform: scale(1);
+  transition:
+    opacity var(--dur) var(--reveal-ease),
+    transform var(--dur) var(--reveal-ease);
+}
+
+.when-start-item {
+  opacity: 0;
+  transform: translate3d(0, calc(var(--reveal-distance) * 0.5), 0);
+  will-change: opacity, transform;
+}
+
+.when-start-item.is-revealed {
+  opacity: 1;
+  transform: none;
+  transition:
+    opacity var(--reveal-dur) var(--reveal-ease),
+    transform var(--reveal-dur) var(--reveal-ease);
+  transition-delay: calc(var(--when-start-index, 0) * var(--reveal-stagger) * 2);
+}
+
+.group\/link:hover .equipment-arrow-down,
+.group\/cta:hover .equipment-arrow-down,
+.group\/hero-card:hover .equipment-arrow-down {
+  animation-duration: 2.2s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  [data-reveal],
+  [data-reveal-hero],
+  .hero-motion {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+
+  [data-reveal-hero] img.hero-bg-photo,
+  [data-reveal-hero] img.hero-figure-photo,
+  [data-reveal-hero] .hero-photo-zoom,
+  [data-reveal-hero] .hero-figure-zoom,
+  .hero-motion img.hero-bg-photo,
+  .hero-motion img.hero-figure-photo,
+  .hero-motion .hero-photo-zoom,
+  .hero-motion .hero-figure-zoom {
+    transform: none !important;
+    transition: none !important;
+  }
+
+  .equipment-importance-fill {
+    transform: scaleX(1) !important;
+    transition: none !important;
+  }
+
+  .when-start-line,
+  .when-start-line-vertical,
+  .when-start-marker,
+  .when-start-item {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
 }

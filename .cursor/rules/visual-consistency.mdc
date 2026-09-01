@@ -1,0 +1,70 @@
+---
+description: Shared visual chrome. Never mix mobile and desktop padding/radius/type.
+alwaysApply: true
+---
+
+# Visual consistency (kochfit-redesign)
+
+## 1. Never mix mobile and desktop (hard rule)
+
+Changing **mobile must not edit desktop**. Changing **desktop must not edit mobile**.
+Sibling-page ports (`/` `/community` `/for_pregnant` `/r` `/e_mtd`) still **respect breakpoints** — copy the *pattern*, not a class that hits both.
+
+Desktop = Figma `xl:` (**1280px / 1200+**). If the section’s desktop layout is gated with `lg:` (ExpectCourse, WhenToStart), restore there. Mobile = default + `max-xl:` only.
+
+- Tokens are always a **pair**: `--plaque-py-mobile` vs `--plaque-py-desktop`. Never one `py` / radius / font for all viewports.
+- Restore desktop with `xl:` (or `lg:` if that is the desktop gate) or `@media (min-width: 1280px)`.
+- Do **not** use `sm:` / `md:` as “desktop”. `sm:py-3` applies through xl unless `xl:` overrides it.
+- Do **not** unify heights across breakpoints. Hero photos, ProgramCards / PregnancyProgram **188px** on desktop, fit-card 72 vs 90 — stay per breakpoint.
+
+```tsx
+// ❌ BAD — one class, both viewports; desktop Figma lost
+className="rounded-full py-[4px]"
+className="sm:py-3" // hits xl
+
+// ✅ GOOD — mobile tweak + explicit desktop original
+className="py-1 xl:py-[6px] rounded-full xl:rounded-[139px]"
+className="py-1.5 sm:max-xl:py-3 xl:py-[16px]"
+```
+
+```css
+/* ❌ BAD — 6px from 640px up, desktop Figma lost */
+.plaque { padding: 4px 10px; }
+@media (min-width: 640px) { .plaque { padding-block: 6px; } }
+
+/* ✅ GOOD */
+.plaque { padding: var(--plaque-py-mobile) var(--plaque-px-mobile); }
+@media (min-width: 1280px) {
+  .plaque { padding: var(--plaque-py-desktop) var(--plaque-px-desktop); }
+}
+```
+
+Edit the matching token in `src/app/globals.css` (mobile *or* desktop). Do not invent a new `py` / `rounded-*` on one landing for a pill that already has a class.
+
+## When the user changes one page
+
+Search siblings, grep the copy (e.g. «Старт с момента покупки»), apply the **same class**, then change the **matching token/breakpoint** — not a one-off that leaks.
+
+| Class | Mobile | Desktop (xl, or lg if that is the gate) |
+| --- | --- | --- |
+| `.plaque` | py **8px**, radius 7px | py **8px** (tariff / price chips) |
+| `.course-catalog-tag` | py **4px** | py **6px** |
+| `.plaque-chip` | py **8px**, `rounded-full` | py **10px**, px **12px**, **`rounded-[139px]`** |
+| `.plaque-feature` | py **4px**, 11px type | py **4px**, 12px type (lg+) |
+| `.plaque-label` | py **5px**, px **12px**, 11px type | py **6px**, px **10px**, 10px type, radius 28px (lg+) |
+| `.fit-card` | min-height **72px** | height **90px** only at xl |
+| `.hscroll-bleed` | inset via first/last child | never padding-inline on the scroller |
+
+Colors only from `globals.css`. Never green/olive.
+
+## Do not unify / do not restyle
+
+Hero photo crops (`object-position`) — mobile crop must not move the desktop girl. ProgramCards / PregnancyProgram desktop **188px**. PhoneMockup. Equipment covers.
+
+```tsx
+// ❌ BAD — new padding on one landing
+<span className="rounded-[8px] px-3 py-[5px] text-[11px]">Старт с момента покупки</span>
+
+// ✅ GOOD
+<span className="plaque bg-surface-blue text-plaque">Старт с момента покупки</span>
+```

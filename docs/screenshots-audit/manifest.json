@@ -1,0 +1,2028 @@
+{
+  "capturedAt": "2026-08-26T15:11:10.066Z",
+  "baseUrl": "http://212.233.93.151/kochfit",
+  "viewports": {
+    "desktop": 1440,
+    "mobile": 375
+  },
+  "pages": [
+    {
+      "path": "/",
+      "label": "Главная",
+      "viewport": "desktop",
+      "file": "home-desktop.png",
+      "url": "http://212.233.93.151/kochfit/",
+      "status": "ok"
+    },
+    {
+      "path": "/community",
+      "label": "Красота и здоровье",
+      "viewport": "desktop",
+      "file": "community-desktop.png",
+      "url": "http://212.233.93.151/kochfit/community",
+      "status": "ok"
+    },
+    {
+      "path": "/e_mtd",
+      "label": "МТД",
+      "viewport": "desktop",
+      "file": "e_mtd-desktop.png",
+      "url": "http://212.233.93.151/kochfit/e_mtd",
+      "status": "ok"
+    },
+    {
+      "path": "/r",
+      "label": "Восстановление после родов",
+      "viewport": "desktop",
+      "file": "r-desktop.png",
+      "url": "http://212.233.93.151/kochfit/r",
+      "status": "ok"
+    },
+    {
+      "path": "/for_pregnant",
+      "label": "Активная беременность",
+      "viewport": "desktop",
+      "file": "for_pregnant-desktop.png",
+      "url": "http://212.233.93.151/kochfit/for_pregnant",
+      "status": "ok"
+    },
+    {
+      "path": "/journal",
+      "label": "Полезный блог",
+      "viewport": "desktop",
+      "file": "journal-desktop.png",
+      "url": "http://212.233.93.151/kochfit/journal",
+      "status": "ok"
+    },
+    {
+      "path": "/result",
+      "label": "Отзывы и результаты",
+      "viewport": "desktop",
+      "file": "result-desktop.png",
+      "url": "http://212.233.93.151/kochfit/result",
+      "status": "ok"
+    },
+    {
+      "path": "/equipment",
+      "label": "Оборудование",
+      "viewport": "desktop",
+      "file": "equipment-desktop.png",
+      "url": "http://212.233.93.151/kochfit/equipment",
+      "status": "ok"
+    },
+    {
+      "path": "/info_referral",
+      "label": "Реферальная программа",
+      "viewport": "desktop",
+      "file": "info_referral-desktop.png",
+      "url": "http://212.233.93.151/kochfit/info_referral",
+      "status": "ok"
+    },
+    {
+      "path": "/person",
+      "label": "О тренере",
+      "viewport": "desktop",
+      "file": "person-desktop.png",
+      "url": "http://212.233.93.151/kochfit/person",
+      "status": "ok"
+    },
+    {
+      "path": "/basket",
+      "label": "Персональная работа",
+      "viewport": "desktop",
+      "file": "basket-desktop.png",
+      "url": "http://212.233.93.151/kochfit/basket",
+      "status": "ok"
+    },
+    {
+      "path": "/faq",
+      "label": "Тейпирование FAQ",
+      "viewport": "desktop",
+      "file": "faq-desktop.png",
+      "url": "http://212.233.93.151/kochfit/faq",
+      "status": "ok"
+    },
+    {
+      "path": "/suport",
+      "label": "Служба заботы",
+      "viewport": "desktop",
+      "file": "suport-desktop.png",
+      "url": "http://212.233.93.151/kochfit/suport",
+      "status": "ok"
+    },
+    {
+      "path": "/work",
+      "label": "Вакансия куратора",
+      "viewport": "desktop",
+      "file": "work-desktop.png",
+      "url": "http://212.233.93.151/kochfit/work",
+      "status": "ok"
+    },
+    {
+      "path": "/year-results",
+      "label": "Итоги года",
+      "viewport": "desktop",
+      "file": "year-results-desktop.png",
+      "url": "http://212.233.93.151/kochfit/year-results",
+      "status": "ok"
+    },
+    {
+      "path": "/sale",
+      "label": "Акции",
+      "viewport": "desktop",
+      "file": "sale-desktop.png",
+      "url": "http://212.233.93.151/kochfit/sale",
+      "status": "ok"
+    },
+    {
+      "path": "/taplink",
+      "label": "Taplink",
+      "viewport": "desktop",
+      "file": "taplink-desktop.png",
+      "url": "http://212.233.93.151/kochfit/taplink",
+      "status": "ok"
+    },
+    {
+      "path": "/tmtd",
+      "label": "TMTD landing",
+      "viewport": "desktop",
+      "file": "tmtd-desktop.png",
+      "url": "http://212.233.93.151/kochfit/tmtd",
+      "status": "ok"
+    },
+    {
+      "path": "/care",
+      "label": "Care",
+      "viewport": "desktop",
+      "file": "care-desktop.png",
+      "url": "http://212.233.93.151/kochfit/care",
+      "status": "ok"
+    },
+    {
+      "path": "/education",
+      "label": "Образование",
+      "viewport": "desktop",
+      "file": "education-desktop.png",
+      "url": "http://212.233.93.151/kochfit/education",
+      "status": "ok"
+    },
+    {
+      "path": "/webinars",
+      "label": "Вебинары",
+      "viewport": "desktop",
+      "file": "webinars-desktop.png",
+      "url": "http://212.233.93.151/kochfit/webinars",
+      "status": "ok"
+    },
+    {
+      "path": "/yes",
+      "label": "Спасибо за покупку",
+      "viewport": "desktop",
+      "file": "yes-desktop.png",
+      "url": "http://212.233.93.151/kochfit/yes",
+      "status": "ok"
+    },
+    {
+      "path": "/no",
+      "label": "Ошибка оплаты",
+      "viewport": "desktop",
+      "file": "no-desktop.png",
+      "url": "http://212.233.93.151/kochfit/no",
+      "status": "ok"
+    },
+    {
+      "path": "/delete",
+      "label": "Удаление данных",
+      "viewport": "desktop",
+      "file": "delete-desktop.png",
+      "url": "http://212.233.93.151/kochfit/delete",
+      "status": "ok"
+    },
+    {
+      "path": "/unsubscribe",
+      "label": "Отписка",
+      "viewport": "desktop",
+      "file": "unsubscribe-desktop.png",
+      "url": "http://212.233.93.151/kochfit/unsubscribe",
+      "status": "ok"
+    },
+    {
+      "path": "/oferta",
+      "label": "Оферта",
+      "viewport": "desktop",
+      "file": "oferta-desktop.png",
+      "url": "http://212.233.93.151/kochfit/oferta",
+      "status": "ok"
+    },
+    {
+      "path": "/part_oferta",
+      "label": "Частичная оферта",
+      "viewport": "desktop",
+      "file": "part_oferta-desktop.png",
+      "url": "http://212.233.93.151/kochfit/part_oferta",
+      "status": "ok"
+    },
+    {
+      "path": "/privacy",
+      "label": "Политика конфиденциальности",
+      "viewport": "desktop",
+      "file": "privacy-desktop.png",
+      "url": "http://212.233.93.151/kochfit/privacy",
+      "status": "ok"
+    },
+    {
+      "path": "/consent",
+      "label": "Согласие",
+      "viewport": "desktop",
+      "file": "consent-desktop.png",
+      "url": "http://212.233.93.151/kochfit/consent",
+      "status": "ok"
+    },
+    {
+      "path": "/data-consent",
+      "label": "Согласие на данные",
+      "viewport": "desktop",
+      "file": "data-consent-desktop.png",
+      "url": "http://212.233.93.151/kochfit/data-consent",
+      "status": "ok"
+    },
+    {
+      "path": "/del",
+      "label": "Удалить аккаунт",
+      "viewport": "desktop",
+      "file": "del-desktop.png",
+      "url": "http://212.233.93.151/kochfit/del",
+      "status": "ok"
+    },
+    {
+      "path": "/st1",
+      "label": "Статья st1",
+      "viewport": "desktop",
+      "file": "st1-desktop.png",
+      "url": "http://212.233.93.151/kochfit/st1",
+      "status": "ok"
+    },
+    {
+      "path": "/st2",
+      "label": "Статья st2",
+      "viewport": "desktop",
+      "file": "st2-desktop.png",
+      "url": "http://212.233.93.151/kochfit/st2",
+      "status": "ok"
+    },
+    {
+      "path": "/st3",
+      "label": "Статья st3",
+      "viewport": "desktop",
+      "file": "st3-desktop.png",
+      "url": "http://212.233.93.151/kochfit/st3",
+      "status": "ok"
+    },
+    {
+      "path": "/st4",
+      "label": "Статья st4",
+      "viewport": "desktop",
+      "file": "st4-desktop.png",
+      "url": "http://212.233.93.151/kochfit/st4",
+      "status": "ok"
+    },
+    {
+      "path": "/st5",
+      "label": "Статья st5",
+      "viewport": "desktop",
+      "file": "st5-desktop.png",
+      "url": "http://212.233.93.151/kochfit/st5",
+      "status": "ok"
+    },
+    {
+      "path": "/st6",
+      "label": "Статья st6",
+      "viewport": "desktop",
+      "file": "st6-desktop.png",
+      "url": "http://212.233.93.151/kochfit/st6",
+      "status": "ok"
+    },
+    {
+      "path": "/st7",
+      "label": "Статья st7",
+      "viewport": "desktop",
+      "file": "st7-desktop.png",
+      "url": "http://212.233.93.151/kochfit/st7",
+      "status": "ok"
+    },
+    {
+      "path": "/st8",
+      "label": "Статья st8",
+      "viewport": "desktop",
+      "file": "st8-desktop.png",
+      "url": "http://212.233.93.151/kochfit/st8",
+      "status": "ok"
+    },
+    {
+      "path": "/st9",
+      "label": "Статья st9",
+      "viewport": "desktop",
+      "file": "st9-desktop.png",
+      "url": "http://212.233.93.151/kochfit/st9",
+      "status": "ok"
+    },
+    {
+      "path": "/st10",
+      "label": "Статья st10",
+      "viewport": "desktop",
+      "file": "st10-desktop.png",
+      "url": "http://212.233.93.151/kochfit/st10",
+      "status": "ok"
+    },
+    {
+      "path": "/st11",
+      "label": "Статья st11",
+      "viewport": "desktop",
+      "file": "st11-desktop.png",
+      "url": "http://212.233.93.151/kochfit/st11",
+      "status": "ok"
+    },
+    {
+      "path": "/st12",
+      "label": "Статья st12",
+      "viewport": "desktop",
+      "file": "st12-desktop.png",
+      "url": "http://212.233.93.151/kochfit/st12",
+      "status": "ok"
+    },
+    {
+      "path": "/st13",
+      "label": "Статья st13",
+      "viewport": "desktop",
+      "file": "st13-desktop.png",
+      "url": "http://212.233.93.151/kochfit/st13",
+      "status": "ok"
+    },
+    {
+      "path": "/st14",
+      "label": "Статья st14",
+      "viewport": "desktop",
+      "file": "st14-desktop.png",
+      "url": "http://212.233.93.151/kochfit/st14",
+      "status": "ok"
+    },
+    {
+      "path": "/blog/1",
+      "label": "Блог 1",
+      "viewport": "desktop",
+      "file": "blog_1-desktop.png",
+      "url": "http://212.233.93.151/kochfit/blog/1",
+      "status": "ok"
+    },
+    {
+      "path": "/blog/2",
+      "label": "Блог 2",
+      "viewport": "desktop",
+      "file": "blog_2-desktop.png",
+      "url": "http://212.233.93.151/kochfit/blog/2",
+      "status": "ok"
+    },
+    {
+      "path": "/blog/3",
+      "label": "Блог 3",
+      "viewport": "desktop",
+      "file": "blog_3-desktop.png",
+      "url": "http://212.233.93.151/kochfit/blog/3",
+      "status": "ok"
+    },
+    {
+      "path": "/blog/4",
+      "label": "Блог 4",
+      "viewport": "desktop",
+      "file": "blog_4-desktop.png",
+      "url": "http://212.233.93.151/kochfit/blog/4",
+      "status": "ok"
+    },
+    {
+      "path": "/blog/5",
+      "label": "Блог 5",
+      "viewport": "desktop",
+      "file": "blog_5-desktop.png",
+      "url": "http://212.233.93.151/kochfit/blog/5",
+      "status": "ok"
+    },
+    {
+      "path": "/blog/6",
+      "label": "Блог 6",
+      "viewport": "desktop",
+      "file": "blog_6-desktop.png",
+      "url": "http://212.233.93.151/kochfit/blog/6",
+      "status": "ok"
+    },
+    {
+      "path": "/blog/7",
+      "label": "Блог 7",
+      "viewport": "desktop",
+      "file": "blog_7-desktop.png",
+      "url": "http://212.233.93.151/kochfit/blog/7",
+      "status": "ok"
+    },
+    {
+      "path": "/blog/8",
+      "label": "Блог 8",
+      "viewport": "desktop",
+      "file": "blog_8-desktop.png",
+      "url": "http://212.233.93.151/kochfit/blog/8",
+      "status": "ok"
+    },
+    {
+      "path": "/blog/9",
+      "label": "Блог 9",
+      "viewport": "desktop",
+      "file": "blog_9-desktop.png",
+      "url": "http://212.233.93.151/kochfit/blog/9",
+      "status": "ok"
+    },
+    {
+      "path": "/blog/10",
+      "label": "Блог 10",
+      "viewport": "desktop",
+      "file": "blog_10-desktop.png",
+      "url": "http://212.233.93.151/kochfit/blog/10",
+      "status": "ok"
+    },
+    {
+      "path": "/blog/11",
+      "label": "Блог 11",
+      "viewport": "desktop",
+      "file": "blog_11-desktop.png",
+      "url": "http://212.233.93.151/kochfit/blog/11",
+      "status": "ok"
+    },
+    {
+      "path": "/blog/12",
+      "label": "Блог 12",
+      "viewport": "desktop",
+      "file": "blog_12-desktop.png",
+      "url": "http://212.233.93.151/kochfit/blog/12",
+      "status": "ok"
+    },
+    {
+      "path": "/blog/13",
+      "label": "Блог 13",
+      "viewport": "desktop",
+      "file": "blog_13-desktop.png",
+      "url": "http://212.233.93.151/kochfit/blog/13",
+      "status": "ok"
+    },
+    {
+      "path": "/blog/14",
+      "label": "Блог 14",
+      "viewport": "desktop",
+      "file": "blog_14-desktop.png",
+      "url": "http://212.233.93.151/kochfit/blog/14",
+      "status": "ok"
+    },
+    {
+      "path": "/blog/15",
+      "label": "Блог 15",
+      "viewport": "desktop",
+      "file": "blog_15-desktop.png",
+      "url": "http://212.233.93.151/kochfit/blog/15",
+      "status": "ok"
+    },
+    {
+      "path": "/blog/16",
+      "label": "Блог 16",
+      "viewport": "desktop",
+      "file": "blog_16-desktop.png",
+      "url": "http://212.233.93.151/kochfit/blog/16",
+      "status": "ok"
+    },
+    {
+      "path": "/blog/17",
+      "label": "Блог 17",
+      "viewport": "desktop",
+      "file": "blog_17-desktop.png",
+      "url": "http://212.233.93.151/kochfit/blog/17",
+      "status": "ok"
+    },
+    {
+      "path": "/blog/18",
+      "label": "Блог 18",
+      "viewport": "desktop",
+      "file": "blog_18-desktop.png",
+      "url": "http://212.233.93.151/kochfit/blog/18",
+      "status": "ok"
+    },
+    {
+      "path": "/blog/19",
+      "label": "Блог 19",
+      "viewport": "desktop",
+      "file": "blog_19-desktop.png",
+      "url": "http://212.233.93.151/kochfit/blog/19",
+      "status": "ok"
+    },
+    {
+      "path": "/blog/20",
+      "label": "Блог 20",
+      "viewport": "desktop",
+      "file": "blog_20-desktop.png",
+      "url": "http://212.233.93.151/kochfit/blog/20",
+      "status": "ok"
+    },
+    {
+      "path": "/blog/21",
+      "label": "Блог 21",
+      "viewport": "desktop",
+      "file": "blog_21-desktop.png",
+      "url": "http://212.233.93.151/kochfit/blog/21",
+      "status": "ok"
+    },
+    {
+      "path": "/blog/22",
+      "label": "Блог 22",
+      "viewport": "desktop",
+      "file": "blog_22-desktop.png",
+      "url": "http://212.233.93.151/kochfit/blog/22",
+      "status": "ok"
+    },
+    {
+      "path": "/blog/23",
+      "label": "Блог 23",
+      "viewport": "desktop",
+      "file": "blog_23-desktop.png",
+      "url": "http://212.233.93.151/kochfit/blog/23",
+      "status": "ok"
+    },
+    {
+      "path": "/blog/24",
+      "label": "Блог 24",
+      "viewport": "desktop",
+      "file": "blog_24-desktop.png",
+      "url": "http://212.233.93.151/kochfit/blog/24",
+      "status": "ok"
+    },
+    {
+      "path": "/blog/25",
+      "label": "Блог 25",
+      "viewport": "desktop",
+      "file": "blog_25-desktop.png",
+      "url": "http://212.233.93.151/kochfit/blog/25",
+      "status": "ok"
+    },
+    {
+      "path": "/blog/26",
+      "label": "Блог 26",
+      "viewport": "desktop",
+      "file": "blog_26-desktop.png",
+      "url": "http://212.233.93.151/kochfit/blog/26",
+      "status": "ok"
+    },
+    {
+      "path": "/blog/27",
+      "label": "Блог 27",
+      "viewport": "desktop",
+      "file": "blog_27-desktop.png",
+      "url": "http://212.233.93.151/kochfit/blog/27",
+      "status": "ok"
+    },
+    {
+      "path": "/blog/28",
+      "label": "Блог 28",
+      "viewport": "desktop",
+      "file": "blog_28-desktop.png",
+      "url": "http://212.233.93.151/kochfit/blog/28",
+      "status": "ok"
+    },
+    {
+      "path": "/blog/29",
+      "label": "Блог 29",
+      "viewport": "desktop",
+      "file": "blog_29-desktop.png",
+      "url": "http://212.233.93.151/kochfit/blog/29",
+      "status": "ok"
+    },
+    {
+      "path": "/blog/30",
+      "label": "Блог 30",
+      "viewport": "desktop",
+      "file": "blog_30-desktop.png",
+      "url": "http://212.233.93.151/kochfit/blog/30",
+      "status": "ok"
+    },
+    {
+      "path": "/blog/31",
+      "label": "Блог 31",
+      "viewport": "desktop",
+      "file": "blog_31-desktop.png",
+      "url": "http://212.233.93.151/kochfit/blog/31",
+      "status": "ok"
+    },
+    {
+      "path": "/blog/32",
+      "label": "Блог 32",
+      "viewport": "desktop",
+      "file": "blog_32-desktop.png",
+      "url": "http://212.233.93.151/kochfit/blog/32",
+      "status": "ok"
+    },
+    {
+      "path": "/blog/33",
+      "label": "Блог 33",
+      "viewport": "desktop",
+      "file": "blog_33-desktop.png",
+      "url": "http://212.233.93.151/kochfit/blog/33",
+      "status": "ok"
+    },
+    {
+      "path": "/blog/34",
+      "label": "Блог 34",
+      "viewport": "desktop",
+      "file": "blog_34-desktop.png",
+      "url": "http://212.233.93.151/kochfit/blog/34",
+      "status": "ok"
+    },
+    {
+      "path": "/blog/35",
+      "label": "Блог 35",
+      "viewport": "desktop",
+      "file": "blog_35-desktop.png",
+      "url": "http://212.233.93.151/kochfit/blog/35",
+      "status": "ok"
+    },
+    {
+      "path": "/blog/36",
+      "label": "Блог 36",
+      "viewport": "desktop",
+      "file": "blog_36-desktop.png",
+      "url": "http://212.233.93.151/kochfit/blog/36",
+      "status": "ok"
+    },
+    {
+      "path": "/diastasisstart",
+      "label": "Диастаз старт",
+      "viewport": "desktop",
+      "file": "diastasisstart-desktop.png",
+      "url": "http://212.233.93.151/kochfit/diastasisstart",
+      "status": "ok"
+    },
+    {
+      "path": "/special_recovery3",
+      "label": "Special recovery 3",
+      "viewport": "desktop",
+      "file": "special_recovery3-desktop.png",
+      "url": "http://212.233.93.151/kochfit/special_recovery3",
+      "status": "ok"
+    },
+    {
+      "path": "/special_recovery5",
+      "label": "Special recovery 5",
+      "viewport": "desktop",
+      "file": "special_recovery5-desktop.png",
+      "url": "http://212.233.93.151/kochfit/special_recovery5",
+      "status": "ok"
+    },
+    {
+      "path": "/special_recovery7",
+      "label": "Special recovery 7",
+      "viewport": "desktop",
+      "file": "special_recovery7-desktop.png",
+      "url": "http://212.233.93.151/kochfit/special_recovery7",
+      "status": "ok"
+    },
+    {
+      "path": "/special_gift_recovery3",
+      "label": "Gift recovery 3",
+      "viewport": "desktop",
+      "file": "special_gift_recovery3-desktop.png",
+      "url": "http://212.233.93.151/kochfit/special_gift_recovery3",
+      "status": "ok"
+    },
+    {
+      "path": "/special_gift_recovery5",
+      "label": "Gift recovery 5",
+      "viewport": "desktop",
+      "file": "special_gift_recovery5-desktop.png",
+      "url": "http://212.233.93.151/kochfit/special_gift_recovery5",
+      "status": "ok"
+    },
+    {
+      "path": "/special_gift_recovery7",
+      "label": "Gift recovery 7",
+      "viewport": "desktop",
+      "file": "special_gift_recovery7-desktop.png",
+      "url": "http://212.233.93.151/kochfit/special_gift_recovery7",
+      "status": "ok"
+    },
+    {
+      "path": "/special_gift_pack1",
+      "label": "Gift pack 1",
+      "viewport": "desktop",
+      "file": "special_gift_pack1-desktop.png",
+      "url": "http://212.233.93.151/kochfit/special_gift_pack1",
+      "status": "ok"
+    },
+    {
+      "path": "/special_gift_pack2",
+      "label": "Gift pack 2",
+      "viewport": "desktop",
+      "file": "special_gift_pack2-desktop.png",
+      "url": "http://212.233.93.151/kochfit/special_gift_pack2",
+      "status": "ok"
+    },
+    {
+      "path": "/special_gift_pack3",
+      "label": "Gift pack 3",
+      "viewport": "desktop",
+      "file": "special_gift_pack3-desktop.png",
+      "url": "http://212.233.93.151/kochfit/special_gift_pack3",
+      "status": "ok"
+    },
+    {
+      "path": "/special_gift_for_pregnant7",
+      "label": "Gift for pregnant 7",
+      "viewport": "desktop",
+      "file": "special_gift_for_pregnant7-desktop.png",
+      "url": "http://212.233.93.151/kochfit/special_gift_for_pregnant7",
+      "status": "ok"
+    },
+    {
+      "path": "/standartsub",
+      "label": "Standart sub",
+      "viewport": "desktop",
+      "file": "standartsub-desktop.png",
+      "url": "http://212.233.93.151/kochfit/standartsub",
+      "status": "ok"
+    },
+    {
+      "path": "/diastasis",
+      "label": "Диастаз",
+      "viewport": "desktop",
+      "file": "diastasis-desktop.png",
+      "url": "http://212.233.93.151/kochfit/diastasis",
+      "status": "ok"
+    },
+    {
+      "path": "/mtd",
+      "label": "МТД урок",
+      "viewport": "desktop",
+      "file": "mtd-desktop.png",
+      "url": "http://212.233.93.151/kochfit/mtd",
+      "status": "ok"
+    },
+    {
+      "path": "/mtdpractice",
+      "label": "МТД практика",
+      "viewport": "desktop",
+      "file": "mtdpractice-desktop.png",
+      "url": "http://212.233.93.151/kochfit/mtdpractice",
+      "status": "ok"
+    },
+    {
+      "path": "/ifr",
+      "label": "IFR",
+      "viewport": "desktop",
+      "file": "ifr-desktop.png",
+      "url": "http://212.233.93.151/kochfit/ifr",
+      "status": "ok"
+    },
+    {
+      "path": "/ifrtheory",
+      "label": "IFR теория",
+      "viewport": "desktop",
+      "file": "ifrtheory-desktop.png",
+      "url": "http://212.233.93.151/kochfit/ifrtheory",
+      "status": "ok"
+    },
+    {
+      "path": "/stlk",
+      "label": "STLK урок",
+      "viewport": "desktop",
+      "file": "stlk-desktop.png",
+      "url": "http://212.233.93.151/kochfit/stlk",
+      "status": "ok"
+    },
+    {
+      "path": "/mpod",
+      "label": "MPOD",
+      "viewport": "desktop",
+      "file": "mpod-desktop.png",
+      "url": "http://212.233.93.151/kochfit/mpod",
+      "status": "ok"
+    },
+    {
+      "path": "/food",
+      "label": "Питание",
+      "viewport": "desktop",
+      "file": "food-desktop.png",
+      "url": "http://212.233.93.151/kochfit/food",
+      "status": "ok"
+    },
+    {
+      "path": "/fooddop",
+      "label": "Питание доп",
+      "viewport": "desktop",
+      "file": "fooddop-desktop.png",
+      "url": "http://212.233.93.151/kochfit/fooddop",
+      "status": "ok"
+    },
+    {
+      "path": "/recipes",
+      "label": "Рецепты",
+      "viewport": "desktop",
+      "file": "recipes-desktop.png",
+      "url": "http://212.233.93.151/kochfit/recipes",
+      "status": "ok"
+    },
+    {
+      "path": "/massage",
+      "label": "Массаж",
+      "viewport": "desktop",
+      "file": "massage-desktop.png",
+      "url": "http://212.233.93.151/kochfit/massage",
+      "status": "ok"
+    },
+    {
+      "path": "/tmj",
+      "label": "TMJ",
+      "viewport": "desktop",
+      "file": "tmj-desktop.png",
+      "url": "http://212.233.93.151/kochfit/tmj",
+      "status": "ok"
+    },
+    {
+      "path": "/tmjjoint",
+      "label": "TMJ joint",
+      "viewport": "desktop",
+      "file": "tmjjoint-desktop.png",
+      "url": "http://212.233.93.151/kochfit/tmjjoint",
+      "status": "ok"
+    },
+    {
+      "path": "/teipirovanie1",
+      "label": "Тейпирование 1",
+      "viewport": "desktop",
+      "file": "teipirovanie1-desktop.png",
+      "url": "http://212.233.93.151/kochfit/teipirovanie1",
+      "status": "ok"
+    },
+    {
+      "path": "/teipirovanie2",
+      "label": "Тейпирование 2",
+      "viewport": "desktop",
+      "file": "teipirovanie2-desktop.png",
+      "url": "http://212.233.93.151/kochfit/teipirovanie2",
+      "status": "ok"
+    },
+    {
+      "path": "/teipirovanie3",
+      "label": "Тейпирование 3",
+      "viewport": "desktop",
+      "file": "teipirovanie3-desktop.png",
+      "url": "http://212.233.93.151/kochfit/teipirovanie3",
+      "status": "ok"
+    },
+    {
+      "path": "/teipirovaniehalusvalgus",
+      "label": "Тейпирование hallux",
+      "viewport": "desktop",
+      "file": "teipirovaniehalusvalgus-desktop.png",
+      "url": "http://212.233.93.151/kochfit/teipirovaniehalusvalgus",
+      "status": "ok"
+    },
+    {
+      "path": "/foottapingtheory",
+      "label": "Foot taping theory",
+      "viewport": "desktop",
+      "file": "foottapingtheory-desktop.png",
+      "url": "http://212.233.93.151/kochfit/foottapingtheory",
+      "status": "ok"
+    },
+    {
+      "path": "/tapingcrest",
+      "label": "Taping crest",
+      "viewport": "desktop",
+      "file": "tapingcrest-desktop.png",
+      "url": "http://212.233.93.151/kochfit/tapingcrest",
+      "status": "ok"
+    },
+    {
+      "path": "/tld",
+      "label": "TLD",
+      "viewport": "desktop",
+      "file": "tld-desktop.png",
+      "url": "http://212.233.93.151/kochfit/tld",
+      "status": "ok"
+    },
+    {
+      "path": "/5htp",
+      "label": "5-HTP",
+      "viewport": "desktop",
+      "file": "5htp-desktop.png",
+      "url": "http://212.233.93.151/kochfit/5htp",
+      "status": "ok"
+    },
+    {
+      "path": "/bad_2",
+      "label": "BAD 2",
+      "viewport": "desktop",
+      "file": "bad_2-desktop.png",
+      "url": "http://212.233.93.151/kochfit/bad_2",
+      "status": "ok"
+    },
+    {
+      "path": "/calcium",
+      "label": "Кальций",
+      "viewport": "desktop",
+      "file": "calcium-desktop.png",
+      "url": "http://212.233.93.151/kochfit/calcium",
+      "status": "ok"
+    },
+    {
+      "path": "/ferrum",
+      "label": "Железо",
+      "viewport": "desktop",
+      "file": "ferrum-desktop.png",
+      "url": "http://212.233.93.151/kochfit/ferrum",
+      "status": "ok"
+    },
+    {
+      "path": "/lecithin",
+      "label": "Лецитин",
+      "viewport": "desktop",
+      "file": "lecithin-desktop.png",
+      "url": "http://212.233.93.151/kochfit/lecithin",
+      "status": "ok"
+    },
+    {
+      "path": "/magnesium",
+      "label": "Магний",
+      "viewport": "desktop",
+      "file": "magnesium-desktop.png",
+      "url": "http://212.233.93.151/kochfit/magnesium",
+      "status": "ok"
+    },
+    {
+      "path": "/omega3",
+      "label": "Omega-3",
+      "viewport": "desktop",
+      "file": "omega3-desktop.png",
+      "url": "http://212.233.93.151/kochfit/omega3",
+      "status": "ok"
+    },
+    {
+      "path": "/protein",
+      "label": "Протеин",
+      "viewport": "desktop",
+      "file": "protein-desktop.png",
+      "url": "http://212.233.93.151/kochfit/protein",
+      "status": "ok"
+    },
+    {
+      "path": "/selen",
+      "label": "Селен",
+      "viewport": "desktop",
+      "file": "selen-desktop.png",
+      "url": "http://212.233.93.151/kochfit/selen",
+      "status": "ok"
+    },
+    {
+      "path": "/vitamin_c",
+      "label": "Витамин C",
+      "viewport": "desktop",
+      "file": "vitamin_c-desktop.png",
+      "url": "http://212.233.93.151/kochfit/vitamin_c",
+      "status": "ok"
+    },
+    {
+      "path": "/vitamin_d",
+      "label": "Витамин D",
+      "viewport": "desktop",
+      "file": "vitamin_d-desktop.png",
+      "url": "http://212.233.93.151/kochfit/vitamin_d",
+      "status": "ok"
+    },
+    {
+      "path": "/zincum",
+      "label": "Цинк",
+      "viewport": "desktop",
+      "file": "zincum-desktop.png",
+      "url": "http://212.233.93.151/kochfit/zincum",
+      "status": "ok"
+    },
+    {
+      "path": "/",
+      "label": "Главная",
+      "viewport": "mobile",
+      "file": "home-mobile.png",
+      "url": "http://212.233.93.151/kochfit/",
+      "status": "ok"
+    },
+    {
+      "path": "/community",
+      "label": "Красота и здоровье",
+      "viewport": "mobile",
+      "file": "community-mobile.png",
+      "url": "http://212.233.93.151/kochfit/community",
+      "status": "ok"
+    },
+    {
+      "path": "/e_mtd",
+      "label": "МТД",
+      "viewport": "mobile",
+      "file": "e_mtd-mobile.png",
+      "url": "http://212.233.93.151/kochfit/e_mtd",
+      "status": "ok"
+    },
+    {
+      "path": "/r",
+      "label": "Восстановление после родов",
+      "viewport": "mobile",
+      "file": "r-mobile.png",
+      "url": "http://212.233.93.151/kochfit/r",
+      "status": "ok"
+    },
+    {
+      "path": "/for_pregnant",
+      "label": "Активная беременность",
+      "viewport": "mobile",
+      "file": "for_pregnant-mobile.png",
+      "url": "http://212.233.93.151/kochfit/for_pregnant",
+      "status": "ok"
+    },
+    {
+      "path": "/journal",
+      "label": "Полезный блог",
+      "viewport": "mobile",
+      "file": "journal-mobile.png",
+      "url": "http://212.233.93.151/kochfit/journal",
+      "status": "ok"
+    },
+    {
+      "path": "/result",
+      "label": "Отзывы и результаты",
+      "viewport": "mobile",
+      "file": "result-mobile.png",
+      "url": "http://212.233.93.151/kochfit/result",
+      "status": "ok"
+    },
+    {
+      "path": "/equipment",
+      "label": "Оборудование",
+      "viewport": "mobile",
+      "file": "equipment-mobile.png",
+      "url": "http://212.233.93.151/kochfit/equipment",
+      "status": "ok"
+    },
+    {
+      "path": "/info_referral",
+      "label": "Реферальная программа",
+      "viewport": "mobile",
+      "file": "info_referral-mobile.png",
+      "url": "http://212.233.93.151/kochfit/info_referral",
+      "status": "ok"
+    },
+    {
+      "path": "/person",
+      "label": "О тренере",
+      "viewport": "mobile",
+      "file": "person-mobile.png",
+      "url": "http://212.233.93.151/kochfit/person",
+      "status": "ok"
+    },
+    {
+      "path": "/basket",
+      "label": "Персональная работа",
+      "viewport": "mobile",
+      "file": "basket-mobile.png",
+      "url": "http://212.233.93.151/kochfit/basket",
+      "status": "ok"
+    },
+    {
+      "path": "/faq",
+      "label": "Тейпирование FAQ",
+      "viewport": "mobile",
+      "file": "faq-mobile.png",
+      "url": "http://212.233.93.151/kochfit/faq",
+      "status": "ok"
+    },
+    {
+      "path": "/suport",
+      "label": "Служба заботы",
+      "viewport": "mobile",
+      "file": "suport-mobile.png",
+      "url": "http://212.233.93.151/kochfit/suport",
+      "status": "ok"
+    },
+    {
+      "path": "/work",
+      "label": "Вакансия куратора",
+      "viewport": "mobile",
+      "file": "work-mobile.png",
+      "url": "http://212.233.93.151/kochfit/work",
+      "status": "ok"
+    },
+    {
+      "path": "/year-results",
+      "label": "Итоги года",
+      "viewport": "mobile",
+      "file": "year-results-mobile.png",
+      "url": "http://212.233.93.151/kochfit/year-results",
+      "status": "ok"
+    },
+    {
+      "path": "/sale",
+      "label": "Акции",
+      "viewport": "mobile",
+      "file": "sale-mobile.png",
+      "url": "http://212.233.93.151/kochfit/sale",
+      "status": "ok"
+    },
+    {
+      "path": "/taplink",
+      "label": "Taplink",
+      "viewport": "mobile",
+      "file": "taplink-mobile.png",
+      "url": "http://212.233.93.151/kochfit/taplink",
+      "status": "ok"
+    },
+    {
+      "path": "/tmtd",
+      "label": "TMTD landing",
+      "viewport": "mobile",
+      "file": "tmtd-mobile.png",
+      "url": "http://212.233.93.151/kochfit/tmtd",
+      "status": "ok"
+    },
+    {
+      "path": "/care",
+      "label": "Care",
+      "viewport": "mobile",
+      "file": "care-mobile.png",
+      "url": "http://212.233.93.151/kochfit/care",
+      "status": "ok"
+    },
+    {
+      "path": "/education",
+      "label": "Образование",
+      "viewport": "mobile",
+      "file": "education-mobile.png",
+      "url": "http://212.233.93.151/kochfit/education",
+      "status": "ok"
+    },
+    {
+      "path": "/webinars",
+      "label": "Вебинары",
+      "viewport": "mobile",
+      "file": "webinars-mobile.png",
+      "url": "http://212.233.93.151/kochfit/webinars",
+      "status": "ok"
+    },
+    {
+      "path": "/yes",
+      "label": "Спасибо за покупку",
+      "viewport": "mobile",
+      "file": "yes-mobile.png",
+      "url": "http://212.233.93.151/kochfit/yes",
+      "status": "ok"
+    },
+    {
+      "path": "/no",
+      "label": "Ошибка оплаты",
+      "viewport": "mobile",
+      "file": "no-mobile.png",
+      "url": "http://212.233.93.151/kochfit/no",
+      "status": "ok"
+    },
+    {
+      "path": "/delete",
+      "label": "Удаление данных",
+      "viewport": "mobile",
+      "file": "delete-mobile.png",
+      "url": "http://212.233.93.151/kochfit/delete",
+      "status": "ok"
+    },
+    {
+      "path": "/unsubscribe",
+      "label": "Отписка",
+      "viewport": "mobile",
+      "file": "unsubscribe-mobile.png",
+      "url": "http://212.233.93.151/kochfit/unsubscribe",
+      "status": "ok"
+    },
+    {
+      "path": "/oferta",
+      "label": "Оферта",
+      "viewport": "mobile",
+      "file": "oferta-mobile.png",
+      "url": "http://212.233.93.151/kochfit/oferta",
+      "status": "ok"
+    },
+    {
+      "path": "/part_oferta",
+      "label": "Частичная оферта",
+      "viewport": "mobile",
+      "file": "part_oferta-mobile.png",
+      "url": "http://212.233.93.151/kochfit/part_oferta",
+      "status": "ok"
+    },
+    {
+      "path": "/privacy",
+      "label": "Политика конфиденциальности",
+      "viewport": "mobile",
+      "file": "privacy-mobile.png",
+      "url": "http://212.233.93.151/kochfit/privacy",
+      "status": "ok"
+    },
+    {
+      "path": "/consent",
+      "label": "Согласие",
+      "viewport": "mobile",
+      "file": "consent-mobile.png",
+      "url": "http://212.233.93.151/kochfit/consent",
+      "status": "ok"
+    },
+    {
+      "path": "/data-consent",
+      "label": "Согласие на данные",
+      "viewport": "mobile",
+      "file": "data-consent-mobile.png",
+      "url": "http://212.233.93.151/kochfit/data-consent",
+      "status": "ok"
+    },
+    {
+      "path": "/del",
+      "label": "Удалить аккаунт",
+      "viewport": "mobile",
+      "file": "del-mobile.png",
+      "url": "http://212.233.93.151/kochfit/del",
+      "status": "ok"
+    },
+    {
+      "path": "/st1",
+      "label": "Статья st1",
+      "viewport": "mobile",
+      "file": "st1-mobile.png",
+      "url": "http://212.233.93.151/kochfit/st1",
+      "status": "ok"
+    },
+    {
+      "path": "/st2",
+      "label": "Статья st2",
+      "viewport": "mobile",
+      "file": "st2-mobile.png",
+      "url": "http://212.233.93.151/kochfit/st2",
+      "status": "ok"
+    },
+    {
+      "path": "/st3",
+      "label": "Статья st3",
+      "viewport": "mobile",
+      "file": "st3-mobile.png",
+      "url": "http://212.233.93.151/kochfit/st3",
+      "status": "ok"
+    },
+    {
+      "path": "/st4",
+      "label": "Статья st4",
+      "viewport": "mobile",
+      "file": "st4-mobile.png",
+      "url": "http://212.233.93.151/kochfit/st4",
+      "status": "ok"
+    },
+    {
+      "path": "/st5",
+      "label": "Статья st5",
+      "viewport": "mobile",
+      "file": "st5-mobile.png",
+      "url": "http://212.233.93.151/kochfit/st5",
+      "status": "ok"
+    },
+    {
+      "path": "/st6",
+      "label": "Статья st6",
+      "viewport": "mobile",
+      "file": "st6-mobile.png",
+      "url": "http://212.233.93.151/kochfit/st6",
+      "status": "ok"
+    },
+    {
+      "path": "/st7",
+      "label": "Статья st7",
+      "viewport": "mobile",
+      "file": "st7-mobile.png",
+      "url": "http://212.233.93.151/kochfit/st7",
+      "status": "ok"
+    },
+    {
+      "path": "/st8",
+      "label": "Статья st8",
+      "viewport": "mobile",
+      "file": "st8-mobile.png",
+      "url": "http://212.233.93.151/kochfit/st8",
+      "status": "ok"
+    },
+    {
+      "path": "/st9",
+      "label": "Статья st9",
+      "viewport": "mobile",
+      "file": "st9-mobile.png",
+      "url": "http://212.233.93.151/kochfit/st9",
+      "status": "ok"
+    },
+    {
+      "path": "/st10",
+      "label": "Статья st10",
+      "viewport": "mobile",
+      "file": "st10-mobile.png",
+      "url": "http://212.233.93.151/kochfit/st10",
+      "status": "ok"
+    },
+    {
+      "path": "/st11",
+      "label": "Статья st11",
+      "viewport": "mobile",
+      "file": "st11-mobile.png",
+      "url": "http://212.233.93.151/kochfit/st11",
+      "status": "ok"
+    },
+    {
+      "path": "/st12",
+      "label": "Статья st12",
+      "viewport": "mobile",
+      "file": "st12-mobile.png",
+      "url": "http://212.233.93.151/kochfit/st12",
+      "status": "ok"
+    },
+    {
+      "path": "/st13",
+      "label": "Статья st13",
+      "viewport": "mobile",
+      "file": "st13-mobile.png",
+      "url": "http://212.233.93.151/kochfit/st13",
+      "status": "ok"
+    },
+    {
+      "path": "/st14",
+      "label": "Статья st14",
+      "viewport": "mobile",
+      "file": "st14-mobile.png",
+      "url": "http://212.233.93.151/kochfit/st14",
+      "status": "ok"
+    },
+    {
+      "path": "/blog/1",
+      "label": "Блог 1",
+      "viewport": "mobile",
+      "file": "blog_1-mobile.png",
+      "url": "http://212.233.93.151/kochfit/blog/1",
+      "status": "ok"
+    },
+    {
+      "path": "/blog/2",
+      "label": "Блог 2",
+      "viewport": "mobile",
+      "file": "blog_2-mobile.png",
+      "url": "http://212.233.93.151/kochfit/blog/2",
+      "status": "ok"
+    },
+    {
+      "path": "/blog/3",
+      "label": "Блог 3",
+      "viewport": "mobile",
+      "file": "blog_3-mobile.png",
+      "url": "http://212.233.93.151/kochfit/blog/3",
+      "status": "ok"
+    },
+    {
+      "path": "/blog/4",
+      "label": "Блог 4",
+      "viewport": "mobile",
+      "file": "blog_4-mobile.png",
+      "url": "http://212.233.93.151/kochfit/blog/4",
+      "status": "ok"
+    },
+    {
+      "path": "/blog/5",
+      "label": "Блог 5",
+      "viewport": "mobile",
+      "file": "blog_5-mobile.png",
+      "url": "http://212.233.93.151/kochfit/blog/5",
+      "status": "ok"
+    },
+    {
+      "path": "/blog/6",
+      "label": "Блог 6",
+      "viewport": "mobile",
+      "file": "blog_6-mobile.png",
+      "url": "http://212.233.93.151/kochfit/blog/6",
+      "status": "ok"
+    },
+    {
+      "path": "/blog/7",
+      "label": "Блог 7",
+      "viewport": "mobile",
+      "file": "blog_7-mobile.png",
+      "url": "http://212.233.93.151/kochfit/blog/7",
+      "status": "ok"
+    },
+    {
+      "path": "/blog/8",
+      "label": "Блог 8",
+      "viewport": "mobile",
+      "file": "blog_8-mobile.png",
+      "url": "http://212.233.93.151/kochfit/blog/8",
+      "status": "ok"
+    },
+    {
+      "path": "/blog/9",
+      "label": "Блог 9",
+      "viewport": "mobile",
+      "file": "blog_9-mobile.png",
+      "url": "http://212.233.93.151/kochfit/blog/9",
+      "status": "ok"
+    },
+    {
+      "path": "/blog/10",
+      "label": "Блог 10",
+      "viewport": "mobile",
+      "file": "blog_10-mobile.png",
+      "url": "http://212.233.93.151/kochfit/blog/10",
+      "status": "ok"
+    },
+    {
+      "path": "/blog/11",
+      "label": "Блог 11",
+      "viewport": "mobile",
+      "file": "blog_11-mobile.png",
+      "url": "http://212.233.93.151/kochfit/blog/11",
+      "status": "ok"
+    },
+    {
+      "path": "/blog/12",
+      "label": "Блог 12",
+      "viewport": "mobile",
+      "file": "blog_12-mobile.png",
+      "url": "http://212.233.93.151/kochfit/blog/12",
+      "status": "ok"
+    },
+    {
+      "path": "/blog/13",
+      "label": "Блог 13",
+      "viewport": "mobile",
+      "file": "blog_13-mobile.png",
+      "url": "http://212.233.93.151/kochfit/blog/13",
+      "status": "ok"
+    },
+    {
+      "path": "/blog/14",
+      "label": "Блог 14",
+      "viewport": "mobile",
+      "file": "blog_14-mobile.png",
+      "url": "http://212.233.93.151/kochfit/blog/14",
+      "status": "ok"
+    },
+    {
+      "path": "/blog/15",
+      "label": "Блог 15",
+      "viewport": "mobile",
+      "file": "blog_15-mobile.png",
+      "url": "http://212.233.93.151/kochfit/blog/15",
+      "status": "ok"
+    },
+    {
+      "path": "/blog/16",
+      "label": "Блог 16",
+      "viewport": "mobile",
+      "file": "blog_16-mobile.png",
+      "url": "http://212.233.93.151/kochfit/blog/16",
+      "status": "ok"
+    },
+    {
+      "path": "/blog/17",
+      "label": "Блог 17",
+      "viewport": "mobile",
+      "file": "blog_17-mobile.png",
+      "url": "http://212.233.93.151/kochfit/blog/17",
+      "status": "ok"
+    },
+    {
+      "path": "/blog/18",
+      "label": "Блог 18",
+      "viewport": "mobile",
+      "file": "blog_18-mobile.png",
+      "url": "http://212.233.93.151/kochfit/blog/18",
+      "status": "ok"
+    },
+    {
+      "path": "/blog/19",
+      "label": "Блог 19",
+      "viewport": "mobile",
+      "file": "blog_19-mobile.png",
+      "url": "http://212.233.93.151/kochfit/blog/19",
+      "status": "ok"
+    },
+    {
+      "path": "/blog/20",
+      "label": "Блог 20",
+      "viewport": "mobile",
+      "file": "blog_20-mobile.png",
+      "url": "http://212.233.93.151/kochfit/blog/20",
+      "status": "ok"
+    },
+    {
+      "path": "/blog/21",
+      "label": "Блог 21",
+      "viewport": "mobile",
+      "file": "blog_21-mobile.png",
+      "url": "http://212.233.93.151/kochfit/blog/21",
+      "status": "ok"
+    },
+    {
+      "path": "/blog/22",
+      "label": "Блог 22",
+      "viewport": "mobile",
+      "file": "blog_22-mobile.png",
+      "url": "http://212.233.93.151/kochfit/blog/22",
+      "status": "ok"
+    },
+    {
+      "path": "/blog/23",
+      "label": "Блог 23",
+      "viewport": "mobile",
+      "file": "blog_23-mobile.png",
+      "url": "http://212.233.93.151/kochfit/blog/23",
+      "status": "ok"
+    },
+    {
+      "path": "/blog/24",
+      "label": "Блог 24",
+      "viewport": "mobile",
+      "file": "blog_24-mobile.png",
+      "url": "http://212.233.93.151/kochfit/blog/24",
+      "status": "ok"
+    },
+    {
+      "path": "/blog/25",
+      "label": "Блог 25",
+      "viewport": "mobile",
+      "file": "blog_25-mobile.png",
+      "url": "http://212.233.93.151/kochfit/blog/25",
+      "status": "ok"
+    },
+    {
+      "path": "/blog/26",
+      "label": "Блог 26",
+      "viewport": "mobile",
+      "file": "blog_26-mobile.png",
+      "url": "http://212.233.93.151/kochfit/blog/26",
+      "status": "ok"
+    },
+    {
+      "path": "/blog/27",
+      "label": "Блог 27",
+      "viewport": "mobile",
+      "file": "blog_27-mobile.png",
+      "url": "http://212.233.93.151/kochfit/blog/27",
+      "status": "ok"
+    },
+    {
+      "path": "/blog/28",
+      "label": "Блог 28",
+      "viewport": "mobile",
+      "file": "blog_28-mobile.png",
+      "url": "http://212.233.93.151/kochfit/blog/28",
+      "status": "ok"
+    },
+    {
+      "path": "/blog/29",
+      "label": "Блог 29",
+      "viewport": "mobile",
+      "file": "blog_29-mobile.png",
+      "url": "http://212.233.93.151/kochfit/blog/29",
+      "status": "ok"
+    },
+    {
+      "path": "/blog/30",
+      "label": "Блог 30",
+      "viewport": "mobile",
+      "file": "blog_30-mobile.png",
+      "url": "http://212.233.93.151/kochfit/blog/30",
+      "status": "ok"
+    },
+    {
+      "path": "/blog/31",
+      "label": "Блог 31",
+      "viewport": "mobile",
+      "file": "blog_31-mobile.png",
+      "url": "http://212.233.93.151/kochfit/blog/31",
+      "status": "ok"
+    },
+    {
+      "path": "/blog/32",
+      "label": "Блог 32",
+      "viewport": "mobile",
+      "file": "blog_32-mobile.png",
+      "url": "http://212.233.93.151/kochfit/blog/32",
+      "status": "ok"
+    },
+    {
+      "path": "/blog/33",
+      "label": "Блог 33",
+      "viewport": "mobile",
+      "file": "blog_33-mobile.png",
+      "url": "http://212.233.93.151/kochfit/blog/33",
+      "status": "ok"
+    },
+    {
+      "path": "/blog/34",
+      "label": "Блог 34",
+      "viewport": "mobile",
+      "file": "blog_34-mobile.png",
+      "url": "http://212.233.93.151/kochfit/blog/34",
+      "status": "ok"
+    },
+    {
+      "path": "/blog/35",
+      "label": "Блог 35",
+      "viewport": "mobile",
+      "file": "blog_35-mobile.png",
+      "url": "http://212.233.93.151/kochfit/blog/35",
+      "status": "ok"
+    },
+    {
+      "path": "/blog/36",
+      "label": "Блог 36",
+      "viewport": "mobile",
+      "file": "blog_36-mobile.png",
+      "url": "http://212.233.93.151/kochfit/blog/36",
+      "status": "ok"
+    },
+    {
+      "path": "/diastasisstart",
+      "label": "Диастаз старт",
+      "viewport": "mobile",
+      "file": "diastasisstart-mobile.png",
+      "url": "http://212.233.93.151/kochfit/diastasisstart",
+      "status": "ok"
+    },
+    {
+      "path": "/special_recovery3",
+      "label": "Special recovery 3",
+      "viewport": "mobile",
+      "file": "special_recovery3-mobile.png",
+      "url": "http://212.233.93.151/kochfit/special_recovery3",
+      "status": "ok"
+    },
+    {
+      "path": "/special_recovery5",
+      "label": "Special recovery 5",
+      "viewport": "mobile",
+      "file": "special_recovery5-mobile.png",
+      "url": "http://212.233.93.151/kochfit/special_recovery5",
+      "status": "ok"
+    },
+    {
+      "path": "/special_recovery7",
+      "label": "Special recovery 7",
+      "viewport": "mobile",
+      "file": "special_recovery7-mobile.png",
+      "url": "http://212.233.93.151/kochfit/special_recovery7",
+      "status": "ok"
+    },
+    {
+      "path": "/special_gift_recovery3",
+      "label": "Gift recovery 3",
+      "viewport": "mobile",
+      "file": "special_gift_recovery3-mobile.png",
+      "url": "http://212.233.93.151/kochfit/special_gift_recovery3",
+      "status": "ok"
+    },
+    {
+      "path": "/special_gift_recovery5",
+      "label": "Gift recovery 5",
+      "viewport": "mobile",
+      "file": "special_gift_recovery5-mobile.png",
+      "url": "http://212.233.93.151/kochfit/special_gift_recovery5",
+      "status": "ok"
+    },
+    {
+      "path": "/special_gift_recovery7",
+      "label": "Gift recovery 7",
+      "viewport": "mobile",
+      "file": "special_gift_recovery7-mobile.png",
+      "url": "http://212.233.93.151/kochfit/special_gift_recovery7",
+      "status": "ok"
+    },
+    {
+      "path": "/special_gift_pack1",
+      "label": "Gift pack 1",
+      "viewport": "mobile",
+      "file": "special_gift_pack1-mobile.png",
+      "url": "http://212.233.93.151/kochfit/special_gift_pack1",
+      "status": "ok"
+    },
+    {
+      "path": "/special_gift_pack2",
+      "label": "Gift pack 2",
+      "viewport": "mobile",
+      "file": "special_gift_pack2-mobile.png",
+      "url": "http://212.233.93.151/kochfit/special_gift_pack2",
+      "status": "ok"
+    },
+    {
+      "path": "/special_gift_pack3",
+      "label": "Gift pack 3",
+      "viewport": "mobile",
+      "file": "special_gift_pack3-mobile.png",
+      "url": "http://212.233.93.151/kochfit/special_gift_pack3",
+      "status": "ok"
+    },
+    {
+      "path": "/special_gift_for_pregnant7",
+      "label": "Gift for pregnant 7",
+      "viewport": "mobile",
+      "file": "special_gift_for_pregnant7-mobile.png",
+      "url": "http://212.233.93.151/kochfit/special_gift_for_pregnant7",
+      "status": "ok"
+    },
+    {
+      "path": "/standartsub",
+      "label": "Standart sub",
+      "viewport": "mobile",
+      "file": "standartsub-mobile.png",
+      "url": "http://212.233.93.151/kochfit/standartsub",
+      "status": "ok"
+    },
+    {
+      "path": "/diastasis",
+      "label": "Диастаз",
+      "viewport": "mobile",
+      "file": "diastasis-mobile.png",
+      "url": "http://212.233.93.151/kochfit/diastasis",
+      "status": "ok"
+    },
+    {
+      "path": "/mtd",
+      "label": "МТД урок",
+      "viewport": "mobile",
+      "file": "mtd-mobile.png",
+      "url": "http://212.233.93.151/kochfit/mtd",
+      "status": "ok"
+    },
+    {
+      "path": "/mtdpractice",
+      "label": "МТД практика",
+      "viewport": "mobile",
+      "file": "mtdpractice-mobile.png",
+      "url": "http://212.233.93.151/kochfit/mtdpractice",
+      "status": "ok"
+    },
+    {
+      "path": "/ifr",
+      "label": "IFR",
+      "viewport": "mobile",
+      "file": "ifr-mobile.png",
+      "url": "http://212.233.93.151/kochfit/ifr",
+      "status": "ok"
+    },
+    {
+      "path": "/ifrtheory",
+      "label": "IFR теория",
+      "viewport": "mobile",
+      "file": "ifrtheory-mobile.png",
+      "url": "http://212.233.93.151/kochfit/ifrtheory",
+      "status": "ok"
+    },
+    {
+      "path": "/stlk",
+      "label": "STLK урок",
+      "viewport": "mobile",
+      "file": "stlk-mobile.png",
+      "url": "http://212.233.93.151/kochfit/stlk",
+      "status": "ok"
+    },
+    {
+      "path": "/mpod",
+      "label": "MPOD",
+      "viewport": "mobile",
+      "file": "mpod-mobile.png",
+      "url": "http://212.233.93.151/kochfit/mpod",
+      "status": "failed",
+      "error": "page.screenshot: Protocol error (Page.captureScreenshot): Unable to capture screenshot\nCall log:\n  - taking page screenshot\n  - waiting for fonts to load...\n  - fonts loaded\n"
+    },
+    {
+      "path": "/food",
+      "label": "Питание",
+      "viewport": "mobile",
+      "file": "food-mobile.png",
+      "url": "http://212.233.93.151/kochfit/food",
+      "status": "ok"
+    },
+    {
+      "path": "/fooddop",
+      "label": "Питание доп",
+      "viewport": "mobile",
+      "file": "fooddop-mobile.png",
+      "url": "http://212.233.93.151/kochfit/fooddop",
+      "status": "ok"
+    },
+    {
+      "path": "/recipes",
+      "label": "Рецепты",
+      "viewport": "mobile",
+      "file": "recipes-mobile.png",
+      "url": "http://212.233.93.151/kochfit/recipes",
+      "status": "ok"
+    },
+    {
+      "path": "/massage",
+      "label": "Массаж",
+      "viewport": "mobile",
+      "file": "massage-mobile.png",
+      "url": "http://212.233.93.151/kochfit/massage",
+      "status": "ok"
+    },
+    {
+      "path": "/tmj",
+      "label": "TMJ",
+      "viewport": "mobile",
+      "file": "tmj-mobile.png",
+      "url": "http://212.233.93.151/kochfit/tmj",
+      "status": "ok"
+    },
+    {
+      "path": "/tmjjoint",
+      "label": "TMJ joint",
+      "viewport": "mobile",
+      "file": "tmjjoint-mobile.png",
+      "url": "http://212.233.93.151/kochfit/tmjjoint",
+      "status": "ok"
+    },
+    {
+      "path": "/teipirovanie1",
+      "label": "Тейпирование 1",
+      "viewport": "mobile",
+      "file": "teipirovanie1-mobile.png",
+      "url": "http://212.233.93.151/kochfit/teipirovanie1",
+      "status": "ok"
+    },
+    {
+      "path": "/teipirovanie2",
+      "label": "Тейпирование 2",
+      "viewport": "mobile",
+      "file": "teipirovanie2-mobile.png",
+      "url": "http://212.233.93.151/kochfit/teipirovanie2",
+      "status": "ok"
+    },
+    {
+      "path": "/teipirovanie3",
+      "label": "Тейпирование 3",
+      "viewport": "mobile",
+      "file": "teipirovanie3-mobile.png",
+      "url": "http://212.233.93.151/kochfit/teipirovanie3",
+      "status": "ok"
+    },
+    {
+      "path": "/teipirovaniehalusvalgus",
+      "label": "Тейпирование hallux",
+      "viewport": "mobile",
+      "file": "teipirovaniehalusvalgus-mobile.png",
+      "url": "http://212.233.93.151/kochfit/teipirovaniehalusvalgus",
+      "status": "ok"
+    },
+    {
+      "path": "/foottapingtheory",
+      "label": "Foot taping theory",
+      "viewport": "mobile",
+      "file": "foottapingtheory-mobile.png",
+      "url": "http://212.233.93.151/kochfit/foottapingtheory",
+      "status": "ok"
+    },
+    {
+      "path": "/tapingcrest",
+      "label": "Taping crest",
+      "viewport": "mobile",
+      "file": "tapingcrest-mobile.png",
+      "url": "http://212.233.93.151/kochfit/tapingcrest",
+      "status": "ok"
+    },
+    {
+      "path": "/tld",
+      "label": "TLD",
+      "viewport": "mobile",
+      "file": "tld-mobile.png",
+      "url": "http://212.233.93.151/kochfit/tld",
+      "status": "ok"
+    },
+    {
+      "path": "/5htp",
+      "label": "5-HTP",
+      "viewport": "mobile",
+      "file": "5htp-mobile.png",
+      "url": "http://212.233.93.151/kochfit/5htp",
+      "status": "ok"
+    },
+    {
+      "path": "/bad_2",
+      "label": "BAD 2",
+      "viewport": "mobile",
+      "file": "bad_2-mobile.png",
+      "url": "http://212.233.93.151/kochfit/bad_2",
+      "status": "ok"
+    },
+    {
+      "path": "/calcium",
+      "label": "Кальций",
+      "viewport": "mobile",
+      "file": "calcium-mobile.png",
+      "url": "http://212.233.93.151/kochfit/calcium",
+      "status": "ok"
+    },
+    {
+      "path": "/ferrum",
+      "label": "Железо",
+      "viewport": "mobile",
+      "file": "ferrum-mobile.png",
+      "url": "http://212.233.93.151/kochfit/ferrum",
+      "status": "ok"
+    },
+    {
+      "path": "/lecithin",
+      "label": "Лецитин",
+      "viewport": "mobile",
+      "file": "lecithin-mobile.png",
+      "url": "http://212.233.93.151/kochfit/lecithin",
+      "status": "ok"
+    },
+    {
+      "path": "/magnesium",
+      "label": "Магний",
+      "viewport": "mobile",
+      "file": "magnesium-mobile.png",
+      "url": "http://212.233.93.151/kochfit/magnesium",
+      "status": "ok"
+    },
+    {
+      "path": "/omega3",
+      "label": "Omega-3",
+      "viewport": "mobile",
+      "file": "omega3-mobile.png",
+      "url": "http://212.233.93.151/kochfit/omega3",
+      "status": "ok"
+    },
+    {
+      "path": "/protein",
+      "label": "Протеин",
+      "viewport": "mobile",
+      "file": "protein-mobile.png",
+      "url": "http://212.233.93.151/kochfit/protein",
+      "status": "ok"
+    },
+    {
+      "path": "/selen",
+      "label": "Селен",
+      "viewport": "mobile",
+      "file": "selen-mobile.png",
+      "url": "http://212.233.93.151/kochfit/selen",
+      "status": "ok"
+    },
+    {
+      "path": "/vitamin_c",
+      "label": "Витамин C",
+      "viewport": "mobile",
+      "file": "vitamin_c-mobile.png",
+      "url": "http://212.233.93.151/kochfit/vitamin_c",
+      "status": "ok"
+    },
+    {
+      "path": "/vitamin_d",
+      "label": "Витамин D",
+      "viewport": "mobile",
+      "file": "vitamin_d-mobile.png",
+      "url": "http://212.233.93.151/kochfit/vitamin_d",
+      "status": "ok"
+    },
+    {
+      "path": "/zincum",
+      "label": "Цинк",
+      "viewport": "mobile",
+      "file": "zincum-mobile.png",
+      "url": "http://212.233.93.151/kochfit/zincum",
+      "status": "ok"
+    }
+  ],
+  "failed": [
+    {
+      "path": "/mpod",
+      "label": "MPOD",
+      "viewport": "mobile",
+      "file": "mpod-mobile.png",
+      "url": "http://212.233.93.151/kochfit/mpod",
+      "status": "failed",
+      "error": "page.screenshot: Protocol error (Page.captureScreenshot): Unable to capture screenshot\nCall log:\n  - taking page screenshot\n  - waiting for fonts to load...\n  - fonts loaded\n"
+    }
+  ],
+  "summary": {
+    "totalPages": 125,
+    "totalScreenshots": 250,
+    "succeeded": 249,
+    "failed": 1
+  }
+}

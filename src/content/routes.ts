@@ -1,0 +1,30 @@
+/** Canonical URL paths — как на kochfit.ru (сохранение SEO и закладок) */
+export const routes = {
+  home: "/",
+  beautyHealth: "/community",
+  pelvicFloor: "/e_mtd",
+  postpartum: "/r",
+  activePregnancy: "/for_pregnant",
+  person: "/person",
+  journal: "/journal",
+  kochJournal: "/koch_journal",
+  result: "/result",
+  equipment: "/equipment",
+  faq: "/faq",
+  support: "/suport",
+  work: "/work",
+  yearResults: "/year-results",
+  oferta: "/oferta",
+  partOferta: "/part_oferta",
+  privacy: "/privacy",
+  consent: "/consent",
+  dataConsent: "/data-consent",
+  deleteAccount: "/del",
+  sale: "/sale",
+  basket: "/basket",
+  care: "/care",
+  education: "/education",
+  blog: "/blog",
+} as const;
+
+export type RoutePath = (typeof routes)[keyof typeof routes];

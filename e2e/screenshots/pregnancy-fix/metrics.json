@@ -1,0 +1,102 @@
+{
+  "after375": {
+    "hero": {
+      "objectPosition": "50% 78%",
+      "transform": "none",
+      "scale": "none",
+      "imgTop": 334.239990234375,
+      "zoneTop": 268,
+      "subtitleBottom": 259.9375,
+      "headAboveSubtitle": true,
+      "cardAbovePortrait": true,
+      "feetAtHeroBottom": true,
+      "heroBottom": 820,
+      "imgBottom": 820,
+      "zIndex": "0"
+    },
+    "cards": [
+      {
+        "i": 0,
+        "title": "Коврик для фитнеса",
+        "textW": 120,
+        "textZonePct": "42.8",
+        "imgObjectPos": "88% 50%",
+        "textConstrained": true
+      },
+      {
+        "i": 1,
+        "title": "Мягкие массажные мячи (мячи Франклина), ",
+        "textW": 120,
+        "textZonePct": "42.8",
+        "imgObjectPos": "88% 50%",
+        "textConstrained": true
+      },
+      {
+        "i": 2,
+        "title": "Пилатес-лента от 180см",
+        "textW": 120,
+        "textZonePct": "42.8",
+        "imgObjectPos": "86% 50%",
+        "textConstrained": true
+      },
+      {
+        "i": 3,
+        "title": "Мяч для пилатеса, d - 25/50 см",
+        "textW": 120,
+        "textZonePct": "42.8",
+        "imgObjectPos": "88% 50%",
+        "textConstrained": true
+      }
+    ]
+  },
+  "after1280": {
+    "hero": {
+      "objectPosition": "0% 0%",
+      "transform": "none",
+      "scale": "none",
+      "imgTop": 28,
+      "zoneTop": 28,
+      "subtitleBottom": 355.796875,
+      "headAboveSubtitle": false,
+      "cardAbovePortrait": true,
+      "feetAtHeroBottom": false,
+      "heroBottom": 756,
+      "imgBottom": 814,
+      "zIndex": "auto"
+    },
+    "cards": [
+      {
+        "i": 0,
+        "title": "Коврик для фитнеса",
+        "textW": 188,
+        "textZonePct": "54.6",
+        "imgObjectPos": "50% 50%",
+        "textConstrained": false
+      },
+      {
+        "i": 1,
+        "title": "Мягкие массажные мячи (мячи Франклина), ",
+        "textW": 188,
+        "textZonePct": "54.6",
+        "imgObjectPos": "50% 50%",
+        "textConstrained": false
+      },
+      {
+        "i": 2,
+        "title": "Пилатес-лента от 180см",
+        "textW": 188,
+        "textZonePct": "54.6",
+        "imgObjectPos": "50% 50%",
+        "textConstrained": false
+      },
+      {
+        "i": 3,
+        "title": "Мяч для пилатеса, d - 25/50 см",
+        "textW": 188,
+        "textZonePct": "54.6",
+        "imgObjectPos": "50% 50%",
+        "textConstrained": false
+      }
+    ]
+  }
+}

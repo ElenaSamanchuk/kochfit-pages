@@ -1,0 +1,18 @@
+/**
+ * nn99 / Shumann chat — brand blue via the widget’s own CSS variables.
+ *
+ * Safe: only overrides --sw-* custom properties on the host (.sw-container).
+ * Does NOT paint background / border-radius / size on child nodes (that broke
+ * the vertical FAB pill / satellites before). Not a hue-rotate filter either —
+ * Telegram satellite keeps its native gradient; avatars stay untinted.
+ *
+ * Upstream still sets olive from admin (primaryColor #adbf88); !important wins
+ * over the widget’s inline setProperty. Long-term: change color in NinetyNine
+ * admin (shumann) and this file can be removed.
+ */
+.sw-container {
+  --sw-primary: var(--color-accent, #84b0d2) !important;
+  --sw-toggle-button-color: var(--color-accent, #84b0d2) !important;
+  --sw-header-bg-color: var(--color-accent, #84b0d2) !important;
+  --sw-shadow-color: rgba(132, 176, 210, 0.3) !important;
+}

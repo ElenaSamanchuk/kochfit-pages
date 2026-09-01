@@ -1,0 +1,127 @@
+{
+  "capturedAt": "2026-08-26T17:37:43.746Z",
+  "baseURL": "http://127.0.0.1:3400",
+  "strategy": "slow-scroll + lazy images + fonts.ready + cookie click dismiss + reduced-motion + animation freeze",
+  "results": [
+    {
+      "filepath": "/Users/elena/Projects/kochfit-redesign/docs/screenshots/redesign-2025/home-desktop.png",
+      "url": "http://127.0.0.1:3400/",
+      "viewport": "1440x900",
+      "deviceScaleFactor": 1,
+      "scrollHeight": 4054,
+      "screenshot": "1440x4054",
+      "imagesLoaded": "65/82",
+      "unrevealedSections": 0,
+      "cookieBannerVisible": false,
+      "fullPageOk": true
+    },
+    {
+      "filepath": "/Users/elena/Projects/kochfit-redesign/docs/screenshots/redesign-2025/home-mobile.png",
+      "url": "http://127.0.0.1:3400/",
+      "viewport": "375x812",
+      "deviceScaleFactor": 2,
+      "scrollHeight": 6746,
+      "screenshot": "750x13492",
+      "imagesLoaded": "54/82",
+      "unrevealedSections": 0,
+      "cookieBannerVisible": false,
+      "fullPageOk": true
+    },
+    {
+      "filepath": "/Users/elena/Projects/kochfit-redesign/docs/screenshots/redesign-2025/community-desktop.png",
+      "url": "http://127.0.0.1:3400/community",
+      "viewport": "1440x900",
+      "deviceScaleFactor": 1,
+      "scrollHeight": 4306,
+      "screenshot": "1440x4306",
+      "imagesLoaded": "44/69",
+      "unrevealedSections": 0,
+      "cookieBannerVisible": false,
+      "fullPageOk": true
+    },
+    {
+      "filepath": "/Users/elena/Projects/kochfit-redesign/docs/screenshots/redesign-2025/community-mobile.png",
+      "url": "http://127.0.0.1:3400/community",
+      "viewport": "375x812",
+      "deviceScaleFactor": 2,
+      "scrollHeight": 7304,
+      "screenshot": "750x14608",
+      "imagesLoaded": "41/69",
+      "unrevealedSections": 0,
+      "cookieBannerVisible": false,
+      "fullPageOk": true
+    },
+    {
+      "filepath": "/Users/elena/Projects/kochfit-redesign/docs/screenshots/redesign-2025/for_pregnant-desktop.png",
+      "url": "http://127.0.0.1:3400/for_pregnant",
+      "viewport": "1440x900",
+      "deviceScaleFactor": 1,
+      "scrollHeight": 4667,
+      "screenshot": "1440x4667",
+      "imagesLoaded": "68/90",
+      "unrevealedSections": 0,
+      "cookieBannerVisible": false,
+      "fullPageOk": true
+    },
+    {
+      "filepath": "/Users/elena/Projects/kochfit-redesign/docs/screenshots/redesign-2025/for_pregnant-mobile.png",
+      "url": "http://127.0.0.1:3400/for_pregnant",
+      "viewport": "375x812",
+      "deviceScaleFactor": 2,
+      "scrollHeight": 6173,
+      "screenshot": "750x12346",
+      "imagesLoaded": "49/90",
+      "unrevealedSections": 0,
+      "cookieBannerVisible": false,
+      "fullPageOk": true
+    },
+    {
+      "filepath": "/Users/elena/Projects/kochfit-redesign/docs/screenshots/redesign-2025/e_mtd-desktop.png",
+      "url": "http://127.0.0.1:3400/e_mtd",
+      "viewport": "1440x900",
+      "deviceScaleFactor": 1,
+      "scrollHeight": 3928,
+      "screenshot": "1440x3928",
+      "imagesLoaded": "49/78",
+      "unrevealedSections": 0,
+      "cookieBannerVisible": false,
+      "fullPageOk": true
+    },
+    {
+      "filepath": "/Users/elena/Projects/kochfit-redesign/docs/screenshots/redesign-2025/e_mtd-mobile.png",
+      "url": "http://127.0.0.1:3400/e_mtd",
+      "viewport": "375x812",
+      "deviceScaleFactor": 2,
+      "scrollHeight": 6081,
+      "screenshot": "750x12162",
+      "imagesLoaded": "48/78",
+      "unrevealedSections": 0,
+      "cookieBannerVisible": false,
+      "fullPageOk": true
+    },
+    {
+      "filepath": "/Users/elena/Projects/kochfit-redesign/docs/screenshots/redesign-2025/r-desktop.png",
+      "url": "http://127.0.0.1:3400/r",
+      "viewport": "1440x900",
+      "deviceScaleFactor": 1,
+      "scrollHeight": 4078,
+      "screenshot": "1440x4078",
+      "imagesLoaded": "71/101",
+      "unrevealedSections": 0,
+      "cookieBannerVisible": false,
+      "fullPageOk": true
+    },
+    {
+      "filepath": "/Users/elena/Projects/kochfit-redesign/docs/screenshots/redesign-2025/r-mobile.png",
+      "url": "http://127.0.0.1:3400/r",
+      "viewport": "375x812",
+      "deviceScaleFactor": 2,
+      "scrollHeight": 5638,
+      "screenshot": "750x11276",
+      "imagesLoaded": "44/101",
+      "unrevealedSections": 0,
+      "cookieBannerVisible": false,
+      "fullPageOk": true
+    }
+  ]
+}
