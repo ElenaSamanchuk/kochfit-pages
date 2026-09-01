@@ -112,7 +112,7 @@ export function HomeHero() {
               key={tag}
               className={`plaque-chip ${
                 i === 0 ? "plaque-chip-accent" : "plaque-chip-glass"
-              } ${i >= HERO_TAGS_MOBILE ? "max-xl:!hidden" : ""}`}
+              } ${i >= HERO_TAGS_MOBILE || tag === "Биомеханика" ? "max-xl:!hidden" : ""}`}
             >
               {tag}
             </span>
