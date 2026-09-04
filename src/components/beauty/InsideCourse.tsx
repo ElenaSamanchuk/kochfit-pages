@@ -200,7 +200,7 @@ export function InsideCourse() {
             <br aria-hidden />
             подходом
           </p>
-          <ul className="absolute left-[10px] top-[62px] flex w-[272px] list-disc flex-col gap-[8px] text-[12px] font-normal leading-[normal] text-[#999ca8]">
+          <ul className="absolute left-[16px] top-[62px] flex w-[276px] list-disc flex-col gap-[8px] text-[12px] font-normal leading-[normal] text-[#999ca8]">
             <li className="ms-[18px]">Разные уровни нагрузки и форматы</li>
             <li className="ms-[18px]">
               Система, а не случайный набор упражнений, не просто фитнес, а образ жизни
