@@ -87,10 +87,10 @@ export function WhyKochfit() {
                 <br aria-hidden className="hidden xl:block" />
                 {" по дням:"}
               </p>
-              <p className="text-small font-medium leading-[0] text-ink-secondary">
+              <p className="text-small font-medium leading-[0] text-ink-muted">
                 <span className="leading-[normal]">{"зарядка, коррекция, силовая. "}</span>
                 <br aria-hidden className="hidden xl:block" />
-                <span className="leading-[normal] text-ink-muted">
+                <span className="leading-[normal]">
                   {"Открываешь приложение и просто"}
                   <br aria-hidden className="hidden xl:block" />
                   {" начинаешь"}
@@ -112,7 +112,7 @@ export function WhyKochfit() {
                 <p className="pr-[44px] text-body font-semibold text-ink xl:pr-0">
                   {"Форматы от 15 до 90 минут"}
                 </p>
-                <p className="text-small font-medium text-ink-secondary">
+                <p className="text-small font-medium text-ink-muted">
                   {"Выполняй тренировку, на которую"}
                   <br aria-hidden className="hidden xl:block" />
                   {" сегодня есть время"}
@@ -154,10 +154,8 @@ export function WhyKochfit() {
                 />
               </span>
             </div>
-            <p className="w-full text-small font-medium leading-[0] text-ink-muted">
-              <span className="leading-[normal] text-ink-secondary">
-                Для каждой, кто хочет здоровое красивое тело в период подготовки, беременности и восстановления после родов
-              </span>
+            <p className="w-full text-small font-medium leading-[normal] text-ink-muted">
+              Для каждой, кто хочет здоровое красивое тело в период подготовки, беременности и восстановления после родов
             </p>
           </article>
 
@@ -213,10 +211,8 @@ export function WhyKochfit() {
                 />
               </span>
             </div>
-            <p className="w-full text-small font-medium leading-[0] text-ink-muted">
-              <span className="leading-[normal] text-ink-secondary">
-                Система, а не хаотичный набор упражнений. Даём понимание, как связаны дыхание, осанка, живот, таз, стопы и общее самочувствие
-              </span>
+            <p className="w-full text-small font-medium leading-[normal] text-ink-muted">
+              Система, а не хаотичный набор упражнений. Даём понимание, как связаны дыхание, осанка, живот, таз, стопы и общее самочувствие
             </p>
           </article>
         </div>

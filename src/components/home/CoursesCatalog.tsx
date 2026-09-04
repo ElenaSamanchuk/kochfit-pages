@@ -1,3 +1,4 @@
+import type React from "react";
 import { assetPath } from "@/lib/asset-path";
 import Link from "next/link";
 import { coursePricing } from "@/content/courses";
@@ -14,7 +15,7 @@ const courseImageSizes = "362px";
 
 type SmallCourse = {
   title: string;
-  description: string;
+  description: React.ReactNode;
   badge: string;
   href: string;
   mark: string;
@@ -43,8 +44,13 @@ const smallCourses: SmallCourse[] = [
   },
   {
     title: "Восстановление после родов",
-    description:
-      "Курс для мягкого восстановления после родов с первых дней: поможет бережно вернуть тело в движение и поддержать эмоциональное и физическое состояние",
+    description: (
+      <>
+        {"Курс для мягкого восстановления после родов с первых дней: "}
+        <br aria-hidden className="hidden xl:block" />
+        {"поможет бережно вернуть тело в движение и поддержать эмоциональное и физическое состояние"}
+      </>
+    ),
     badge: "Старт с момента покупки",
     href: routes.postpartum,
     mark: "imgRectangle29427.webp",

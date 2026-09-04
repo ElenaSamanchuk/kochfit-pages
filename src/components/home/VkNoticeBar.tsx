@@ -40,13 +40,16 @@ function writeClosedCookie() {
 
 type VkNoticeVariant = "floating" | "stacked";
 
+const barSurface =
+  "flex items-center gap-[6px] rounded-[10px] bg-white py-[6px] pl-[6px] pr-[22px] shadow-[0_10px_30px_rgba(75,77,87,0.2)] sm:gap-[8px] sm:py-[8px] sm:pl-[8px] sm:pr-[26px]";
+
 /**
  * Плашка «Если не работает Телеграм — переходите сюда» как на текущем kochfit.ru
  * (page14498897): белая карточка с лого ВК и крестиком поверх hero слева.
  * Закрытие запоминается в cookie на 1 год.
  *
- * - `floating` — absolute поверх hero (<xl), со flow-spacer
- * - `stacked` — отдельная строка над hero-тегами (xl+)
+ * - `floating` — absolute поверх hero (<xl), со flow-spacer; xl+ не рендерится
+ * - `stacked` — отдельная строка над hero-тегами (xl+); монтируется в max-xl:hidden обёртке
  */
 export function VkNoticeBar({ variant = "floating" }: { variant?: VkNoticeVariant }) {
   // На сервере/до маунта считаем плашку скрытой, чтобы не было flash и SSR-mismatch
@@ -65,24 +68,14 @@ export function VkNoticeBar({ variant = "floating" }: { variant?: VkNoticeVarian
 
   if (closed) return null;
 
-  const isFloating = variant === "floating";
+  const anim = exiting ? "vk-notice-exit" : "vk-notice-enter";
 
-  return (
-    <Typo>
-    {isFloating && (
-      /* Flow-spacer <xl: резерв под absolute-плашку, чтобы hero pt мог быть как на других лендингах */
-      <div
-        aria-hidden
-        className="pointer-events-none max-xl:h-[48px] sm:max-xl:h-[52px] xl:hidden"
-      />
-    )}
+  const bar = (
     <div
-      className={`vk-notice relative flex shrink-0 items-center gap-[6px] rounded-[10px] bg-white py-[6px] pl-[6px] pr-[22px] shadow-[0_10px_30px_rgba(75,77,87,0.2)] sm:gap-[8px] sm:py-[8px] sm:pl-[8px] sm:pr-[26px] ${
-        isFloating
+      className={`vk-notice ${barSurface} ${anim} ${
+        variant === "floating"
           ? "absolute max-xl:inset-x-(--page-inset-x) top-[56px] z-10 sm:top-[72px] xl:hidden"
-          : "hidden xl:flex xl:max-w-[430px] xl:mb-[16px]"
-      } ${
-        exiting ? "vk-notice-exit" : "vk-notice-enter"
+          : "max-w-[430px] xl:mb-[16px]"
       }`}
       onAnimationEnd={onAnimEnd}
     >
@@ -125,6 +118,20 @@ export function VkNoticeBar({ variant = "floating" }: { variant?: VkNoticeVarian
         </svg>
       </button>
     </div>
-    </Typo>
   );
+
+  if (variant === "floating") {
+    return (
+      <Typo>
+        {/* Flow-spacer <xl: резерв под absolute-плашку, чтобы hero pt мог быть как на других лендингах */}
+        <div
+          aria-hidden
+          className="pointer-events-none max-xl:h-[48px] sm:max-xl:h-[52px] xl:hidden"
+        />
+        {bar}
+      </Typo>
+    );
+  }
+
+  return <Typo>{bar}</Typo>;
 }
