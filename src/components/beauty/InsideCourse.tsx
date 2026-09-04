@@ -203,13 +203,10 @@ export function InsideCourse() {
           <ul className="absolute left-[10px] top-[62px] flex w-[272px] list-disc flex-col gap-[8px] text-[12px] font-normal leading-[normal] text-[#999ca8]">
             <li className="ms-[18px]">Разные уровни нагрузки и форматы</li>
             <li className="ms-[18px]">
-              {"Система, а не случайный набор упражнений,"}
-              <br aria-hidden />
-              {"не просто фитнес, а образ жизни"}
+              Система, а не случайный набор упражнений, не просто фитнес, а образ жизни
             </li>
             <li className="ms-[18px]">
-              {"Полная система заботы о вашем теле "}
-              <br aria-hidden />и самочувствии
+              Полная система заботы о вашем теле и самочувствии
             </li>
           </ul>
         </article>
@@ -242,15 +239,11 @@ export function InsideCourse() {
           </p>
           <ul className="absolute left-[10px] top-[62px] flex w-[233px] list-disc flex-col gap-[8px] text-[12px] font-normal leading-[normal] text-[#999ca8]">
             <li className="ms-[18px]">
-              {"Видеоуроки в формате «следуй "}
-              <br aria-hidden />
-              {"за мной»: я веду каждое занятие "}
-              <br aria-hidden />
-              от первой до последней минуты
+              Видеоуроки в формате «следуй за мной»: я веду каждое занятие от первой до последней
+              минуты
             </li>
             <li className="ms-[18px]">
-              {"Все материалы теперь можно найти "}
-              <br aria-hidden />в приложении и личном кабинете
+              Все материалы теперь можно найти в приложении и личном кабинете
             </li>
           </ul>
           <span className="absolute left-[8px] top-[168px] block h-[135px] w-[235px] rounded-[10px] bg-[#edf4f9]" />
@@ -289,17 +282,9 @@ export function InsideCourse() {
           </p>
           <ul className="absolute left-[10px] top-[63px] w-[249px] list-disc text-[12px] font-normal leading-[normal] text-[#999ca8]">
             <li className="ms-[18px]">
-              {"Коррекции убирают хроническое"}
-              <br aria-hidden />
-              {"напряжение в шее, пояснице, животе"}
+              Коррекции убирают хроническое напряжение в шее, пояснице, животе
             </li>
-          </ul>
-          <ul className="absolute left-[10px] top-[103px] w-[246px] list-disc text-[12px] font-normal leading-[normal] text-[#999ca8]">
-            <li className="ms-[18px]">
-              {"Силовые добавляются, когда тело"}
-              <br aria-hidden />
-              готово
-            </li>
+            <li className="ms-[18px]">Силовые добавляются, когда тело готово</li>
           </ul>
         </article>
 
