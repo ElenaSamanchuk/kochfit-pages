@@ -1,6 +1,9 @@
 @import "tailwindcss";
 
 @theme inline {
+  /* Figma desktop baseline «от 1200px» — xl utilities kick in at 1200, not default 1280 */
+  --breakpoint-xl: 75rem;
+
   --font-sans: var(--font-nunito-sans), ui-sans-serif, system-ui, sans-serif;
   --font-display: var(--font-evolventa), var(--font-nunito-sans), sans-serif;
 
@@ -74,7 +77,7 @@
   --page-inset-top: 8px;
   --page-inset-bottom: 16px;
 
-  /* Плашки: всегда пара mobile / desktop. Desktop = xl 1280px (Figma). Не один py на все вьюпорты. */
+  /* Плашки: всегда пара mobile / desktop. Desktop = xl 1200px (Figma). Не один py на все вьюпорты. */
   --plaque-px-mobile: 10px;
   --plaque-px-desktop: 10px;
   --plaque-py-mobile: 8px; /* тарифы / startBadge / hero-card — чуть выше 6px */
@@ -153,7 +156,7 @@
   --reveal-delay: 0ms;
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 1200px) {
   :root {
     --page-inset-x: var(--page-inset-x-desktop);
     --card-padding: var(--card-padding-desktop);
@@ -332,7 +335,7 @@ body {
 
 /* Плашка под фото на hero-карточке (stat, «Бесплатная тренировка») — выше тарифных chip */
 
-@media (min-width: 1280px) {
+@media (min-width: 1200px) {
   .plaque {
     padding: var(--plaque-py-desktop) var(--plaque-px-desktop);
   }
@@ -351,7 +354,7 @@ body {
 }
 
 /* Каталог — флагман «Красота и здоровье»: max-xl две строки тегов (2261:1785) */
-@media (max-width: 1279px) {
+@media (max-width: 1199px) {
   .flagship-catalog-header {
     margin-top: -4px;
   }
@@ -365,7 +368,7 @@ body {
   }
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 1200px) {
   .flagship-catalog-tags .flagship-tag-flag {
     order: 1;
   }
@@ -407,7 +410,7 @@ body {
   color: #fff;
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 1200px) {
   .plaque-chip {
     padding: var(--plaque-chip-py-desktop) var(--plaque-chip-px-desktop);
     border-radius: var(--plaque-chip-radius-desktop);
@@ -443,7 +446,7 @@ body {
   white-space: nowrap;
 }
 
-/* ExpectCourse desktop-макет с lg (1024), не ждать 1280 */
+/* ExpectCourse desktop-макет с lg (1024), не ждать xl (1200) */
 @media (min-width: 1024px) {
   .plaque-feature {
     padding-block: var(--plaque-feature-py-desktop);
@@ -474,8 +477,8 @@ body {
   line-height: 1;
 }
 
-/* PlatformSection: крупнее на xl (1280), не смешивать с ExpectCourse lg */
-@media (min-width: 1280px) {
+/* PlatformSection: крупнее на xl (1200), не смешивать с ExpectCourse lg */
+@media (min-width: 1200px) {
   .plaque-feature-platform {
     gap: 8px;
     padding-block: var(--plaque-feature-py-platform-desktop);
@@ -528,7 +531,7 @@ body {
   }
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 1200px) {
   .catalog-cta-btn {
     width: var(--catalog-cta-btn-width-desktop);
     min-width: var(--catalog-cta-btn-width-desktop);
@@ -544,7 +547,7 @@ body {
   padding: var(--card-padding);
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 1200px) {
   .course-card-abs {
     padding: 0;
   }
@@ -568,7 +571,7 @@ body {
   overflow: visible;
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 1200px) {
   .fit-card {
     height: var(--fit-card-height);
     min-height: var(--fit-card-height);
@@ -582,7 +585,7 @@ body {
   flex-shrink: 0;
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 1200px) {
   .why-kochfit-thumb-photo {
     width: 57px;
     height: 57px;
@@ -594,7 +597,7 @@ body {
   height: 28px;
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 1200px) {
   .why-kochfit-thumb-icon-box {
     width: 36px;
     height: 36px;
@@ -608,7 +611,7 @@ body {
   height: 20px;
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 1200px) {
   .why-kochfit-thumb-icon {
     left: 6px;
     top: 6px;
@@ -621,7 +624,7 @@ body {
   grid-template-columns: minmax(0, 1fr) 49px;
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 1200px) {
   .why-kochfit-thumb-grid {
     grid-template-columns: minmax(0, 1fr) 57px;
   }
@@ -696,14 +699,14 @@ body {
   }
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 1200px) {
   .section-gap-after-hero {
     margin-top: 140px;
   }
 }
 
 /* WhyKochfit → «Курсы Kochfit»: 48 → 64 → 100px, xl чуть больше (120px) */
-@media (min-width: 1280px) {
+@media (min-width: 1200px) {
   .section-gap-before-courses {
     margin-top: 120px;
   }
@@ -907,7 +910,7 @@ html.motion-ready .hero-motion:not(.is-revealed) {
 
 /*
   Hero photo load zoom: Ken Burns on inner wrappers, all breakpoints
-  (no min-width: 1280px gate — mobile must see the same depth effect).
+  (no min-width: 1200px gate — mobile must see the same depth effect).
   Wrappers settle to identity so img crop (Tailwind scale-* / object-position)
   is never overridden — `/r` must not settle at scale 1.28 origin-bottom.
   Shell is opacity:0 during the 2-rAF prep, so the start scale is hidden.
@@ -984,14 +987,14 @@ html.motion-ready .hero-motion:not(.is-revealed) .hero-figure-zoom {
   transition: none;
 }
 
-@media (min-width: 640px) and (max-width: 1279px) {
+@media (min-width: 640px) and (max-width: 1199px) {
   .hero-header {
     --hero-header-travel: 18px;
     --hero-header-inset-extra: 12px;
   }
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 1200px) {
   .hero-header {
     --hero-header-travel: 36px;
     --hero-header-inset-extra: 0px;
@@ -1136,7 +1139,7 @@ html.motion-ready .hero-motion:not(.is-revealed) .hero-figure-zoom {
     transform var(--dur) var(--ease-out);
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 1200px) {
   .site-menu-link {
     font-size: 14px;
   }

@@ -1,4 +1,4 @@
-/** Общие Tailwind-фрагменты hero: мобилка/планшет — база, desktop — единый брейкпоинт xl: (1280px) */
+/** Общие Tailwind-фрагменты hero: мобилка/планшет — база, desktop — единый брейкпоинт xl: (1200px) */
 
 /**
  * Фиксированная высота hero на всех брейкпоинтах.
@@ -15,7 +15,7 @@ export const heroShell =
  * Travel / horizontal inset-extra live in `.hero-header` / `.hero-header-bar`
  * (globals.css) per breakpoint:
  * - <640: travel 14px, inset-extra 12px (rest inside cover → docked nearer edges)
- * - 640–1279: travel 18px, inset-extra 12px
+ * - 640–1199: travel 18px, inset-extra 12px
  * - xl: travel 36px (20+16), bar px = page-inset-x-desktop+20 (static)
  * Desktop rest visual top ≈ --page-inset-top + 36 (~44); docked ≈ 8.
  */
