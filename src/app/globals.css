@@ -479,13 +479,6 @@ body {
   line-height: 1;
 }
 
-.plaque-feature-expect-mobile-tight {
-  gap: 3px;
-  padding-block: 3px;
-  padding-inline: var(--plaque-feature-pl) 6px;
-  font-size: 9px;
-}
-
 /* PlatformSection: крупнее на xl (1200), не смешивать с ExpectCourse lg */
 @media (min-width: 1200px) {
   .plaque-feature-platform {

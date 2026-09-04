@@ -7,26 +7,15 @@ const TARIFFS_HASH = "#tariffs";
 
 function expectChipNode(chip: ExpectChip, compact = false) {
   const label = compact && chip.mobileText ? chip.mobileText : chip.text;
-  const compactClass = compact
-    ? chip.mobileCompact
-      ? "plaque-feature plaque-feature-expect-mobile plaque-feature-expect-mobile-tight"
-      : "plaque-feature plaque-feature-expect-mobile"
-    : "plaque-feature";
   return (
     <span
-      className={compactClass}
+      className={compact ? "plaque-feature plaque-feature-expect-mobile" : "plaque-feature"}
       {...(compact && chip.mobileText && chip.mobileText !== chip.text
         ? { title: chip.text, "aria-label": chip.text }
         : {})}
     >
       <FeatureCheckIcon
-        className={`block shrink-0 ${
-          compact
-            ? chip.mobileCompact
-              ? "size-[10px]"
-              : "size-[11px]"
-            : "size-[13px] lg:size-[13px]"
-        }`}
+        className={`block shrink-0 ${compact ? "size-[11px]" : "size-[13px] lg:size-[13px]"}`}
       />
       <span className={compact ? "shrink-0" : "min-w-0 truncate"}>{label}</span>
     </span>
