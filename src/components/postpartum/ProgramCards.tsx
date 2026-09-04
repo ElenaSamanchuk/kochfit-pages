@@ -1,10 +1,11 @@
 import { CardArrowCta } from "@/components/ui/CardArrowCta";
+import { LcpPreload } from "@/components/site/LcpPreload";
 import { routes } from "@/content/routes";
-import { assetPath } from "@/lib/asset-path";
+import { programPhotoPreloadHref, programPhotoProps } from "@/lib/program-card-photo";
 import Link from "next/link";
 import type { CSSProperties, ReactNode } from "react";
 
-const img = (name: string) => assetPath(`/images/postpartum/${name}`);
+const IMAGE_DIR = "postpartum" as const;
 
 /** Плашки: на мобилке чуть выше (py-5), xl как в Figma (py-6). */
 const chipClass =
@@ -98,7 +99,17 @@ const cards: Card[] = [
   },
 ];
 
-function ProgramCardView({ card }: { card: Card }) {
+function ProgramCardView({ card, index }: { card: Card; index: number }) {
+  const photo = programPhotoProps(IMAGE_DIR, card.image, index);
+  const imgProps = {
+    alt: "",
+    draggable: false as const,
+    src: photo.src,
+    srcSet: photo.srcSet,
+    sizes: photo.sizes,
+    loading: photo.loading,
+    ...(photo.fetchPriority ? { fetchPriority: photo.fetchPriority } : {}),
+  };
   return (
     <article
       data-figma-node={card.node}
@@ -115,21 +126,15 @@ function ProgramCardView({ card }: { card: Card }) {
       {/* Mobile: квадрат float-right — чипы/имя/список обтекают (как InsideCourse). */}
       <span className="relative float-right mb-[6px] ml-[10px] block size-[60px] overflow-hidden rounded-[10px] bg-[#edf4f9] xl:hidden">
         <img
-          loading="lazy"
-          alt=""
-          draggable={false}
+          {...imgProps}
           className="absolute inset-0 size-full max-w-none object-cover object-[50%_20%] [-webkit-user-drag:none]"
-          src={img(card.image)}
         />
       </span>
       {/* Desktop xl: квадрат 180×180 слева — Figma top/left 4px. Кроп imageClass не трогаем. */}
       <span className="relative m-[4px] hidden size-[180px] shrink-0 overflow-hidden rounded-l-[16px] xl:block">
         <img
-          loading="lazy"
-          alt=""
-          draggable={false}
+          {...imgProps}
           className={`[-webkit-user-drag:none] ${card.imageClass}`}
-          src={img(card.image)}
         />
         <span
           className="absolute inset-0 rounded-l-[16px]"
@@ -185,6 +190,7 @@ function ProgramCardView({ card }: { card: Card }) {
 export function ProgramCards() {
   return (
     <section id="program" className="mx-auto w-full max-w-[1160px] overflow-x-visible">
+      <LcpPreload href={programPhotoPreloadHref(IMAGE_DIR, cards[0]!.image)} />
       <h2 className="font-display text-[22px] font-normal leading-[1.25] text-ink lg:text-[24px] lg:leading-[1.2]">
         Программа курса
       </h2>
@@ -194,8 +200,8 @@ export function ProgramCards() {
         data-drag-scroll
         className="mt-6 flex min-w-0 items-stretch gap-5 overflow-x-auto overflow-y-visible pb-1 [-ms-overflow-style:none] [-webkit-overflow-scrolling:touch] [scrollbar-width:none] [touch-action:pan-x_pan-y] max-xl:hscroll-bleed sm:mt-[41px] xl:hscroll-end xl:w-[calc(50%+50vw)] xl:max-w-none [&::-webkit-scrollbar]:hidden"
       >
-        {cards.map((card) => (
-          <ProgramCardView key={card.node} card={card} />
+        {cards.map((card, index) => (
+          <ProgramCardView key={card.node} card={card} index={index} />
         ))}
       </div>
     </section>

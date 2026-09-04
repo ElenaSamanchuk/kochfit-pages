@@ -1,13 +1,14 @@
 "use client";
 
 import { ObstetricProgramModal } from "@/components/pregnancy/ObstetricProgramModal";
+import { LcpPreload } from "@/components/site/LcpPreload";
 import { CardArrowCta } from "@/components/ui/CardArrowCta";
 import { routes } from "@/content/routes";
-import { assetPath } from "@/lib/asset-path";
+import { programPhotoPreloadHref, programPhotoProps } from "@/lib/program-card-photo";
 import Link from "next/link";
 import { useCallback, useState, type CSSProperties, type ReactNode } from "react";
 
-const img = (name: string) => assetPath(`/images/pregnancy/${name}`);
+const IMAGE_DIR = "pregnancy" as const;
 
 type ChipCtx = {
   openObstetricProgram: () => void;
@@ -150,10 +151,22 @@ const cards: Card[] = [
 function ProgramCardView({
   card,
   chipCtx,
+  index,
 }: {
   card: Card;
   chipCtx: ChipCtx;
+  index: number;
 }) {
+  const photo = programPhotoProps(IMAGE_DIR, card.image, index);
+  const imgProps = {
+    alt: "",
+    draggable: false as const,
+    src: photo.src,
+    srcSet: photo.srcSet,
+    sizes: photo.sizes,
+    loading: photo.loading,
+    ...(photo.fetchPriority ? { fetchPriority: photo.fetchPriority } : {}),
+  };
   const mobileHref =
     card.mobileCta && "href" in card.mobileCta ? card.mobileCta.href : undefined;
   const mobileOpenObstetric =
@@ -185,21 +198,15 @@ function ProgramCardView({
       {/* Mobile: квадрат float-right — чипы/имя/список обтекают (как InsideCourse). */}
       <span className="relative float-right mb-[6px] ml-[10px] block size-[60px] overflow-hidden rounded-[10px] bg-[#edf4f9] min-[1200px]:hidden">
         <img
-          loading="lazy"
-          alt=""
-          draggable={false}
+          {...imgProps}
           className="absolute inset-0 size-full max-w-none object-cover object-[50%_20%] [-webkit-user-drag:none]"
-          src={img(card.image)}
         />
       </span>
       {/* Desktop 1200+: квадрат 180×180 слева — Figma top/left 4px */}
       <span className="relative m-[4px] hidden size-[180px] shrink-0 overflow-hidden rounded-l-[16px] min-[1200px]:block">
         <img
-          loading="lazy"
-          alt=""
-          draggable={false}
+          {...imgProps}
           className={`[-webkit-user-drag:none] ${card.imageClass}`}
-          src={img(card.image)}
         />
         <span
           className="absolute inset-0 rounded-l-[16px]"
@@ -262,6 +269,7 @@ export function PregnancyProgram() {
 
   return (
     <section id="program" className="mx-auto w-full max-w-[1160px] overflow-x-visible">
+      <LcpPreload href={programPhotoPreloadHref(IMAGE_DIR, cards[0]!.image)} />
       <h2 className="font-display text-[22px] font-normal leading-[1.25] text-ink lg:text-[25px] lg:leading-[1.2]">
         Программа курса
       </h2>
@@ -269,8 +277,8 @@ export function PregnancyProgram() {
         data-drag-scroll
         className="mt-6 flex min-w-0 items-stretch gap-5 overflow-x-auto overflow-y-visible pb-1 [-ms-overflow-style:none] [-webkit-overflow-scrolling:touch] [scrollbar-width:none] [touch-action:pan-x_pan-y] max-[1199px]:hscroll-bleed sm:mt-[41px] min-[1200px]:hscroll-end min-[1200px]:w-[calc(50%+50vw)] min-[1200px]:max-w-none [&::-webkit-scrollbar]:hidden"
       >
-        {cards.map((card) => (
-          <ProgramCardView key={card.node} card={card} chipCtx={chipCtx} />
+        {cards.map((card, index) => (
+          <ProgramCardView key={card.node} card={card} chipCtx={chipCtx} index={index} />
         ))}
       </div>
       <ObstetricProgramModal open={obstetricOpen} onClose={closeObstetricProgram} />
