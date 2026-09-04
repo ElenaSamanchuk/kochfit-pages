@@ -40,7 +40,7 @@ export function ExpectSection() {
           icon: "imgContainer2.svg",
           text: "Тренируйся дома, в зале, в поездке",
           mobileText: "Дома, зал, поездка",
-          mobileCompact: true,
+          hideOnMobile: true,
         },
         {
           icon: "imgContainer3.svg",
