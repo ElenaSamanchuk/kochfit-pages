@@ -35,8 +35,7 @@ const authorPortraitSrcSet = webpSrcSet("imgAuthorPortrait", [644, 966]);
 const authorPortraitSizes = "161px";
 
 /**
- * Квадратный thumb float-right — заголовок и список обтекают картинку
- * (без колонки под thumb и пустоты под заголовком).
+ * Квадратный thumb справа в flex-ряду с заголовком; список — на всю ширину карточки.
  */
 function MobileCardThumb({
   children,
@@ -47,16 +46,16 @@ function MobileCardThumb({
 }) {
   return (
     <span
-      className={`relative float-right mb-[8px] ml-[12px] block size-[60px] overflow-hidden rounded-[10px] ${className}`}
+      className={`relative block size-[60px] shrink-0 overflow-hidden rounded-[10px] ${className}`}
     >
       {children}
     </span>
   );
 }
 
-const mobileCardClass = "flow-root rounded-[12px] bg-white p-[15px]";
-const mobileTitleClass = "text-[14px] font-semibold leading-[normal] text-[#4b4d57]";
-/* без flex — иначе список не обтекает float */
+const mobileCardClass = "rounded-[12px] bg-white p-[15px]";
+const mobileTitleClass =
+  "min-w-0 flex-1 text-[14px] font-semibold leading-[1.25] text-[#4b4d57]";
 const mobileListClass =
   "mt-[12px] list-disc space-y-[8px] pl-[18px] text-[12px] font-normal leading-[1.45] text-[#999ca8]";
 
@@ -68,25 +67,27 @@ export function InsideCourse() {
         Что внутри курса
       </h2>
 
-      {/* ——— Mobile (<lg): текст обтекает квадрат float-right ——— */}
+      {/* ——— Mobile (<lg): flex-ряд заголовок + thumb, список ниже ——— */}
       <div className="mt-6 flex flex-col gap-[12px] lg:hidden">
         {/* Тренировки + duo 2031:2312 */}
         <article className={mobileCardClass}>
-          <MobileCardThumb className="">
-            <span
-              className="absolute inset-0"
-              style={{ backgroundImage: "var(--gradient-primary)" }}
-            />
-            <img
-              loading="lazy"
-              alt=""
-              className="absolute inset-0 size-full max-w-none object-cover object-center"
-              src={img("imgImage2-1100.webp")}
-              srcSet={duoPhotoSrcSet}
-              sizes={duoPhotoSizes}
-            />
-          </MobileCardThumb>
-          <p className={mobileTitleClass}>Тренировки с комплексным подходом</p>
+          <div className="flex items-start gap-[12px]">
+            <p className={mobileTitleClass}>Тренировки с комплексным подходом</p>
+            <MobileCardThumb className="">
+              <span
+                className="absolute inset-0"
+                style={{ backgroundImage: "var(--gradient-primary)" }}
+              />
+              <img
+                loading="lazy"
+                alt=""
+                className="absolute inset-0 size-full max-w-none object-cover object-center"
+                src={img("imgImage2-1100.webp")}
+                srcSet={duoPhotoSrcSet}
+                sizes={duoPhotoSizes}
+              />
+            </MobileCardThumb>
+          </div>
           <ul className={mobileListClass}>
             <li>Разные уровни нагрузки и форматы</li>
             <li>Система, а не случайный набор упражнений, не просто фитнес, а образ жизни</li>
@@ -96,20 +97,22 @@ export function InsideCourse() {
 
         {/* Многоуровневая — телефоны, как в десктоп-карточке 2031:2289 */}
         <article className={mobileCardClass}>
-          <MobileCardThumb>
-            <img
-              loading="lazy"
-              decoding="async"
-              alt="Приложение Kochfit"
-              width={60}
-              height={60}
-              className="absolute inset-0 size-full max-w-none origin-bottom scale-[1.45] object-contain object-bottom"
-              src={img("imgIPhone15Pro-560.webp")}
-              srcSet={appMockupSrcSet}
-              sizes={appMockupThumbSizes}
-            />
-          </MobileCardThumb>
-          <p className={mobileTitleClass}>Многоуровневая подача материала</p>
+          <div className="flex items-start gap-[12px]">
+            <p className={mobileTitleClass}>Многоуровневая подача материала</p>
+            <MobileCardThumb>
+              <img
+                loading="lazy"
+                decoding="async"
+                alt="Приложение Kochfit"
+                width={60}
+                height={60}
+                className="absolute inset-0 size-full max-w-none origin-bottom scale-[1.45] object-contain object-bottom"
+                src={img("imgIPhone15Pro-560.webp")}
+                srcSet={appMockupSrcSet}
+                sizes={appMockupThumbSizes}
+              />
+            </MobileCardThumb>
+          </div>
           <ul className={mobileListClass}>
             <li>
               Видеоуроки в формате «следуй за мной»: я веду каждое занятие от первой до последней
@@ -121,20 +124,22 @@ export function InsideCourse() {
 
         {/* Дыхание и МФР + bridge/mat 2031:2302 */}
         <article className={mobileCardClass}>
-          <MobileCardThumb>
-            <img
-              loading="lazy"
-              decoding="async"
-              alt=""
-              width={60}
-              height={60}
-              className="absolute inset-0 size-full max-w-none object-cover object-center"
-              src={bridgeImg("imgImage1-1100.webp")}
-              srcSet={bridgePhotoSrcSet}
-              sizes={bridgePhotoSizes}
-            />
-          </MobileCardThumb>
-          <p className={mobileTitleClass}>Дыхание и МФР. Осанка и тазовое дно</p>
+          <div className="flex items-start gap-[12px]">
+            <p className={mobileTitleClass}>Дыхание и МФР. Осанка и тазовое дно</p>
+            <MobileCardThumb>
+              <img
+                loading="lazy"
+                decoding="async"
+                alt=""
+                width={60}
+                height={60}
+                className="absolute inset-0 size-full max-w-none object-cover object-center"
+                src={bridgeImg("imgImage1-1100.webp")}
+                srcSet={bridgePhotoSrcSet}
+                sizes={bridgePhotoSizes}
+              />
+            </MobileCardThumb>
+          </div>
           <ul className={mobileListClass}>
             <li>Коррекции убирают хроническое напряжение в шее, пояснице, животе</li>
             <li>Силовые добавляются, когда тело готово</li>
@@ -195,22 +200,15 @@ export function InsideCourse() {
       <div className="relative mt-[27px] hidden h-[311px] w-full lg:block">
         {/* Тренировки с комплексным подходом — 2031:2306 */}
         <article className="absolute left-0 top-0 h-[174px] w-[292px] overflow-hidden rounded-[12px] bg-white">
-          <p className="absolute left-[16px] top-[16px] w-[218px] text-[14px] font-semibold leading-[normal] text-[#4b4d57]">
-            {"Тренировки с комплексным"}
-            <br aria-hidden />
-            подходом
+          <p className="absolute left-[16px] right-[16px] top-[16px] text-[14px] font-semibold leading-[1.25] text-[#4b4d57]">
+            Тренировки с комплексным подходом
           </p>
-          <ul className="absolute left-[10px] top-[62px] flex w-[272px] list-disc flex-col gap-[8px] text-[12px] font-normal leading-[normal] text-[#999ca8]">
+          <ul className="absolute left-[10px] right-[10px] top-[62px] flex list-disc flex-col gap-[8px] text-[12px] font-normal leading-[1.45] text-[#999ca8]">
             <li className="ms-[18px]">Разные уровни нагрузки и форматы</li>
             <li className="ms-[18px]">
-              {"Система, а не случайный набор упражнений,"}
-              <br aria-hidden />
-              {"не просто фитнес, а образ жизни"}
+              Система, а не случайный набор упражнений, не просто фитнес, а образ жизни
             </li>
-            <li className="ms-[18px]">
-              {"Полная система заботы о вашем теле "}
-              <br aria-hidden />и самочувствии
-            </li>
+            <li className="ms-[18px]">Полная система заботы о вашем теле и самочувствии</li>
           </ul>
         </article>
         {/* Фото под карточкой — 2031:2312 + 2031:2313 */}
@@ -235,22 +233,16 @@ export function InsideCourse() {
 
         {/* Многоуровневая подача материала — 2031:2289 */}
         <article className="absolute left-[308px] top-0 h-[311px] w-[251px] overflow-hidden rounded-[12px] bg-white">
-          <p className="absolute left-[16px] top-[16px] w-[201px] text-[14px] font-semibold leading-[normal] text-[#4b4d57]">
-            {"Многоуровневая подача"}
-            <br aria-hidden />
-            материала
+          <p className="absolute left-[16px] right-[16px] top-[16px] text-[14px] font-semibold leading-[1.25] text-[#4b4d57]">
+            Многоуровневая подача материала
           </p>
-          <ul className="absolute left-[10px] top-[62px] flex w-[233px] list-disc flex-col gap-[8px] text-[12px] font-normal leading-[normal] text-[#999ca8]">
+          <ul className="absolute left-[10px] right-[10px] top-[62px] flex list-disc flex-col gap-[8px] text-[12px] font-normal leading-[1.45] text-[#999ca8]">
             <li className="ms-[18px]">
-              {"Видеоуроки в формате «следуй "}
-              <br aria-hidden />
-              {"за мной»: я веду каждое занятие "}
-              <br aria-hidden />
-              от первой до последней минуты
+              Видеоуроки в формате «следуй за мной»: я веду каждое занятие от первой до последней
+              минуты
             </li>
             <li className="ms-[18px]">
-              {"Все материалы теперь можно найти "}
-              <br aria-hidden />в приложении и личном кабинете
+              Все материалы теперь можно найти в приложении и личном кабинете
             </li>
           </ul>
           <span className="absolute left-[8px] top-[168px] block h-[135px] w-[235px] rounded-[10px] bg-[#edf4f9]" />
@@ -282,24 +274,16 @@ export function InsideCourse() {
         </span>
         {/* Дыхание и МФР — 2031:2297 */}
         <article className="absolute left-[575px] top-[168px] h-[143px] w-[275px] overflow-hidden rounded-[12px] bg-white">
-          <p className="absolute left-[16px] top-[16px] w-[153px] text-[14px] font-semibold leading-[normal] text-[#4b4d57]">
-            {"Дыхание и МФР."}
-            <br aria-hidden />
-            {"Осанка и тазовое дно"}
+          <p className="absolute left-[16px] right-[16px] top-[16px] text-[14px] font-semibold leading-[1.25] text-[#4b4d57]">
+            Дыхание и МФР. Осанка и тазовое дно
           </p>
-          <ul className="absolute left-[10px] top-[63px] w-[249px] list-disc text-[12px] font-normal leading-[normal] text-[#999ca8]">
+          <ul className="absolute left-[10px] right-[10px] top-[63px] list-disc text-[12px] font-normal leading-[1.45] text-[#999ca8]">
             <li className="ms-[18px]">
-              {"Коррекции убирают хроническое"}
-              <br aria-hidden />
-              {"напряжение в шее, пояснице, животе"}
+              Коррекции убирают хроническое напряжение в шее, пояснице, животе
             </li>
           </ul>
-          <ul className="absolute left-[10px] top-[103px] w-[246px] list-disc text-[12px] font-normal leading-[normal] text-[#999ca8]">
-            <li className="ms-[18px]">
-              {"Силовые добавляются, когда тело"}
-              <br aria-hidden />
-              готово
-            </li>
+          <ul className="absolute left-[10px] right-[10px] top-[103px] list-disc text-[12px] font-normal leading-[1.45] text-[#999ca8]">
+            <li className="ms-[18px]">Силовые добавляются, когда тело готово</li>
           </ul>
         </article>
 
@@ -340,16 +324,12 @@ export function InsideCourse() {
           <p className="absolute left-[16px] top-[194px] w-[243px] text-[14px] font-semibold leading-[normal] text-[#4b4d57]">
             Юлия Кочкина
           </p>
-          <ul className="absolute left-[10px] top-[223px] flex w-[271px] list-disc flex-col gap-[8px] text-[12px] font-normal leading-[normal] text-[#999ca8]">
+          <ul className="absolute left-[10px] right-[10px] top-[223px] flex list-disc flex-col gap-[8px] text-[12px] font-normal leading-[1.45] text-[#999ca8]">
             <li className="ms-[18px]">
-              {"Тренер с 2014 года, специалист по"}
-              <br aria-hidden />
-              {"движению и восстановлению после родов"}
+              Тренер с 2014 года, специалист по движению и восстановлению после родов
             </li>
             <li className="ms-[18px]">
-              {"Автор фитнес-школы женского здоровья,"}
-              <br aria-hidden />
-              {"помогла более 5000 женщинам"}
+              Автор фитнес-школы женского здоровья, помогла более 5000 женщинам
             </li>
           </ul>
         </Link>
