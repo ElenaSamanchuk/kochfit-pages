@@ -58,6 +58,14 @@ const CATALOG_CTA_BUTTON_TEXT = "Подробнее" as const;
 const catalogCtaButtonClass =
   "catalog-cta-btn btn-primary flex min-h-[36px] shrink-0 items-center justify-center rounded-[10px] px-2 py-1 sm:max-xl:min-h-[44px] sm:max-xl:rounded-[12px] sm:max-xl:px-6 sm:max-xl:py-3 xl:min-h-0 xl:rounded-[12px] xl:px-[32px] xl:py-[16px]";
 
+/** Теги флагманского курса — Figma 2261:1785; на max-xl «дыхание» скрыто в globals.css */
+const flagshipContentTags = [
+  { label: "питание", className: "flagship-tag-pilates" },
+  { label: "силовые", className: "flagship-tag-strength" },
+  { label: "дыхание", className: "flagship-tag-breath" },
+  { label: "мфр", className: "flagship-tag-mfr" },
+] as const;
+
 const flagshipFeatures = [
   "тренировки распределены по уровням и задачам",
   "материалы по нутрициологии, физиологии, психологии",
@@ -178,13 +186,21 @@ export function CoursesCatalog() {
             <div className="relative flex flex-col gap-2 xl:contents">
               <div className="w-full xl:absolute xl:left-[16px] xl:top-[16px] xl:w-auto">
                 <div className="flagship-catalog-header flex min-w-0 flex-1 max-xl:grid max-xl:grid-cols-[1fr_auto] max-xl:items-start max-xl:gap-x-2 xl:flex xl:flex-wrap xl:items-center xl:gap-2">
-                  <div className="flagship-catalog-tag-stack flex flex-col xl:contents xl:flex-row xl:flex-wrap xl:items-center xl:gap-2">
-                    <span className="course-catalog-tag bg-surface-blue text-accent">
+                  <div className="flagship-catalog-tag-stack flagship-catalog-tags flex flex-col xl:contents xl:flex-row xl:flex-wrap xl:items-center xl:gap-2">
+                    <span className="flagship-tag-flag course-catalog-tag bg-surface-blue text-accent">
                       Флагманский курс
                     </span>
-                    <span className="course-catalog-tag bg-surface text-ink-muted">
+                    <span className="flagship-tag-intro course-catalog-tag bg-surface text-ink-muted">
                       Если не знаете, с чего начать
                     </span>
+                    {flagshipContentTags.map((tag) => (
+                      <span
+                        key={tag.label}
+                        className={`${tag.className} course-catalog-tag bg-surface text-ink-muted`}
+                      >
+                        {tag.label}
+                      </span>
+                    ))}
                   </div>
                   <span className="relative inline-grid shrink-0 place-items-start leading-none max-xl:col-start-2 max-xl:row-start-1 xl:hidden">
                     <span className="col-start-1 row-start-1 size-[60px]">
