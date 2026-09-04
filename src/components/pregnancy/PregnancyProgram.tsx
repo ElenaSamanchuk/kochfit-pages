@@ -226,10 +226,10 @@ function ProgramCardView({
             <span className="hidden min-[1200px]:contents">{card.cta(chipCtx)}</span>
           ) : null}
         </div>
-        <p className="min-w-0 [text-wrap:wrap] text-[14px] font-semibold leading-[18px] text-[#4b4d57] min-[1200px]:mb-[8px]">
+        <p className="mb-[10px] min-w-0 [text-wrap:wrap] text-[14px] font-semibold leading-[18px] text-[#4b4d57] min-[1200px]:mb-[8px]">
           {card.name}
         </p>
-        <ul className="mt-1.5 list-disc space-y-0 break-words pl-[18px] text-[12px] font-normal leading-[16px] text-[#676971] [text-wrap:wrap] min-[1200px]:mt-0 min-[1200px]:leading-[18px]">
+        <ul className="list-disc space-y-0 break-words pl-[18px] text-[12px] font-normal leading-[16px] text-[#676971] [text-wrap:wrap] min-[1200px]:leading-[18px]">
           {card.bullets.map((bullet) => (
             <li key={bullet} className="break-words leading-[16px] min-[1200px]:leading-[18px]">
               {bullet}
