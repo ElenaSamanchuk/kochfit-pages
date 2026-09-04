@@ -246,20 +246,14 @@ export function TariffsSection({
         {/* Тариф «Стандарт» — 2031:2470 */}
         <article className="flex min-w-0 flex-1 flex-col gap-[12px] rounded-[20px] bg-white p-[15px] shadow-[2px_2px_8px_0px_rgba(224,224,224,0.25)] lg:p-[20px]">
           <div className="flex items-start justify-between gap-[2px] xl:gap-[12px]">
-            <div className="flex min-w-0 flex-col gap-[16px]">
+            <div className="flex min-w-0 flex-1 flex-col gap-[16px]">
               <span className={`${tariffHeaderBadge} bg-[#f8f8f8] text-[#4b4d57]`}>
                 Самостоятельное прохождение по видео
               </span>
               <div className="flex flex-col gap-[4px] font-semibold leading-[normal]">
                 <p className="text-[20px] text-[#4b4d57]">Тариф «Стандарт»</p>
-                <p className="text-[12px] text-[#676971]">
-                  <span className="xl:hidden">
-                    Юлия ведёт каждую тренировку
-                    {" голосом от первой до последней минуты"}
-                  </span>
-                  <span className="hidden xl:inline">
-                    Юлия ведёт каждую тренировку голосом от первой до последней минуты
-                  </span>
+                <p className="text-[12px] leading-[1.45] text-[#676971]">
+                  Юлия ведёт каждую тренировку голосом от первой до последней минуты
                 </p>
               </div>
             </div>
