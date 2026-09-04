@@ -61,7 +61,7 @@ const catalogCtaButtonClass =
 /** Теги флагманского курса — Figma 2261:1785; на max-xl «Дыхание» скрыто в globals.css */
 const flagshipContentTags = [
   { label: "Питание", className: "flagship-tag-pilates" },
-  { label: "Силовый", className: "flagship-tag-strength" },
+  { label: "Силовые", className: "flagship-tag-strength" },
   { label: "Дыхание", className: "flagship-tag-breath" },
   { label: "МФР", className: "flagship-tag-mfr" },
 ] as const;
@@ -186,7 +186,7 @@ export function CoursesCatalog() {
             <div className="relative flex flex-col gap-2 xl:contents">
               <div className="w-full xl:absolute xl:left-[16px] xl:top-[16px] xl:w-auto">
                 <div className="flagship-catalog-header flex min-w-0 flex-1 max-xl:grid max-xl:grid-cols-[1fr_auto] max-xl:items-start max-xl:gap-x-2 xl:flex xl:flex-wrap xl:items-center xl:gap-2">
-                  <div className="flagship-catalog-tag-stack flagship-catalog-tags flex flex-col xl:contents xl:flex-row xl:flex-wrap xl:items-center xl:gap-2">
+                  <div className="flagship-catalog-tag-stack flagship-catalog-tags flex min-w-0 flex-row flex-wrap items-center xl:contents xl:flex-row xl:flex-wrap xl:items-center xl:gap-2">
                     <span className="flagship-tag-flag course-catalog-tag bg-surface-blue text-accent">
                       Флагманский курс
                     </span>
