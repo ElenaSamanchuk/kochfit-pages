@@ -4,11 +4,11 @@ import { ObstetricProgramModal } from "@/components/pregnancy/ObstetricProgramMo
 import { LcpPreload } from "@/components/site/LcpPreload";
 import { CardArrowCta } from "@/components/ui/CardArrowCta";
 import { routes } from "@/content/routes";
-import { programPhotoPreloadHref, programPhotoProps } from "@/lib/program-card-photo";
+import { assetPath } from "@/lib/asset-path";
 import Link from "next/link";
 import { useCallback, useState, type CSSProperties, type ReactNode } from "react";
 
-const IMAGE_DIR = "pregnancy" as const;
+const img = (name: string) => assetPath(`/images/pregnancy/${name}`);
 
 type ChipCtx = {
   openObstetricProgram: () => void;
@@ -148,6 +148,10 @@ const cards: Card[] = [
   },
 ];
 
+function programImageLoading(index: number): "eager" | "lazy" {
+  return index < 2 ? "eager" : "lazy";
+}
+
 function ProgramCardView({
   card,
   chipCtx,
@@ -157,15 +161,13 @@ function ProgramCardView({
   chipCtx: ChipCtx;
   index: number;
 }) {
-  const photo = programPhotoProps(IMAGE_DIR, card.image, index);
-  const imgProps = {
+  const loading = programImageLoading(index);
+  const imgCommon = {
+    loading,
     alt: "",
     draggable: false as const,
-    src: photo.src,
-    srcSet: photo.srcSet,
-    sizes: photo.sizes,
-    loading: photo.loading,
-    ...(photo.fetchPriority ? { fetchPriority: photo.fetchPriority } : {}),
+    src: img(card.image),
+    ...(index === 0 ? { fetchPriority: "high" as const } : {}),
   };
   const mobileHref =
     card.mobileCta && "href" in card.mobileCta ? card.mobileCta.href : undefined;
@@ -198,14 +200,14 @@ function ProgramCardView({
       {/* Mobile: квадрат float-right — чипы/имя/список обтекают (как InsideCourse). */}
       <span className="relative float-right mb-[6px] ml-[10px] block size-[60px] overflow-hidden rounded-[10px] bg-[#edf4f9] min-[1200px]:hidden">
         <img
-          {...imgProps}
+          {...imgCommon}
           className="absolute inset-0 size-full max-w-none object-cover object-[50%_20%] [-webkit-user-drag:none]"
         />
       </span>
       {/* Desktop 1200+: квадрат 180×180 слева — Figma top/left 4px */}
       <span className="relative m-[4px] hidden size-[180px] shrink-0 overflow-hidden rounded-l-[16px] min-[1200px]:block">
         <img
-          {...imgProps}
+          {...imgCommon}
           className={`[-webkit-user-drag:none] ${card.imageClass}`}
         />
         <span
@@ -266,10 +268,14 @@ export function PregnancyProgram() {
   const openObstetricProgram = useCallback(() => setObstetricOpen(true), []);
   const closeObstetricProgram = useCallback(() => setObstetricOpen(false), []);
   const chipCtx: ChipCtx = { openObstetricProgram };
+  const firstImage = cards[0]!.image;
 
   return (
     <section id="program" className="mx-auto w-full max-w-[1160px] overflow-x-visible">
-      <LcpPreload href={programPhotoPreloadHref(IMAGE_DIR, cards[0]!.image)} />
+      <LcpPreload
+        href={`/images/pregnancy/${firstImage}`}
+        type={firstImage.endsWith(".png") ? "image/png" : "image/webp"}
+      />
       <h2 className="font-display text-[22px] font-normal leading-[1.25] text-ink lg:text-[25px] lg:leading-[1.2]">
         Программа курса
       </h2>

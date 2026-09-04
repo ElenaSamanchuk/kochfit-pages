@@ -1,11 +1,11 @@
 import { CardArrowCta } from "@/components/ui/CardArrowCta";
 import { LcpPreload } from "@/components/site/LcpPreload";
 import { routes } from "@/content/routes";
-import { programPhotoPreloadHref, programPhotoProps } from "@/lib/program-card-photo";
+import { assetPath } from "@/lib/asset-path";
 import Link from "next/link";
 import type { CSSProperties, ReactNode } from "react";
 
-const IMAGE_DIR = "postpartum" as const;
+const img = (name: string) => assetPath(`/images/postpartum/${name}`);
 
 /** Плашки: на мобилке чуть выше (py-5), xl как в Figma (py-6). */
 const chipClass =
@@ -99,17 +99,20 @@ const cards: Card[] = [
   },
 ];
 
+function programImageLoading(index: number): "eager" | "lazy" {
+  return index < 2 ? "eager" : "lazy";
+}
+
 function ProgramCardView({ card, index }: { card: Card; index: number }) {
-  const photo = programPhotoProps(IMAGE_DIR, card.image, index);
-  const imgProps = {
+  const loading = programImageLoading(index);
+  const imgCommon = {
+    loading,
     alt: "",
     draggable: false as const,
-    src: photo.src,
-    srcSet: photo.srcSet,
-    sizes: photo.sizes,
-    loading: photo.loading,
-    ...(photo.fetchPriority ? { fetchPriority: photo.fetchPriority } : {}),
+    src: img(card.image),
+    ...(index === 0 ? { fetchPriority: "high" as const } : {}),
   };
+
   return (
     <article
       data-figma-node={card.node}
@@ -126,14 +129,14 @@ function ProgramCardView({ card, index }: { card: Card; index: number }) {
       {/* Mobile: квадрат float-right — чипы/имя/список обтекают (как InsideCourse). */}
       <span className="relative float-right mb-[6px] ml-[10px] block size-[60px] overflow-hidden rounded-[10px] bg-[#edf4f9] xl:hidden">
         <img
-          {...imgProps}
+          {...imgCommon}
           className="absolute inset-0 size-full max-w-none object-cover object-[50%_20%] [-webkit-user-drag:none]"
         />
       </span>
       {/* Desktop xl: квадрат 180×180 слева — Figma top/left 4px. Кроп imageClass не трогаем. */}
       <span className="relative m-[4px] hidden size-[180px] shrink-0 overflow-hidden rounded-l-[16px] xl:block">
         <img
-          {...imgProps}
+          {...imgCommon}
           className={`[-webkit-user-drag:none] ${card.imageClass}`}
         />
         <span
@@ -188,9 +191,14 @@ function ProgramCardView({ card, index }: { card: Card; index: number }) {
 
 /** «Программа курса» — лента карточек экспертов, Figma 2042:9249 */
 export function ProgramCards() {
+  const firstImage = cards[0]!.image;
+
   return (
     <section id="program" className="mx-auto w-full max-w-[1160px] overflow-x-visible">
-      <LcpPreload href={programPhotoPreloadHref(IMAGE_DIR, cards[0]!.image)} />
+      <LcpPreload
+        href={`/images/postpartum/${firstImage}`}
+        type={firstImage.endsWith(".png") ? "image/png" : "image/webp"}
+      />
       <h2 className="font-display text-[22px] font-normal leading-[1.25] text-ink lg:text-[24px] lg:leading-[1.2]">
         Программа курса
       </h2>
