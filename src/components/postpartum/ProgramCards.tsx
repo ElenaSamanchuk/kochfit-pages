@@ -157,7 +157,7 @@ function ProgramCardView({ card }: { card: Card }) {
         <p className="min-w-0 text-[14px] font-semibold leading-[18px] text-[#4b4d57] xl:mb-[8px]">
           {card.name}
         </p>
-        <ul className="mt-1.5 list-disc space-y-0 pl-[18px] text-[12px] font-normal leading-[16px] text-[#676971] xl:mt-0 xl:leading-[18px]">
+        <ul className="mt-1.5 list-disc space-y-[8px] pl-[18px] text-[12px] font-normal leading-[16px] text-[#676971] xl:mt-0 xl:space-y-0 xl:leading-[18px]">
           {card.bullets.map((bullet) => (
             <li key={bullet} className="leading-[16px] xl:leading-[18px]">
               {bullet}
