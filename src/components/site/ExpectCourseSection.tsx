@@ -22,13 +22,13 @@ function expectChipNode(chip: ExpectChip, compact = false) {
   );
 }
 
-/** Мобила: ровно N строк без свободного wrap. 5 → 2+2+1, 4 → 2+2, 3 → 2+1. */
+/** Мобила: до 3 строк; внутри строки — flex-wrap. 5 → 2+1+2 (не 2+2+1: пара на ~390px ломается в 4 ряда). */
 function mobileChipRows(chips: ExpectChip[]): ExpectChip[][] {
   const n = chips.length;
   if (n <= 2) return n === 0 ? [] : [chips];
   if (n === 3) return [chips.slice(0, 2), chips.slice(2)];
   if (n === 4) return [chips.slice(0, 2), chips.slice(2)];
-  if (n === 5) return [chips.slice(0, 2), chips.slice(2, 4), chips.slice(4)];
+  if (n === 5) return [chips.slice(0, 2), chips.slice(2, 3), chips.slice(3)];
   const rows: ExpectChip[][] = [];
   for (let i = 0; i < n; i += 2) rows.push(chips.slice(i, i + 2));
   return rows;
@@ -191,22 +191,26 @@ export function ExpectCourseSection({
         <h2 className="text-center font-display text-[22px] font-normal leading-[1.25] text-ink">
           Что вас ждет на курсе
         </h2>
-        {/* 5 плашек → 2+2+1; ширина по контенту + padding (не растягивать в equal grid). Desktop — выше. */}
-        <div className="flex w-full flex-col items-center gap-1.5">
+        {/* До 3 строк на ~390px: flex-wrap в одном контейнере; разрывы — basis-full. Desktop — выше. */}
+        <div className="flex w-full flex-wrap items-center justify-center gap-1.5">
           {mobileChipRows(
             [...chipsRow1, ...chipsRow2].filter((chip) => !chip.hideOnMobile),
-          ).map((row) => (
-            <div
-              key={row.map((c) => c.text).join("|")}
-              className="flex w-full flex-wrap items-center justify-center gap-1.5"
-            >
-              {row.map((chip) => (
-                <span key={chip.text} className="inline-flex w-auto max-w-full">
-                  {expectChipNode(chip, true)}
-                </span>
-              ))}
-            </div>
-          ))}
+          ).flatMap((row, rowIndex) => [
+            ...(rowIndex > 0
+              ? [
+                  <span
+                    key={`break-${rowIndex}`}
+                    className="h-0 basis-full"
+                    aria-hidden
+                  />,
+                ]
+              : []),
+            ...row.map((chip) => (
+              <span key={chip.text} className="inline-flex w-auto max-w-full">
+                {expectChipNode(chip, true)}
+              </span>
+            )),
+          ])}
         </div>
 
         {/* Белая карточка: заголовок → шаги → мокап → CTA (как desktop: кнопка под мокапом) */}
