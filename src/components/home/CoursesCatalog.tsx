@@ -61,7 +61,7 @@ const catalogCtaButtonClass =
 /** Теги флагманского курса — Figma 2261:1785; на max-xl «Дыхание» скрыто в globals.css */
 const flagshipContentTags = [
   { label: "Питание", className: "flagship-tag-pilates" },
-  { label: "Силовый", className: "flagship-tag-strength" },
+  { label: "Силовые", className: "flagship-tag-strength" },
   { label: "Дыхание", className: "flagship-tag-breath" },
   { label: "МФР", className: "flagship-tag-mfr" },
 ] as const;
