@@ -12,7 +12,6 @@ import { TelegramBadgeIcon } from "@/components/ui/TelegramBadgeIcon";
 import { externalLinks } from "@/content/links";
 
 const heroBg = assetPath("/images/shared/hero-bg.webp");
-const heroGlassCard = assetPath("/images/shared/hero-glass-card.webp");
 const heroGlassCardDesktop = assetPath("/images/home/img202605131451311.webp");
 
 const heroTags = [
@@ -165,14 +164,15 @@ export function HomeHero() {
               data-figma-node="2228:1427"
               className="group/hero-strip flex min-h-0 w-full items-center gap-2 rounded-md border border-solid border-[rgba(239,239,239,0.3)] bg-[rgba(0,0,0,0.13)] px-2 py-1.5 backdrop-blur-[2px] transition hover:bg-[rgba(0,0,0,0.2)] active:scale-[0.99] sm:min-h-[64px] sm:gap-3 sm:max-xl:px-[15px] sm:py-2.5"
             >
-              {/* Thumb 56/64: square + object-cover — uniform scale, no rotate/absolute % (those stretched faces) */}
-              <span className="relative size-[56px] shrink-0 overflow-hidden rounded-[6px] sm:size-[64px]">
+              {/* Thumb 56/64: desktop source (hero-glass-card.webp is pre-squashed); absolute fill + object-cover */}
+              <span className="relative aspect-square size-[56px] shrink-0 overflow-hidden rounded-[6px] sm:size-[64px]">
                 <img
                   alt=""
-                  className="hero-card-photo pointer-events-none block size-full object-cover object-[50%_32%]"
-                  src={heroGlassCard}
-                  width={544}
-                  height={264}
+                  decoding="async"
+                  width={1100}
+                  height={741}
+                  className="hero-card-photo pointer-events-none absolute inset-0 size-full max-w-none object-cover object-[50%_42%]"
+                  src={heroGlassCardDesktop}
                 />
               </span>
               <span className="flex min-w-0 flex-1 flex-col gap-0.5 sm:gap-1">
