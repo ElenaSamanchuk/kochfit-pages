@@ -120,11 +120,11 @@ export function VkNoticeBar() {
     <Typo>
       <div
         aria-hidden
-        className="pointer-events-none max-xl:h-[54px] sm:max-xl:h-[66px] xl:hidden"
+        className="pointer-events-none max-xl:h-[48px] sm:max-xl:h-[52px] xl:hidden"
       />
       {/* Mobile — не трогать xl-классы на этом узле */}
       <div
-        className={`${noticeShellClass} absolute max-xl:inset-x-(--page-inset-x) top-[56px] z-10 sm:top-[72px] xl:hidden ${animClass}`}
+        className={`${noticeShellClass} absolute max-xl:inset-x-(--page-inset-x) top-[56px] z-20 sm:top-[72px] xl:hidden ${animClass}`}
         onAnimationEnd={onAnimEnd}
       >
         <VkNoticeCard exiting={exiting} onClose={close} />
