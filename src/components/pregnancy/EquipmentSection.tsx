@@ -182,7 +182,7 @@ export function EquipmentSection() {
       className="mx-auto w-full max-w-[1160px] overflow-x-visible"
     >
       <div className="flex flex-col gap-[12px] lg:relative lg:block">
-        <h2 className="max-w-[368px] font-display text-[22px] font-normal leading-[1.25] text-ink lg:text-[24px] lg:leading-[1.2]">
+        <h2 className="max-w-[368px] font-display text-[22px] font-normal leading-[1.25] text-ink lg:max-w-[calc(100%-330px)] lg:text-[24px] lg:leading-[1.2]">
           Необходимое оборудование для тренировок на курсе
         </h2>
         <p className="text-[12px] font-normal leading-[normal] text-ink-secondary lg:absolute lg:right-0 lg:top-[26px] lg:w-[311px] lg:text-right">
