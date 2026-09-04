@@ -44,17 +44,8 @@ const smallCourses: SmallCourse[] = [
   },
   {
     title: "Восстановление после родов",
-    description: (
-      <>
-        {"Курс для мягкого восстановления после родов "}
-        <br aria-hidden className="hidden xl:block" />
-        {"с первых дней: поможет бережно вернуть "}
-        <br aria-hidden className="hidden xl:block" />
-        {"тело в движение и поддержать эмоциональное "}
-        <br aria-hidden className="hidden xl:block" />
-        {"и физическое состояние"}
-      </>
-    ),
+    description:
+      "Курс для мягкого восстановления после родов с первых дней: поможет бережно вернуть тело в движение и поддержать эмоциональное и физическое состояние",
     badge: "Старт с момента покупки",
     href: routes.postpartum,
     mark: "imgRectangle29427.webp",
