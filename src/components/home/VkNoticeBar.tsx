@@ -44,9 +44,12 @@ const noticeShellClass =
 function VkNoticeCard({
   exiting,
   onClose,
+  desktop,
 }: {
   exiting: boolean;
   onClose: () => void;
+  /** Desktop xl+ — две строки, ширина по контенту (как до снятия br). */
+  desktop?: boolean;
 }) {
   return (
     <>
@@ -64,9 +67,21 @@ function VkNoticeCard({
           </svg>
         </span>
       </span>
-      <p className="text-[9px] font-semibold leading-[1.4] text-ink sm:text-[11px] sm:leading-[1.45]">
-        Дублируем информацию в других соцсетях. Если не работает Телеграм,{" "}
-        <span className="text-accent underline underline-offset-2">переходите сюда</span>
+      <p className="min-w-0 text-[9px] font-semibold leading-[1.4] text-ink sm:text-[11px] sm:leading-[1.45]">
+        {desktop ? (
+          <>
+            <span className="block">Дублируем информацию в других соцсетях</span>
+            <span className="block">
+              Если не работает Телеграм,{" "}
+              <span className="text-accent underline underline-offset-2">переходите сюда</span>
+            </span>
+          </>
+        ) : (
+          <>
+            Дублируем информацию в других соцсетях. Если не работает Телеграм,{" "}
+            <span className="text-accent underline underline-offset-2">переходите сюда</span>
+          </>
+        )}
       </p>
       <button
         type="button"
@@ -129,10 +144,10 @@ export function VkNoticeBar() {
       </div>
       {/* Desktop — отдельный узел, мобилку не затрагивает */}
       <div
-        className={`${noticeShellClass} absolute z-20 hidden xl:left-[100px] xl:top-[68px] xl:flex xl:max-w-[430px] ${animClass}`}
+        className={`${noticeShellClass} absolute z-20 hidden xl:left-[100px] xl:top-[68px] xl:flex xl:w-fit xl:max-w-[340px] ${animClass}`}
         onAnimationEnd={onAnimEnd}
       >
-        <VkNoticeCard exiting={exiting} onClose={close} />
+        <VkNoticeCard exiting={exiting} onClose={close} desktop />
       </div>
     </Typo>
   );
