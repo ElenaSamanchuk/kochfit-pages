@@ -124,14 +124,14 @@ export function VkNoticeBar() {
       />
       {/* Mobile — не трогать xl-классы на этом узле */}
       <div
-        className={`${noticeShellClass} absolute max-xl:inset-x-(--page-inset-x) top-[56px] z-20 sm:top-[72px] xl:hidden ${animClass}`}
+        className={`${noticeShellClass} absolute max-xl:inset-x-(--page-inset-x) top-[56px] z-10 sm:top-[72px] xl:hidden ${animClass}`}
         onAnimationEnd={onAnimEnd}
       >
         <VkNoticeCard exiting={exiting} onClose={close} />
       </div>
       {/* Desktop — отдельный узел, мобилку не затрагивает */}
       <div
-        className={`${noticeShellClass} absolute z-10 hidden xl:left-[100px] xl:top-[96px] xl:flex xl:max-w-[430px] ${animClass}`}
+        className={`${noticeShellClass} absolute z-20 hidden xl:left-[100px] xl:top-[88px] xl:flex xl:max-w-[430px] ${animClass}`}
         onAnimationEnd={onAnimEnd}
       >
         <VkNoticeCard exiting={exiting} onClose={close} />
