@@ -2,6 +2,7 @@ import type { ReactNode } from "react";
 import Link from "next/link";
 import { assetPath } from "@/lib/asset-path";
 import { routes } from "@/content/routes";
+import { typo } from "@/lib/typography";
 
 /** Cache-bust: без query браузер оставляет мыльные 480w/1100w. */
 const CACHE_BUST = "v=figma-crop";
@@ -184,8 +185,8 @@ export function InsideCourse() {
               Юлия Кочкина
             </p>
             <ul className="flex list-disc flex-col gap-[8px] pl-[18px] text-[12px] font-normal leading-[1.45] text-[#999ca8]">
-              <li>Тренер с 2014 года, специалист по движению и восстановлению после родов</li>
-              <li>Автор фитнес-школы женского здоровья, помогла более 5000 женщинам</li>
+              <li>{typo("Тренер с 2014 года, специалист по движению и восстановлению после родов")}</li>
+              <li>{typo("Автор фитнес-школы женского здоровья, помогла более 5000 женщинам")}</li>
             </ul>
           </div>
         </Link>
@@ -319,12 +320,12 @@ export function InsideCourse() {
           <p className="absolute left-[16px] top-[194px] w-[243px] text-[14px] font-semibold leading-[normal] text-[#4b4d57]">
             Юлия Кочкина
           </p>
-          <ul className="absolute left-[10px] top-[223px] flex w-[271px] list-disc flex-col gap-[8px] text-[12px] font-normal leading-[normal] text-[#999ca8]">
+          <ul className="absolute left-[10px] top-[223px] flex w-[276px] list-disc flex-col gap-[8px] text-[12px] font-normal leading-[1.45] text-[#999ca8]">
             <li className="ms-[18px]">
-              {"Тренер с 2014 года, специалист по движению и восстановлению после родов"}
+              {typo("Тренер с 2014 года, специалист по движению и восстановлению после родов")}
             </li>
             <li className="ms-[18px]">
-              {"Автор фитнес-школы женского здоровья, помогла более 5000 женщинам"}
+              {typo("Автор фитнес-школы женского здоровья, помогла более 5000 женщинам")}
             </li>
           </ul>
         </Link>
