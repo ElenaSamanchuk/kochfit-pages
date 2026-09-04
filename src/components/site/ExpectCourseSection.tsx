@@ -1,4 +1,5 @@
 import { assetPath } from "@/lib/asset-path";
+import { typo } from "@/lib/typography";
 import { FeatureCheckIcon } from "@/components/ui/FeatureCheckIcon";
 import { PhoneMockup, PhoneStack } from "@/components/ui/PhoneMockup";
 
@@ -39,8 +40,6 @@ export type ExpectChip = {
   text: string;
   /** Короткая подпись только для мобильной сетки 2+2(+1); desktop — полный `text`. */
   mobileText?: string;
-  /** Ещё компактнее на мобилке (только ExpectCourse lg:hidden). */
-  mobileCompact?: boolean;
   hideOnMobile?: boolean;
 };
 
@@ -53,22 +52,11 @@ const defaultSteps: ExpectStep[] = [
   },
   {
     title: "2 шаг",
-    text: (
-      <>
-        {"Занимайтесь по 20–30 минут "}
-        <br aria-hidden />в день, в своём темпе
-      </>
-    ),
+    text: typo("Занимайтесь по 20–30 минут в день, в своём темпе"),
   },
   {
     title: "3 шаг",
-    text: (
-      <>
-        {"Заходите с телефона "}
-        <br aria-hidden />
-        или ноутбука в удобное время
-      </>
-    ),
+    text: typo("Заходите с телефона или ноутбука в удобное время"),
   },
 ];
 

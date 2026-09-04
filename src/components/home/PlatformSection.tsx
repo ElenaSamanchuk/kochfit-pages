@@ -75,7 +75,7 @@ export function PlatformSection() {
 
       {/* Figma 2262:2616 */}
       <div className="relative flex w-full max-w-[508px] flex-col items-center gap-6 sm:gap-10 xl:gap-[40px]">
-        <h2 className="w-full text-center font-display text-h2 font-normal leading-[1.2] text-ink">
+        <h2 className="w-full text-center font-display text-[22px] font-normal leading-[1.25] text-ink xl:text-[24px] xl:leading-[1.2]">
           Платформа и формат прохождения
         </h2>
         <ChipBadgeRows

@@ -57,9 +57,8 @@ export function WhyKochfit() {
       <div className="mx-auto flex min-w-0 max-w-[1160px] flex-col gap-6 overflow-x-visible xl:flex-row xl:gap-[16px]">
         {/* Заголовок + стрелки — стек на мобиле, колонка слева на десктопе */}
         <div className="flex shrink-0 flex-col gap-4 sm:flex-row sm:items-center sm:justify-between xl:w-[242px] xl:flex-col xl:items-start xl:justify-between">
-          <h2 className="font-display text-h2 font-normal leading-[1.2] text-ink">
+          <h2 className="font-display text-[22px] font-normal leading-[1.25] text-ink xl:text-[24px] xl:leading-[1.2]">
             {"Почему женщины"}
-            <br aria-hidden className="hidden xl:block" />
             {" выбирают Kochfit"}
           </h2>
           <div className="hidden items-center gap-[8px] xl:flex">
@@ -84,15 +83,12 @@ export function WhyKochfit() {
             <div className="flex w-full flex-col gap-[4px]">
               <p className="text-body font-semibold leading-[normal] text-ink">
                 {"Программа курса расписана"}
-                <br aria-hidden className="hidden xl:block" />
                 {" по дням:"}
               </p>
               <p className="text-small font-medium leading-[0] text-ink-muted">
                 <span className="leading-[normal]">{"зарядка, коррекция, силовая. "}</span>
-                <br aria-hidden className="hidden xl:block" />
                 <span className="leading-[normal]">
                   {"Открываешь приложение и просто"}
-                  <br aria-hidden className="hidden xl:block" />
                   {" начинаешь"}
                 </span>
               </p>
@@ -114,7 +110,6 @@ export function WhyKochfit() {
                 </p>
                 <p className="text-small font-medium text-ink-muted">
                   {"Выполняй тренировку, на которую"}
-                  <br aria-hidden className="hidden xl:block" />
                   {" сегодня есть время"}
                 </p>
               </div>
@@ -177,7 +172,6 @@ export function WhyKochfit() {
               <div className="flex w-full flex-col gap-[4px] leading-[normal]">
                 <p className="pr-[44px] text-body font-semibold text-ink xl:pr-0">
                   {"Не только красиво, "}
-                  <br aria-hidden className="hidden xl:block" />
                   {"но и функционально"}
                 </p>
                 <p className="text-small font-medium text-ink-muted">

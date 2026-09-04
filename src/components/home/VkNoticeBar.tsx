@@ -65,9 +65,7 @@ function VkNoticeCard({
         </span>
       </span>
       <p className="text-[9px] font-semibold leading-[1.4] text-ink sm:text-[11px] sm:leading-[1.45]">
-        Дублируем информацию в других соцсетях
-        <br />
-        Если не работает Телеграм,{" "}
+        Дублируем информацию в других соцсетях. Если не работает Телеграм,{" "}
         <span className="text-accent underline underline-offset-2">переходите сюда</span>
       </p>
       <button

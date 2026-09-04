@@ -13,7 +13,7 @@ export function PregnancyTariffs() {
       data-figma-node="2351:11264"
       className="mx-auto flex w-full max-w-[1160px] scroll-mt-[20px] flex-col items-start gap-6 sm:gap-[40px]"
     >
-      <h2 className="w-full font-display text-[24px] font-normal leading-[1.2] text-[#4b4d57]">
+      <h2 className="w-full font-display text-[22px] font-normal leading-[1.25] text-[#4b4d57] lg:text-[24px] lg:leading-[1.2]">
         {"Тарифы курса "}
       </h2>
       <div className="relative w-full overflow-hidden rounded-[20px] bg-white pb-5 xl:h-[331px] xl:pb-0">
@@ -33,7 +33,6 @@ export function PregnancyTariffs() {
           <p className="max-w-[389px] text-[14px] font-normal leading-[normal] text-white xl:absolute xl:left-[30px] xl:top-[30px]">
             <span className="font-bold">Есть противопоказания:</span>
             {" перед занятиями спортом"}
-            <br aria-hidden className="hidden xl:inline" />
             {" при беременности проконсультируйтесь с врачом"}
           </p>
         </div>

@@ -51,7 +51,6 @@ const cards: BannerCard[] = [
     text: (
       <>
         {"Хочешь заниматься спортом, "}
-        <br aria-hidden />
         но не с кем оставить ребёнка
       </>
     ),
@@ -64,7 +63,6 @@ const cards: BannerCard[] = [
     text: (
       <>
         {"Прошло время, а такие проблемы как диастаз "}
-        <br aria-hidden />
         {"или подтекания не прошли"}
       </>
     ),
@@ -76,7 +74,6 @@ const cards: BannerCard[] = [
     text: (
       <>
         {"Боишься, что мало времени "}
-        <br aria-hidden />
         на тренировки с малышом
       </>
     ),
@@ -131,7 +128,6 @@ export function SuitableBanner() {
     <section data-figma-node="2042:9297" className="mx-auto w-full max-w-[1160px]">
       <h2 className="mx-auto w-full max-w-[482px] text-center font-display text-[22px] font-normal leading-[1.25] text-[#4b4d57] lg:text-[24px] lg:leading-[1.2]">
         {"Программа вам "}
-        <br aria-hidden />
         подойдёт, если
       </h2>
 

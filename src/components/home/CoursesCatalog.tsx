@@ -47,7 +47,6 @@ const smallCourses: SmallCourse[] = [
     description: (
       <>
         {"Курс для мягкого восстановления после родов с первых дней: поможет "}
-        <br aria-hidden className="hidden xl:block" />
         {"бережно вернуть тело в движение и поддержать эмоциональное и физическое состояние"}
       </>
     ),
@@ -163,7 +162,7 @@ export function CoursesCatalog() {
       data-figma-node="2261:1785"
       className="mx-auto flex w-full max-w-[1160px] flex-col items-start gap-6 sm:gap-10"
     >
-      <h2 className="w-full font-display text-h2 leading-[1.2] text-ink">
+      <h2 className="w-full font-display text-[22px] font-normal leading-[1.25] text-ink xl:text-[24px] xl:leading-[1.2]">
         Курсы <span className="font-bold text-accent">Kochfit</span>
       </h2>
 

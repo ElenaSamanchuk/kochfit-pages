@@ -42,7 +42,7 @@ export function LessonPage({ doc }: { doc: ProseDoc }) {
         >
           ← На главную
         </Link>
-        <h1 className="mt-[16px] font-display text-[28px] font-normal leading-[1.2] text-ink lg:text-[36px]">
+        <h1 className="mt-[16px] font-display text-[25px] font-normal leading-[1.2] text-ink lg:text-[36px]">
           {doc.title}
         </h1>
         {doc.blocks && doc.blocks.length > 0 && <ArticleBody blocks={doc.blocks} />}

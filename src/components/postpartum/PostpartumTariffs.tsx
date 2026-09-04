@@ -13,7 +13,7 @@ export function PostpartumTariffs() {
       data-figma-node="2042:9328"
       className="mx-auto flex w-full max-w-[1160px] scroll-mt-[20px] flex-col items-start gap-6 sm:gap-[40px]"
     >
-      <h2 className="w-full font-display text-[24px] font-normal leading-[1.2] text-[#4b4d57]">
+      <h2 className="w-full font-display text-[22px] font-normal leading-[1.25] text-[#4b4d57] lg:text-[24px] lg:leading-[1.2]">
         {"Тарифы курса "}
       </h2>
       <div className="relative w-full overflow-hidden rounded-[20px] bg-white pb-5 xl:h-[331px] xl:pb-0">
@@ -32,7 +32,6 @@ export function PostpartumTariffs() {
           </span>
           <p className="max-w-[344px] text-[14px] font-normal leading-[normal] text-white xl:absolute xl:left-[30px] xl:top-[30px]">
             {"Выбирайте доступ в зависимости от того, "}
-            <br aria-hidden />
             на каком этапе восстановления вы находитесь
           </p>
         </div>

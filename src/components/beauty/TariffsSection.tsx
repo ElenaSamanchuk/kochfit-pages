@@ -255,7 +255,6 @@ export function TariffsSection({
                 <p className="text-[12px] text-[#676971]">
                   <span className="xl:hidden">
                     Юлия ведёт каждую тренировку
-                    <br aria-hidden />
                     {" голосом от первой до последней минуты"}
                   </span>
                   <span className="hidden xl:inline">
@@ -347,7 +346,7 @@ export function TariffsSection({
               <p className="font-semibold leading-[normal] text-[#4b4d57]">
                 {"Всё, что есть на тарифе "}
                 <span className="text-[#84b0d2]">«Стандарт»</span>
-                {" +"}
+                
               </p>
               <ul className="flex list-disc flex-col gap-[8px] pl-[18px] font-normal leading-[1.4] text-[#676971]">
                 <li>

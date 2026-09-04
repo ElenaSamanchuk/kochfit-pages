@@ -237,7 +237,6 @@ export function Footer() {
               <SocialIcons className="mt-[13px] flex" />
               <p className="mt-[42px] w-[260px] text-[12px] font-normal leading-[1.4] text-white/60">
                 {"Meta признана экстремистской "}
-                <br aria-hidden />
                 организацией на территории РФ*
               </p>
             </div>
@@ -271,16 +270,14 @@ export function Footer() {
             </AppLink>
             <AppLink href={externalLinks.legal.partOferta} className="whitespace-nowrap">
               {"Партнерское соглашение "}
-              <br aria-hidden />о реферальной программе
+               о реферальной программе
             </AppLink>
             <AppLink href={externalLinks.legal.privacy} className="whitespace-nowrap">
               {"Политика обработки "}
-              <br aria-hidden />
               персональных данных
             </AppLink>
             <AppLink href={externalLinks.legal.dataConsent} className="whitespace-nowrap">
               {"Согласие на обработку "}
-              <br aria-hidden />
               персональных данных
             </AppLink>
             <span className="whitespace-nowrap">

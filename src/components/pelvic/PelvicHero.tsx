@@ -78,7 +78,7 @@ export function PelvicHero() {
             description={
               <>
                 Помогает вернуть телу опору после родов:
-                <br className="hidden xl:block" aria-hidden />{" "}
+                 
                 мышцы тазового дна, дыхание, осанка, живот
               </>
             }

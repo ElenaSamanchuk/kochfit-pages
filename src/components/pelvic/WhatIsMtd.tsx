@@ -14,7 +14,7 @@ const weakSigns = ["появляются подтекания", "боли ", "д
 export function WhatIsMtd() {
   return (
     <section data-figma-node="2031:2808" className="mx-auto w-full max-w-[1160px]">
-      <h2 className="font-display text-[24px] font-normal leading-[1.2] text-[#4b4d57]">
+      <h2 className="font-display text-[22px] font-normal leading-[1.25] text-[#4b4d57] lg:text-[24px] lg:leading-[1.2]">
         Что такое МТД?
       </h2>
       <div className="mt-6 flex w-full flex-col gap-4 sm:mt-[40px] xl:flex-row xl:items-start xl:gap-[16px]">
@@ -68,7 +68,7 @@ export function WhatIsMtd() {
               <img loading="lazy" alt="" className="block size-[16px] shrink-0" src={img("imgAtIconsCross.svg")} />
               <span className="min-w-0 flex-1 text-[12px] font-normal leading-[normal] text-[#676971]">
                 Это не «возрастное» и не «после родов само
-                <br className="hidden xl:block" aria-hidden />{" "}
+                 
                 пройдёт»
               </span>
             </span>

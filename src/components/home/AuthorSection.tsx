@@ -76,7 +76,7 @@ export function AuthorSection() {
 
       {/* Левая колонка */}
       <div className="relative z-10 flex w-full flex-col gap-6 sm:gap-8 xl:w-[472px] xl:shrink-0 xl:gap-[190px]">
-        <h2 className="max-w-[338px] font-display text-h2 font-normal leading-[1.2] text-ink">
+        <h2 className="max-w-[338px] font-display text-[22px] font-normal leading-[1.25] text-ink xl:text-[24px] xl:leading-[1.2]">
           Kochfit ведёт Юлия Кочкина
         </h2>
         <div className="flex w-full flex-col items-start xl:pl-[50px]">

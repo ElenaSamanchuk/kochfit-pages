@@ -27,7 +27,7 @@ const cards: Card[] = [
     text: (
       <>
         {"Если планируешь беременность "}
-        <br aria-hidden />и хочешь укрепить женское здоровье
+         и хочешь укрепить женское здоровье
       </>
     ),
     textWidth: 262,
@@ -47,10 +47,7 @@ const cards: Card[] = [
   {
     text: (
       <>
-        {"Если хочешь заниматься без"}
-        <br className="hidden xl:block" aria-hidden />
-        <span className="xl:hidden"> </span>
-        {"перегруза и жестких ограничений"}
+        {"Если хочешь заниматься без"} {"перегруза и жестких ограничений"}
       </>
     ),
     textWidth: 244,
@@ -72,7 +69,7 @@ export function AudienceSection() {
       data-figma-node="2031:2314"
       className="mx-auto flex w-full max-w-[1160px] flex-col items-start gap-6 sm:gap-[40px]"
     >
-      <h2 className="w-full font-display text-[24px] font-normal leading-[1.2] text-[#4b4d57]">
+      <h2 className="w-full font-display text-[22px] font-normal leading-[1.25] text-[#4b4d57] lg:text-[24px] lg:leading-[1.2]">
         Кому подойдет курс
       </h2>
       <div className="flex w-full flex-wrap gap-[12px]">

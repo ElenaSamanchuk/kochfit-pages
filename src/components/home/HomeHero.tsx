@@ -125,8 +125,7 @@ export function HomeHero() {
           </h1>
           {/* Mobile: 14px / lh 1.35 / max 320 — 3 hard \\n; xl — text-lead */}
           <p className="w-full max-w-[548px] text-[14px] font-normal leading-[1.35] tracking-[-0.02em] max-xl:mx-auto max-xl:max-w-[320px] xl:mx-0 xl:w-auto xl:max-w-[548px] xl:text-lead xl:leading-[1.45] xl:tracking-normal">
-            Система тренировок, которая встраивается в жизнь:
-            <br aria-hidden />
+            Система тренировок, которая встраивается в жизнь:{" "}
             <span className="whitespace-nowrap">от 15-минутной</span> зарядки до силовых
             тренировок
           </p>

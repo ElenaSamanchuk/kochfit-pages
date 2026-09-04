@@ -33,7 +33,7 @@ function SectionCard({
       <p className="text-[12px] font-semibold uppercase tracking-[0.08em] text-ink-muted">
         {referralContent.overline}
       </p>
-      <h2 className="mt-2 font-display text-[22px] font-normal leading-[1.2] text-ink lg:text-[26px]">
+      <h2 className="mt-2 font-display text-[22px] font-normal leading-[1.25] text-ink lg:text-[24px] lg:leading-[1.2]">
         {heading}
       </h2>
       <div className="mt-6 space-y-[14px] text-[15px] leading-[1.5] sm:leading-[1.65] text-ink-secondary">
@@ -89,7 +89,7 @@ export function ReferralProgram() {
             ),
           )}
         </div>
-        <h1 className="mt-4 font-display text-[28px] font-normal leading-[1.2] text-ink lg:text-[36px]">
+        <h1 className="mt-4 font-display text-[25px] font-normal leading-[1.2] text-ink lg:text-[36px]">
           {title}
         </h1>
         <p className="mt-[14px] max-w-[560px] text-[16px] leading-[1.45] sm:leading-[1.6] text-ink-secondary">

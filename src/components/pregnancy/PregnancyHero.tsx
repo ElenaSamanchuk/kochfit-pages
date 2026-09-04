@@ -89,7 +89,7 @@ export function PregnancyHero() {
                 <span className="xl:whitespace-nowrap">
                   Тренировки и лекции, которые помогают чувствовать себя в ресурсе,
                 </span>
-                <br aria-hidden />{" "}
+                 
                 подготовить тело к родам и восстановиться быстрее
               </span>
             </p>

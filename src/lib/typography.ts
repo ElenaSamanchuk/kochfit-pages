@@ -121,9 +121,14 @@ export function typo(text: string): string {
   return nbspAfterParticles(russianQuotes(text));
 }
 
+/** Убирает `<br>` из HTML — только неразрывные пробелы после частиц через typo(). */
+export function stripBrTags(html: string): string {
+  return html.replace(/<br\b[^>]*\/?>/gi, " ");
+}
+
 /** Типографика для HTML-фрагментов (только текст между тегами, теги не трогаем). */
 export function typoHtml(html: string): string {
-  const withTargets = applyLinkTargetsToHtml(html);
+  const withTargets = applyLinkTargetsToHtml(stripBrTags(html));
   if (!withTargets.includes(" ")) return withTargets;
   return withTargets
     .split(/(<[^>]+>)/g)

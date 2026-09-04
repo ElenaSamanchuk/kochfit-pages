@@ -1,4 +1,5 @@
 import { ExpectCourseSection } from "@/components/site/ExpectCourseSection";
+import { typo } from "@/lib/typography";
 
 /** «Что вас ждет на курсе» страницы «Красота и здоровье» — Figma 2031:2534 */
 export function ExpectSection() {
@@ -17,13 +18,7 @@ export function ExpectSection() {
         },
         {
           title: "3 шаг",
-          text: (
-            <>
-              {"Заходите с телефона "}
-              <br aria-hidden />
-              или ноутбука в удобное время
-            </>
-          ),
+          text: typo("Заходите с телефона или ноутбука в удобное время"),
         },
       ]}
       chipsRow1={[

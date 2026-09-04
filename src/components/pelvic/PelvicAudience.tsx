@@ -9,7 +9,7 @@ export function PelvicAudience() {
       className="mx-auto flex w-full max-w-[1160px] flex-col items-start gap-[30px]"
     >
       <div className="flex w-full max-w-[589px] flex-col items-start gap-[12px]">
-        <h2 className="w-full font-display text-[24px] font-normal leading-[1.2] text-[#4b4d57]">
+        <h2 className="w-full font-display text-[22px] font-normal leading-[1.25] text-[#4b4d57] lg:text-[24px] lg:leading-[1.2]">
           Курс подойдёт, если
         </h2>
         <p className="w-full text-[14px] font-medium leading-[1.4] text-[#999ca8] lg:text-[18px] lg:leading-[normal]">

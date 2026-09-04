@@ -18,7 +18,7 @@ type Step = {
 const steps: Step[] = [
   {
     title: "Выбери тариф",
-    // Spaces live in the text nodes (not only next to desktop-only <br>),
+    // Spaces live in the text nodes (not only next to desktop-only  ),
     // so mobile never glues words when the break is hidden.
     text: (
       <>
@@ -27,11 +27,9 @@ const steps: Step[] = [
         </span>
         {" или "}
         <span className="font-semibold text-[#676971]">Премиум </span>
-        <br className="hidden xl:block" aria-hidden />
         <span className="font-semibold text-[#676971] xl:whitespace-nowrap">
           {premium.price.toLocaleString("ru-RU")} ₽/мес. Или фиксированный период,{" "}
         </span>
-        <br className="hidden xl:block" aria-hidden />
         {"3 или 6 месяцев без автопродления"}
       </>
     ),
@@ -41,14 +39,12 @@ const steps: Step[] = [
   {
     title: "Оформи подписку",
     // Always-on breaks + spaces on both sides: mid-sentence period after
-    // «месяц»; never glued when <br> is ignored (copy/a11y/mobile).
+    // «месяц»; never glued when   is ignored (copy/a11y/mobile).
     text: (
       <>
         {"Привязываешь карту, списывается "}
-        <br aria-hidden />
         {"первый месяц. "}
         <span className="font-medium text-[#676971]">Доступ к курсу </span>
-        <br aria-hidden />
         <span className="font-medium text-[#676971]">открывается сразу</span>
       </>
     ),
@@ -63,10 +59,8 @@ const steps: Step[] = [
       <>
         {"Подписка продлевается"}
         <span className="font-medium text-[#676971]"> автоматически </span>
-        <br aria-hidden />
         <span className="font-medium text-[#676971]">каждый месяц. </span>
         {"Списание происходит "}
-        <br aria-hidden />
         {"за\u00a03\u00a0дня до окончания текущего периода"}
       </>
     ),
@@ -81,9 +75,7 @@ const steps: Step[] = [
         <span className="font-semibold text-[#676971] xl:whitespace-nowrap">
           {"В любой момент через личный кабинет. "}
         </span>
-        <br aria-hidden />
         {"Доступ сохраняется до конца "}
-        <br aria-hidden />
         {"оплаченного периода"}
       </>
     ),

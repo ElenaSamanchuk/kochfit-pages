@@ -10,7 +10,7 @@ import {
 } from "@/components/site/hero-layout";
 import { BotPrelaunchIcons } from "@/components/ui/BotPrelaunchIcons";
 import { AppLink } from "@/components/ui/AppLink";
-import { Typo } from "@/components/ui/TypoText";
+import { Typo, typo } from "@/components/ui/TypoText";
 
 const gradientBtn = "var(--gradient-primary)";
 
@@ -147,10 +147,7 @@ export function HeroFreeWorkoutCard({
             Бесплатная тренировка
           </span>
           <span className="hidden text-[12px] font-medium leading-snug text-[#676971] xl:absolute xl:left-[16px] xl:top-[188px] xl:block xl:w-[239px] xl:text-[12px] xl:leading-[normal]">
-            Высвобождение шейного региона через
-            <br className="hidden xl:block" aria-hidden />
-            {" "}
-            движение таза и позвоночника
+            {typo("Высвобождение шейного региона через движение таза и позвоночника")}
           </span>
         </span>
       </button>

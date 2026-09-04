@@ -129,7 +129,7 @@ export function PersonalWorkPage() {
               <p className="text-[12px] font-semibold uppercase tracking-[0.08em] text-ink-muted">
                 {c.overline}
               </p>
-              <h1 className="mt-2 font-display text-[28px] font-normal leading-[1.15] text-ink sm:text-[32px] lg:text-[40px]">
+              <h1 className="mt-2 font-display text-[25px] font-normal leading-[1.2] tracking-[-0.03em] text-ink lg:text-[40px] lg:tracking-normal">
                 {c.headline}
               </h1>
               <p className="mt-[14px] max-w-[560px] text-[15px] leading-[1.45] sm:leading-[1.6] text-ink-secondary">
@@ -293,7 +293,7 @@ export function PersonalWorkPage() {
           className="rounded-[24px] px-[24px] py-[32px] text-white sm:px-[28px] sm:py-[36px] lg:px-[48px]"
           style={{ backgroundImage: "var(--gradient-primary)" }}
         >
-          <h2 className="font-display text-[24px] font-normal sm:text-[26px]">
+          <h2 className="font-display text-[22px] font-normal leading-[1.25] lg:text-[24px] lg:leading-[1.2]">
             Готовы работать персонально?
           </h2>
           <p className="mt-3 max-w-[520px] text-[15px] leading-[1.45] sm:leading-[1.55] text-white/90">

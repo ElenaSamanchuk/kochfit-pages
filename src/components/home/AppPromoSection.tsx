@@ -7,33 +7,17 @@ const img = (name: string) => assetPath(`/images/home/${name}`);
 const socials = [
   {
     title: "ВКонтакте",
-    text: (
-      <>
-        {"Тренировки, советы "}
-        <br aria-hidden />и полезные материалы
-      </>
-    ),
+    text: typo("Тренировки, советы и полезные материалы"),
     href: externalLinks.vk,
   },
   {
     title: "YouTube",
-    text: (
-      <>
-        {"Видеоуроки и разборы "}
-        <br aria-hidden />
-        от Юлии
-      </>
-    ),
+    text: typo("Видеоуроки и разборы от Юлии"),
     href: externalLinks.youtube,
   },
   {
     title: "Бот Telegram",
-    text: (
-      <>
-        {"Тренировки, советы "}
-        <br aria-hidden />и полезные материалы
-      </>
-    ),
+    text: typo("Тренировки, советы и полезные материалы"),
     href: externalLinks.telegramBot,
   },
 ];
@@ -110,7 +94,7 @@ export function AppPromoSection() {
                       {social.title}
                     </span>
                   </span>
-                  <span className="text-caption font-normal leading-snug text-ink-muted [&_br]:hidden sm:text-small sm:[&_br]:inline">
+                  <span className="text-caption font-normal leading-snug text-ink-muted sm:text-small sm:">
                     {social.text}
                   </span>
                 </a>

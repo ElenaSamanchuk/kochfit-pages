@@ -8,9 +8,8 @@ export function PregnancyBenefits() {
       data-figma-node="2351:10807"
       className="mx-auto flex w-full max-w-[1160px] flex-col items-start gap-6 sm:gap-[40px]"
     >
-      <h2 className="w-full font-display text-[24px] font-normal leading-[1.2] text-[#4b4d57]">
+      <h2 className="w-full font-display text-[22px] font-normal leading-[1.25] text-[#4b4d57] lg:text-[24px] lg:leading-[1.2]">
         {"Физическая активность "}
-        <br aria-hidden />
         во время беременности помогает
       </h2>
 
@@ -19,7 +18,6 @@ export function PregnancyBenefits() {
         <article className="fit-card">
           <p className="absolute left-[15px] xl:left-[27px] top-1/2 w-[206px] -translate-y-1/2 text-[14px] font-medium leading-[normal] text-[#676971]">
             {"Уменьшить боли в спине, шее "}
-            <br className="hidden xl:block" aria-hidden />
             и пояснице
           </p>
           <span className="absolute right-[15px] top-1/2 flex size-[36px] -translate-y-1/2 items-center justify-center rounded-[8px] bg-[#f8f8f8] lg:right-[27px]">
@@ -31,7 +29,6 @@ export function PregnancyBenefits() {
         <article className="fit-card">
           <p className="absolute left-[15px] xl:left-[27px] top-1/2 w-[209px] -translate-y-1/2 text-[14px] font-medium leading-[normal] text-[#676971]">
             {"Подготовить мышцы тазового "}
-            <br className="hidden xl:block" aria-hidden />
             дна к родам
           </p>
           <span className="absolute right-[4px] top-1/2 block size-[60px] -translate-y-1/2 overflow-hidden rounded-[10px] lg:top-[5px] lg:size-[80px] lg:translate-y-0 lg:rounded-[15px]">
@@ -47,7 +44,6 @@ export function PregnancyBenefits() {
         <article className="fit-card">
           <p className="absolute left-[15px] xl:left-[27px] top-1/2 w-[262px] -translate-y-1/2 text-[14px] font-medium leading-[normal] text-[#676971]">
             {"Снизить уровень "}
-            <br aria-hidden />
             стресса
           </p>
           <span className="absolute right-[15px] top-1/2 flex size-[36px] -translate-y-1/2 items-center justify-center rounded-[8px] bg-[#f8f8f8] lg:right-[27px]">

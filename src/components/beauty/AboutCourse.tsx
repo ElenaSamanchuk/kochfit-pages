@@ -46,7 +46,7 @@ export function AboutCourse() {
       data-figma-node="2031:2246"
       className="mx-auto flex w-full max-w-[1160px] flex-col items-start gap-6 overflow-x-visible sm:gap-[40px]"
     >
-      <h2 className="font-display text-[24px] font-normal leading-[1.2] text-[#4b4d57]">
+      <h2 className="font-display text-[22px] font-normal leading-[1.25] text-[#4b4d57] lg:text-[24px] lg:leading-[1.2]">
         Про что этот курс Kochfit
       </h2>
       <div

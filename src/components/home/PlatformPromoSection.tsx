@@ -78,10 +78,7 @@ export function PlatformPromoSection() {
             <Switch />
             <p className="text-small leading-snug text-ink">
               <span className="font-semibold">{feature.title}</span>
-              <br aria-hidden className="hidden xl:block" />
-              <span className="font-normal text-ink-secondary">
-                <span className="xl:hidden"> </span>
-                {feature.text}
+              <span className="font-normal text-ink-secondary"> {feature.text}
               </span>
             </p>
           </li>

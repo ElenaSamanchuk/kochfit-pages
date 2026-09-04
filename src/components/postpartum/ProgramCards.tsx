@@ -185,7 +185,7 @@ function ProgramCardView({ card }: { card: Card }) {
 export function ProgramCards() {
   return (
     <section id="program" className="mx-auto w-full max-w-[1160px] overflow-x-visible">
-      <h2 className="font-display text-[24px] font-normal leading-[1.2] text-ink sm:text-[25px]">
+      <h2 className="font-display text-[22px] font-normal leading-[1.25] text-ink lg:text-[24px] lg:leading-[1.2]">
         Программа курса
       </h2>
       {/* Карточки — прямые дети скроллера: hscroll-bleed ставит inset через margin

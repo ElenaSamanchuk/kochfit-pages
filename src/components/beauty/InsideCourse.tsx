@@ -196,9 +196,7 @@ export function InsideCourse() {
         {/* Тренировки с комплексным подходом — 2031:2306 */}
         <article className="absolute left-0 top-0 h-[174px] w-[292px] overflow-hidden rounded-[12px] bg-white">
           <p className="absolute left-[16px] top-[16px] w-[218px] text-[14px] font-semibold leading-[normal] text-[#4b4d57]">
-            {"Тренировки с комплексным"}
-            <br aria-hidden />
-            подходом
+            {"Тренировки с комплексным подходом"}
           </p>
           <ul className="absolute left-[16px] top-[62px] flex w-[276px] list-disc flex-col gap-[8px] text-[12px] font-normal leading-[normal] text-[#999ca8]">
             <li className="ms-[18px]">Разные уровни нагрузки и форматы</li>
@@ -233,9 +231,7 @@ export function InsideCourse() {
         {/* Многоуровневая подача материала — 2031:2289 */}
         <article className="absolute left-[308px] top-0 h-[311px] w-[251px] overflow-hidden rounded-[12px] bg-white">
           <p className="absolute left-[16px] top-[16px] w-[201px] text-[14px] font-semibold leading-[normal] text-[#4b4d57]">
-            {"Многоуровневая подача"}
-            <br aria-hidden />
-            материала
+            {"Многоуровневая подача материала"}
           </p>
           <ul className="absolute left-[10px] top-[62px] flex w-[233px] list-disc flex-col gap-[8px] text-[12px] font-normal leading-[normal] text-[#999ca8]">
             <li className="ms-[18px]">
@@ -276,9 +272,7 @@ export function InsideCourse() {
         {/* Дыхание и МФР — 2031:2297 */}
         <article className="absolute left-[575px] top-[168px] h-[143px] w-[275px] overflow-hidden rounded-[12px] bg-white">
           <p className="absolute left-[16px] top-[16px] w-[153px] text-[14px] font-semibold leading-[normal] text-[#4b4d57]">
-            {"Дыхание и МФР."}
-            <br aria-hidden />
-            {"Осанка и тазовое дно"}
+            {"Дыхание и МФР. Осанка и тазовое дно"}
           </p>
           <ul className="absolute left-[10px] top-[63px] w-[249px] list-disc text-[12px] font-normal leading-[normal] text-[#999ca8]">
             <li className="ms-[18px]">
@@ -327,14 +321,10 @@ export function InsideCourse() {
           </p>
           <ul className="absolute left-[10px] top-[223px] flex w-[271px] list-disc flex-col gap-[8px] text-[12px] font-normal leading-[normal] text-[#999ca8]">
             <li className="ms-[18px]">
-              {"Тренер с 2014 года, специалист по"}
-              <br aria-hidden />
-              {"движению и восстановлению после родов"}
+              {"Тренер с 2014 года, специалист по движению и восстановлению после родов"}
             </li>
             <li className="ms-[18px]">
-              {"Автор фитнес-школы женского здоровья,"}
-              <br aria-hidden />
-              {"помогла более 5000 женщинам"}
+              {"Автор фитнес-школы женского здоровья, помогла более 5000 женщинам"}
             </li>
           </ul>
         </Link>

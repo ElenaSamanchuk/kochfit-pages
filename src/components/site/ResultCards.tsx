@@ -83,7 +83,7 @@ export function ResultCards() {
             <span className="inline-flex items-center justify-center rounded-full bg-surface-blue px-[12px] py-[4px] text-center text-[12px] font-semibold leading-none text-accent">
               {open.course}
             </span>
-            <h2 className="mt-[10px] font-display text-[24px] font-normal text-ink">
+            <h2 className="mt-[10px] font-display text-[22px] font-normal leading-[1.25] text-ink lg:text-[24px] lg:leading-[1.2]">
               {open.name}
             </h2>
             {open.photo && (

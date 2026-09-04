@@ -19,7 +19,7 @@ export function PelvicTariff() {
       data-figma-node="2031:2837"
       className="mx-auto flex w-full max-w-[1160px] scroll-mt-[20px] flex-col items-start gap-6 sm:gap-[40px]"
     >
-      <h2 className="w-full font-display text-[24px] font-normal leading-[1.2] text-[#4b4d57]">
+      <h2 className="w-full font-display text-[22px] font-normal leading-[1.25] text-[#4b4d57] lg:text-[24px] lg:leading-[1.2]">
         {"Тариф курса "}
       </h2>
 
@@ -105,7 +105,7 @@ export function PelvicTariff() {
               <p className="w-full text-[18px] font-semibold xl:text-[20px]">Почему именно 3 месяца?</p>
               <p className="w-full text-[13px] font-normal xl:text-[14px]">
                 {"Этого достаточно, чтобы изменения закрепились, "}
-                <br aria-hidden />а не ушли после первой недели
+                 а не ушли после первой недели
               </p>
             </div>
           </div>

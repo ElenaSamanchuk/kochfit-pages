@@ -8,30 +8,11 @@ const bonuses = [
   },
   {
     value: "10%",
-    text: (
-      <>
-        <span className="lg:hidden">
-          бонусов начислится тебе от суммы её покупки
-        </span>
-        <span className="hidden lg:contents">
-          {"бонусов начисляется "}
-          <br aria-hidden />
-          {"тебе начислится "}
-          <br aria-hidden />
-          от суммы её покупки
-        </span>
-      </>
-    ),
+    text: "бонусов начислится тебе от суммы её покупки",
   },
   {
     value: "5 000 ₽ ",
-    text: (
-      <>
-        {"можно вывести на карту "}
-        <br aria-hidden />
-        или оплатить бонусами при следующей оплате
-      </>
-    ),
+    text: "можно вывести на карту или оплатить бонусами при следующей оплате",
   },
 ];
 
@@ -54,20 +35,7 @@ const steps = [
     top: 134,
     width: 140,
     n: "2",
-    text: (
-      <>
-        <span className="lg:hidden">
-          {"Отправь подруге в мессенджере"}
-          <br aria-hidden />
-          {"или соцсетях"}
-        </span>
-        <span className="hidden lg:contents">
-          <span className="mb-0 block">{"Отправь подруге "}</span>
-          <span className="mb-0 block">{"в мессенджере "}</span>
-          <span className="block">или соцсетях</span>
-        </span>
-      </>
-    ),
+    text: "Отправь подруге в мессенджере или соцсетях",
     textWidth: 178,
   },
   {
@@ -126,7 +94,7 @@ export function ReferralSection() {
               <p className="whitespace-nowrap text-[16px] font-semibold leading-[normal] text-[#4b4d57]">
                 {bonus.value}
               </p>
-              <p className="w-full text-[12px] font-normal leading-[1.4] text-[#999ca8] [&_br]:hidden">
+              <p className="w-full text-[12px] font-normal leading-[1.4] text-[#999ca8]">
                 {bonus.text}
               </p>
             </article>

@@ -11,7 +11,7 @@ export function ProsePage({
   return (
     <PageShell article>
       <article className="min-w-0 rounded-[24px] bg-white p-[15px] shadow-[var(--shadow-card)] sm:p-[28px] lg:p-[48px]">
-        <h1 className="font-display text-[28px] font-normal leading-[1.2] text-ink lg:text-[36px]">
+        <h1 className="font-display text-[25px] font-normal leading-[1.2] text-ink lg:text-[36px]">
           {typo(title)}
         </h1>
         <div className="mt-[28px] space-y-[14px] text-[15px] leading-[1.5] sm:leading-[1.65] text-ink-secondary">
