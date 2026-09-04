@@ -59,7 +59,7 @@ export function TrialAndPersonal() {
           <span className="course-catalog-tag bg-surface text-ink-secondary">
             Демоверсия курса
           </span>
-          <div className="mt-2 flex flex-col gap-1 xl:mt-4">
+          <div className="mt-2 flex flex-col gap-2 xl:mt-4">
             <p className={titleClass}>Тестовая неделя</p>
             <ul className={listClass}>
               {trialItems.map((item) => (
@@ -85,7 +85,7 @@ export function TrialAndPersonal() {
           <span className="course-catalog-tag bg-surface text-ink-secondary">
             {training.subtitle}
           </span>
-          <div className="mt-2 flex flex-col gap-1 xl:mt-4">
+          <div className="mt-2 flex flex-col gap-2 xl:mt-4">
             <p className={titleClass}>{training.title}</p>
             <ul className={listClass}>
               {training.features.map((item) => (
