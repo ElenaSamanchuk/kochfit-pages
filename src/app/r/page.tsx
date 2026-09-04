@@ -62,6 +62,7 @@ export default function PostpartumPage() {
               icon: "imgContainer.svg",
               text: "Начать можно с телефона в любое время",
               mobileText: "С телефона в любое время",
+              hideOnMobile: true,
             },
             {
               icon: "imgContainer1.svg",
