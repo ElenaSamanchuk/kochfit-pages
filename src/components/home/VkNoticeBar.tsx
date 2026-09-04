@@ -120,7 +120,7 @@ export function VkNoticeBar() {
     <Typo>
       <div
         aria-hidden
-        className="pointer-events-none max-xl:h-[48px] sm:max-xl:h-[52px] xl:hidden"
+        className="pointer-events-none max-xl:h-[54px] sm:max-xl:h-[66px] xl:hidden"
       />
       {/* Mobile — не трогать xl-классы на этом узле */}
       <div
