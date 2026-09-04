@@ -44,7 +44,7 @@ function writeClosedCookie() {
  * Закрытие запоминается в cookie на 1 год.
  *
  * Mobile (<xl): absolute overlay + flow-spacer для высоты плашки.
- * Desktop (xl+): absolute в верхнем левом углу hero — не сдвигает теги/заголовок.
+ * Desktop (xl+): absolute, left-aligned with hero tags (xl:left-[100px]) — не сдвигает теги/заголовок.
  */
 export function VkNoticeBar() {
   // На сервере/до маунта считаем плашку скрытой, чтобы не было flash и SSR-mismatch
