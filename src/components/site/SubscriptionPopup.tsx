@@ -3,6 +3,7 @@
 import { assetPath } from "@/lib/asset-path";
 import { Modal } from "@/components/ui/Modal";
 import { Typo } from "@/components/ui/TypoText";
+import { typo } from "@/lib/typography";
 import { subscriptionPricing } from "@/content/courses";
 
 const img = (name: string) => assetPath(`/images/subscription-popup/${name}`);
@@ -27,7 +28,7 @@ const steps: Step[] = [
         </span>
         {" или "}
         <span className="font-semibold text-[#676971]">Премиум </span>
-        <span className="font-semibold text-[#676971] xl:whitespace-nowrap">
+        <span className="font-semibold text-[#676971]">
           {premium.price.toLocaleString("ru-RU")} ₽/мес. Или фиксированный период,{" "}
         </span>
         {"3 или 6 месяцев без автопродления"}
@@ -72,11 +73,10 @@ const steps: Step[] = [
     // Always-on breaks + spaces: period after «кабинет»; no trailing period.
     text: (
       <>
-        <span className="font-semibold text-[#676971] xl:whitespace-nowrap">
-          {"В любой момент через личный кабинет. "}
+        <span className="font-semibold text-[#676971]">
+          {typo("В любой момент через личный кабинет.")}{" "}
         </span>
-        {"Доступ сохраняется до конца "}
-        {"оплаченного периода"}
+        {typo("Доступ сохраняется до конца оплаченного периода")}
       </>
     ),
     width: 262,
@@ -243,7 +243,7 @@ export function SubscriptionPopup({
                   <p className="text-[14px] font-semibold leading-[normal] text-[#676971]">
                     {step.title}
                   </p>
-                  <p className="text-[13px] font-normal leading-[1.4] text-[#999ca8]">{step.text}</p>
+                  <p className="min-w-0 break-words text-[13px] font-normal leading-[1.4] text-[#999ca8]">{step.text}</p>
                 </div>
               </article>
             ))}
@@ -289,7 +289,7 @@ export function SubscriptionPopup({
               <p className="w-full text-[14px] font-semibold leading-[normal] text-[#676971]">
                 {step.title}
               </p>
-              <p className="w-full text-[12px] font-normal leading-[normal] text-[#999ca8]">
+              <p className="min-w-0 w-full break-words text-[12px] font-normal leading-[1.4] text-[#999ca8]">
                 {step.text}
               </p>
             </div>
