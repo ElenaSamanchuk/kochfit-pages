@@ -58,11 +58,11 @@ const CATALOG_CTA_BUTTON_TEXT = "Подробнее" as const;
 const catalogCtaButtonClass =
   "catalog-cta-btn btn-primary flex min-h-[36px] shrink-0 items-center justify-center rounded-[10px] px-2 py-1 sm:max-xl:min-h-[44px] sm:max-xl:rounded-[12px] sm:max-xl:px-6 sm:max-xl:py-3 xl:min-h-0 xl:rounded-[12px] xl:px-[32px] xl:py-[16px]";
 
-/** Теги флагманского курса — Figma 2261:1785 */
+/** Теги флагманского курса — Figma 2261:1785; на max-xl «Дыхание» скрыто в globals.css */
 const flagshipContentTags = [
   { label: "Питание", className: "flagship-tag-pilates" },
+  { label: "Силовые", className: "flagship-tag-strength" },
   { label: "Дыхание", className: "flagship-tag-breath" },
-  { label: "Силовый", className: "flagship-tag-strength" },
   { label: "МФР", className: "flagship-tag-mfr" },
 ] as const;
 

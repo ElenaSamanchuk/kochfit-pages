@@ -353,7 +353,7 @@ body {
   }
 }
 
-/* Каталог — флагман «Красота и здоровье»: max-xl колонка тегов (2261:1785) */
+/* Каталог — флагман «Красота и здоровье»: max-xl wrap, ≤3 строки (2261:1785) */
 @media (max-width: 1199px) {
   .flagship-catalog-header {
     margin-top: -4px;
@@ -361,6 +361,12 @@ body {
 
   .flagship-catalog-tag-stack {
     gap: 10px;
+    max-height: calc(3 * (var(--plaque-tag-py-mobile) * 2 + 1em) + 2 * 10px);
+    overflow: hidden;
+  }
+
+  .flagship-catalog-tags .flagship-tag-breath {
+    display: none;
   }
 }
 
