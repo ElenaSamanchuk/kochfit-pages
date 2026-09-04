@@ -38,12 +38,17 @@ function writeClosedCookie() {
   }
 }
 
+type VkNoticeVariant = "floating" | "inline";
+
 /**
  * Плашка «Если не работает Телеграм — переходите сюда» как на текущем kochfit.ru
  * (page14498897): белая карточка с лого ВК и крестиком поверх hero слева.
  * Закрытие запоминается в cookie на 1 год.
+ *
+ * - `floating` — absolute поверх hero (<xl), со flow-spacer
+ * - `inline` — в одном ряду с hero-тегами (xl+)
  */
-export function VkNoticeBar() {
+export function VkNoticeBar({ variant = "floating" }: { variant?: VkNoticeVariant }) {
   // На сервере/до маунта считаем плашку скрытой, чтобы не было flash и SSR-mismatch
   const closed = useSyncExternalStore(subscribe, readClosedCookie, () => true);
   const [exiting, setExiting] = useState(false);
@@ -60,15 +65,23 @@ export function VkNoticeBar() {
 
   if (closed) return null;
 
+  const isFloating = variant === "floating";
+
   return (
     <Typo>
-    {/* Flow-spacer <xl: резерв под absolute-плашку, чтобы hero pt мог быть как на других лендингах */}
+    {isFloating && (
+      /* Flow-spacer <xl: резерв под absolute-плашку, чтобы hero pt мог быть как на других лендингах */
+      <div
+        aria-hidden
+        className="pointer-events-none max-xl:h-[48px] sm:max-xl:h-[52px] xl:hidden"
+      />
+    )}
     <div
-      aria-hidden
-      className="pointer-events-none max-xl:h-[48px] sm:max-xl:h-[52px] xl:hidden"
-    />
-    <div
-      className={`vk-notice absolute max-xl:inset-x-(--page-inset-x) top-[56px] z-10 flex items-center gap-[6px] rounded-[10px] bg-white py-[6px] pl-[6px] pr-[22px] shadow-[0_10px_30px_rgba(75,77,87,0.2)] sm:top-[72px] sm:gap-[8px] sm:py-[8px] sm:pl-[8px] sm:pr-[26px] xl:inset-x-auto xl:left-[20px] xl:max-w-[430px] ${
+      className={`vk-notice relative flex shrink-0 items-center gap-[6px] rounded-[10px] bg-white py-[6px] pl-[6px] pr-[22px] shadow-[0_10px_30px_rgba(75,77,87,0.2)] sm:gap-[8px] sm:py-[8px] sm:pl-[8px] sm:pr-[26px] ${
+        isFloating
+          ? "absolute max-xl:inset-x-(--page-inset-x) top-[56px] z-10 sm:top-[72px] xl:hidden"
+          : "hidden xl:flex xl:max-w-[430px]"
+      } ${
         exiting ? "vk-notice-exit" : "vk-notice-enter"
       }`}
       onAnimationEnd={onAnimEnd}
