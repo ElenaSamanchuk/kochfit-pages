@@ -38,7 +38,7 @@ function writeClosedCookie() {
   }
 }
 
-type VkNoticeVariant = "floating" | "inline";
+type VkNoticeVariant = "floating" | "stacked";
 
 /**
  * Плашка «Если не работает Телеграм — переходите сюда» как на текущем kochfit.ru
@@ -46,7 +46,7 @@ type VkNoticeVariant = "floating" | "inline";
  * Закрытие запоминается в cookie на 1 год.
  *
  * - `floating` — absolute поверх hero (<xl), со flow-spacer
- * - `inline` — в одном ряду с hero-тегами (xl+)
+ * - `stacked` — отдельная строка над hero-тегами (xl+)
  */
 export function VkNoticeBar({ variant = "floating" }: { variant?: VkNoticeVariant }) {
   // На сервере/до маунта считаем плашку скрытой, чтобы не было flash и SSR-mismatch
@@ -80,7 +80,7 @@ export function VkNoticeBar({ variant = "floating" }: { variant?: VkNoticeVarian
       className={`vk-notice relative flex shrink-0 items-center gap-[6px] rounded-[10px] bg-white py-[6px] pl-[6px] pr-[22px] shadow-[0_10px_30px_rgba(75,77,87,0.2)] sm:gap-[8px] sm:py-[8px] sm:pl-[8px] sm:pr-[26px] ${
         isFloating
           ? "absolute max-xl:inset-x-(--page-inset-x) top-[56px] z-10 sm:top-[72px] xl:hidden"
-          : "hidden xl:flex xl:max-w-[430px]"
+          : "hidden xl:flex xl:max-w-[430px] xl:mb-[16px]"
       } ${
         exiting ? "vk-notice-exit" : "vk-notice-enter"
       }`}
