@@ -39,8 +39,9 @@ export function EquipmentCatalog() {
         data-figma-node="2351:10229"
         className="flex flex-col gap-3 lg:flex-row lg:items-end lg:justify-between"
       >
-        <h1 className="max-w-[368px] font-display text-[25px] font-normal leading-[1.2] tracking-[-0.03em] text-ink xl:tracking-normal xl:text-[36px]">
-          {equipmentIntro.title}
+        <h1 className="max-w-[368px] font-display text-[25px] font-normal leading-[1.2] text-ink xl:text-[24px] xl:leading-[1.2]">
+          <span className="xl:block">Необходимое оборудование</span>
+          <span className="xl:block">для тренировок на курсе</span>
         </h1>
         <p className="max-w-[311px] text-[12px] leading-normal text-ink-muted lg:text-right">
           {equipmentIntro.hint}
