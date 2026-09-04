@@ -131,7 +131,7 @@ export function VkNoticeBar() {
       </div>
       {/* Desktop — отдельный узел, мобилку не затрагивает */}
       <div
-        className={`${noticeShellClass} absolute z-20 hidden xl:left-[100px] xl:top-[88px] xl:flex xl:max-w-[430px] ${animClass}`}
+        className={`${noticeShellClass} absolute z-20 hidden xl:left-[100px] xl:top-[84px] xl:flex xl:max-w-[430px] ${animClass}`}
         onAnimationEnd={onAnimEnd}
       >
         <VkNoticeCard exiting={exiting} onClose={close} />
