@@ -54,6 +54,7 @@ export default function PregnancyPage() {
               icon: "imgContainer.svg",
               text: "Тренируйся дома в удобное время",
               mobileText: "Дома в удобное время",
+              hideOnMobile: true,
             },
             {
               icon: "imgContainer1.svg",
