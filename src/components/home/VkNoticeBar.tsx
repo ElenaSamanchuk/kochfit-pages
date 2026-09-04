@@ -71,7 +71,7 @@ export function VkNoticeBar() {
         className="pointer-events-none max-xl:h-[48px] sm:max-xl:h-[52px] xl:hidden"
       />
       <div
-        className={`vk-notice absolute max-xl:inset-x-(--page-inset-x) top-[56px] z-10 flex items-center gap-[6px] rounded-[10px] bg-white py-[6px] pl-[6px] pr-[22px] shadow-[0_10px_30px_rgba(75,77,87,0.2)] sm:top-[72px] sm:gap-[8px] sm:py-[8px] sm:pl-[8px] sm:pr-[26px] xl:inset-x-auto xl:left-[20px] xl:max-w-[430px] ${
+        className={`vk-notice absolute max-xl:inset-x-(--page-inset-x) top-[56px] z-10 flex items-center gap-[6px] rounded-[10px] bg-white py-[6px] pl-[6px] pr-[22px] shadow-[0_10px_30px_rgba(75,77,87,0.2)] sm:top-[72px] sm:gap-[8px] sm:py-[8px] sm:pl-[8px] sm:pr-[26px] xl:inset-x-auto xl:left-[100px] xl:max-w-[430px] ${
           exiting ? "vk-notice-exit" : "vk-notice-enter"
         }`}
         onAnimationEnd={onAnimEnd}
