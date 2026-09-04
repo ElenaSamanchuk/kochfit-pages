@@ -10,10 +10,10 @@ alwaysApply: true
 Changing **mobile must not edit desktop**. Changing **desktop must not edit mobile**.
 Sibling-page ports (`/` `/community` `/for_pregnant` `/r` `/e_mtd`) still **respect breakpoints** — copy the *pattern*, not a class that hits both.
 
-Desktop = Figma `xl:` (**1280px / 1200+**). If the section’s desktop layout is gated with `lg:` (ExpectCourse, WhenToStart), restore there. Mobile = default + `max-xl:` only.
+Desktop = Figma `xl:` (**1200px**, `--breakpoint-xl: 75rem` in `@theme`). If the section’s desktop layout is gated with `lg:` (ExpectCourse, WhenToStart), restore there. Mobile = default + `max-xl:` only.
 
 - Tokens are always a **pair**: `--plaque-py-mobile` vs `--plaque-py-desktop`. Never one `py` / radius / font for all viewports.
-- Restore desktop with `xl:` (or `lg:` if that is the desktop gate) or `@media (min-width: 1280px)`.
+- Restore desktop with `xl:` (or `lg:` if that is the desktop gate) or `@media (min-width: 1200px)`.
 - Do **not** use `sm:` / `md:` as “desktop”. `sm:py-3` applies through xl unless `xl:` overrides it.
 - Do **not** unify heights across breakpoints. Hero photos, ProgramCards / PregnancyProgram **188px** on desktop, fit-card 72 vs 90 — stay per breakpoint.
 
@@ -34,7 +34,7 @@ className="py-1.5 sm:max-xl:py-3 xl:py-[16px]"
 
 /* ✅ GOOD */
 .plaque { padding: var(--plaque-py-mobile) var(--plaque-px-mobile); }
-@media (min-width: 1280px) {
+@media (min-width: 1200px) {
   .plaque { padding: var(--plaque-py-desktop) var(--plaque-px-desktop); }
 }
 ```
