@@ -15,6 +15,7 @@ import {
 } from "@/components/site/hero-layout";
 import { externalLinks } from "@/content/links";
 import { coursePricing } from "@/content/courses";
+import { typo } from "@/lib/typography";
 
 const img = (name: string) => assetPath(`/images/beauty-health/${name}`);
 
@@ -100,8 +101,10 @@ export function BeautyHero() {
               Красота и здоровье
             </h1>
             {/* Mobile: 14px / lh 1.35 / max 320 как HomeHero; xl — 18px как было */}
-            <p className="w-full whitespace-pre-line text-[14px] font-normal leading-[1.35] tracking-[-0.02em] max-xl:mx-auto max-xl:max-w-[320px] xl:mx-0 xl:w-auto xl:max-w-none xl:whitespace-normal xl:text-[18px] xl:leading-[normal] xl:tracking-normal">
-              {`Система тренировок, дыхания и работы с телом,\nкоторую можно встроить в обычную жизнь\nи заниматься регулярно от 15 минут в день`}
+            <p className="w-full text-[14px] font-normal leading-[1.35] tracking-[-0.02em] max-xl:mx-auto max-xl:max-w-[320px] xl:mx-0 xl:w-auto xl:max-w-none xl:text-[18px] xl:leading-[normal] xl:tracking-normal">
+              {typo(
+                "Система тренировок, дыхания и работы с телом, которую можно встроить в обычную жизнь и заниматься регулярно от 15 минут в день",
+              )}
             </p>
           </div>
         </div>
