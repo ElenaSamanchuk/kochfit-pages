@@ -100,14 +100,11 @@ export function HomeHero() {
         </div>
       </div>
 
-      <VkNoticeBar variant="floating" />
+      <VkNoticeBar />
 
       {/* pt <xl = heroBody; VK-плашка при открытии даёт flow-spacer в VkNoticeBar */}
       <div className="relative z-[1] flex flex-1 flex-col justify-between gap-3 px-(--page-inset-x) pb-5 pt-[64px] sm:gap-4 sm:pb-6 sm:pt-[72px] xl:absolute xl:inset-auto xl:left-[100px] xl:top-[140px] xl:flex-none xl:justify-start xl:gap-0 xl:p-0">
         <div className="flex flex-col items-center gap-4 text-center sm:gap-6 xl:items-start xl:gap-0 xl:text-left">
-        <div className="max-xl:hidden">
-          <VkNoticeBar variant="stacked" />
-        </div>
         <div className="flex flex-nowrap items-center justify-center gap-1 overflow-x-auto [-ms-overflow-style:none] [scrollbar-width:none] sm:gap-1.5 xl:mb-[32px] xl:justify-start xl:flex-wrap xl:gap-2 xl:overflow-visible [&::-webkit-scrollbar]:hidden">
           {heroTags.map((tag, i) => (
             <span
