@@ -1,0 +1,60 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+# Pages отдаёт сайт по адресу https://<user>.github.io/kochfit-pages/,
+# поэтому сборке нужен basePath. Обе переменные обязательны:
+# KOCHFIT_BASE_PATH — маршруты и /_next (next.config.ts),
+# NEXT_PUBLIC_BASE_PATH — assetPath() для <img src> из public/.
+# Без второй картинки уходят без префикса и отдают 404.
+env:
+  BASE_PATH: /kochfit-pages
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Build static export
+        run: npm run build
+        env:
+          NEXT_PUBLIC_BASE_PATH: ${{ env.BASE_PATH }}
+          KOCHFIT_BASE_PATH: ${{ env.BASE_PATH }}
+      - name: Проверить, что пути получили префикс
+        run: |
+          missing=$(grep -roE 'src="/(images|_next)[^"]*"' out/index.html | wc -l)
+          if [ "$missing" -ne 0 ]; then
+            echo "::error::В сборке $missing путей без basePath — на Pages они дадут 404"
+            exit 1
+          fi
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: out
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
