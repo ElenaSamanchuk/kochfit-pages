@@ -44,6 +44,19 @@ jobs:
             echo "::error::В сборке $missing путей без basePath — на Pages они дадут 404"
             exit 1
           fi
+      # Копия на Pages не должна индексироваться как дубль kochfit.ru.
+      # Свой X-Robots-Tag Pages не позволяет, поэтому meta в каждый HTML;
+      # robots.txt здесь не помогает: поисковик читает только корень домена.
+      - name: Закрыть копию от индексации (noindex)
+        run: |
+          find out -name '*.html' -print0 | xargs -0 perl -0pi -e 's/<head>/<head><meta name="robots" content="noindex, nofollow"\/>/ unless /name="robots"/'
+          total=$(find out -name '*.html' | wc -l)
+          bad=$(grep -rL 'name="robots" content="noindex' --include='*.html' out | wc -l)
+          echo "HTML: $total, без noindex: $bad"
+          if [ "$total" -eq 0 ] || [ "$bad" -ne 0 ]; then
+            echo "::error::noindex проставлен не во все страницы"
+            exit 1
+          fi
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
